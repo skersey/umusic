@@ -19,7 +19,7 @@ public class uMusicPlayer implements Runnable {
     public void start () {
             Player player = new Player();
             String str1 = "V1 I[Piano]   R   R   R   R   R G5q F5q G5q F5q G5q F5q"; 
-            String str2 = "V2 I[Flute] D5q G5q F5q C5q D5q D5q G5q F5q C5q D5q";
+            String str2 = "V2 I[Flute] D5q G5q F5q C5q D5q D5q G5q F5q C5q D5q F5q";
             Sequence s1 = player.getSequence(str1, str2);
 
         try {
