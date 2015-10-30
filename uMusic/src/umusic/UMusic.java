@@ -18,7 +18,7 @@ public class UMusic {
 		boolean runloop = true;
 
 		while (runloop) {
-			System.out.println("Please enter a command: <start:pause:resume> ");
+			System.out.println("Please enter a command: <start:pause:resume:finish> ");
 			line = input.nextLine();
 			switch (line) {
 				case "start":
