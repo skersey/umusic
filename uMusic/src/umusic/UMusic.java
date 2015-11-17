@@ -1,5 +1,7 @@
 package umusic;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,6 +24,8 @@ import umusic.uMusicTrack.TrackNumber;
 
 public class UMusic {
 	static ArrayList <uMusicNote> voice1 = new ArrayList<>();
+        static String jsonString; //djm 11/14/15
+        static ArrayList <uMusicTrack> song = new ArrayList<>(); //djm 11/14/15
 
 	static uMusicTrack track1;
 	static uMusicTrack track2;
@@ -201,7 +205,7 @@ public class UMusic {
 		ManagedPlayer mp = new ManagedPlayer();
 
 		while (runloop) {
-			System.out.println("Please enter a command: <start:pause:resume:finish:save:open_midi:open_jfugue> ");
+			System.out.println("Please enter a command: <start:pause:resume:finish:save:open_midi:open_jfugue:serialize:clear:deserialize> "); //djm 11/14/15
 			line = input.nextLine();
 			switch (line) {
 				case "start":
@@ -209,6 +213,8 @@ public class UMusic {
 						mp.start(seq);
 					} catch (MidiUnavailableException ex) {
 						Logger.getLogger(UMusic.class.getName()).log(Level.SEVERE, null, ex);
+                                        } catch (IllegalStateException ex) { //djm 11/14/15
+                                                System.out.println("Sequence not set.");
 					}
 					break;
 				case "pause":
@@ -230,6 +236,15 @@ public class UMusic {
 				case "open_jfugue":
 					openJfugue();
 					break;
+                                case "serialize": //djm 11/14/15
+                                        serialize();
+                                        break;
+                                case "clear": //djm 11/14/15
+                                        seq = clear();
+                                        break;
+                                case "deserialize": //djm 11/14/15
+                                        seq = deserialize();
+                                        break;
 			}
 		}
 	}
@@ -285,6 +300,34 @@ public class UMusic {
 
 		uMusicTrack track = parser.parseTrack(uMusicTrack.TrackNumber.TRACK1);
 	}
+        
+        public static void serialize(){ //djm 11/14/15
+            Gson gson = new Gson();
+            
+            song.add(track1);
+            song.add(track2);
+            song.add(track3);
+            
+            jsonString = gson.toJson(song);
+            System.out.println(jsonString);
+        }
+        
+        public static Sequence clear(){ //djm 11/14/15
+            return null;
+        }
+        
+        public static Sequence deserialize(){ //djm 11/14/15
+            Gson gson = new Gson();
+            
+            song = gson.fromJson(jsonString, new TypeToken<ArrayList<uMusicTrack>>(){}.getType());
+            track1 = song.get(0);
+            track2 = song.get(1);
+            track3 = song.get(2);
+            
+            Sequence seq = new Player().getSequence(track1.buildTrackString(), 
+			track2.buildTrackString(), track3.buildTrackString());
+            return seq;           
+        }
 	
 	public static void main(String[] args) 
 		throws InvalidMidiDataException, MidiUnavailableException, FileNotFoundException, IOException {
