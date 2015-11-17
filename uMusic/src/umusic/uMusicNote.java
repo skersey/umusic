@@ -11,34 +11,20 @@ public class uMusicNote {
 	public enum SharpFlat {NONE, SHARP, DOUBLE_SHARP, FLAT, DOUBLE_FLAT} 
 	public enum uMusicChord {NONE, MAJOR, MINOR} //Add other chords 
 	
-	public uMusicNote (String note) {
+	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord c) {
 		this.note = note;	
-	}
-
-	public int setNote (String note) {
-		this.note = note;
-		return 0;
-	}
-	
-	public int setDuration (int duration) {
-		this.duration = duration; //check for errors
-		return 0;
-	}
-	
-	public int setOctave (int octave) {
-		if (octave < 0 || octave > 10)
-			return -1;
-
+		this.duration = dur; 
 		this.octave = octave;
-		return 0;
-	}
-
-	public void setSharpFlat (SharpFlat sharpFlat) {
-		this.sharpFlat = sharpFlat;
+		this.sharpFlat = sf;
+		this.chord = c;
 	}
 	
-	public void setChord (uMusicChord chord) {
-		this.chord = chord;
+	public uMusicNote (uMusicNote copy) {
+		this.note = copy.note;	
+		this.duration = copy.duration; 
+		this.octave = copy.octave;
+		this.sharpFlat = copy.sharpFlat;
+		this.chord = copy.chord;
 	}
 	
 	private void buildNoteString() {

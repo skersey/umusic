@@ -27,283 +27,411 @@ public class UMusic {
 	static uMusicTrack track2;
 	static uMusicTrack track3;
 
-	public static void makeTrack1 () {
-		track1 = new uMusicTrack (TrackNumber.TRACK1);
+	public static void makeTrack1 (uMusicSongController sc) {
+            sc.addTrack(TrackNumber.TRACK0, "Track 1");
+            sc.setInstrument(TrackNumber.TRACK0, "Flute");
+            sc.setTrackVolume(TrackNumber.TRACK0, 100);
 
-		track1.setInstrument("Flute");
-		track1.setTempo("Allegro");
-		track1.setTimeSignature(4, 4);
-		track1.setVolume(100);
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 16, 5, SharpFlat.NONE, uMusicChord.MINOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("r", 8, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 16, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 2, 3, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 8, 3, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 7, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("b", 8, 7, SharpFlat.SHARP, uMusicChord.NONE));
 
-		track1.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("c", 16, 5, SharpFlat.NONE, uMusicChord.MINOR);
-		track1.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("r", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("c", 16, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR);
-		track1.addNextNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR);
-		track1.addNextNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR);
-		track1.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track1.addNextNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track1.addNextNote("e", 2, 3, SharpFlat.SHARP, uMusicChord.NONE);
-		track1.addNextNote("f", 8, 3, SharpFlat.SHARP, uMusicChord.NONE);
-		track1.addNextNote("a", 4, 7, SharpFlat.SHARP, uMusicChord.NONE);
-		track1.addNextNote("b", 8, 7, SharpFlat.SHARP, uMusicChord.NONE);
-		
-		track1.deleteLastNote(); // delete the last note added
-
-		track1.editNote(0, "a", 8, 5); //edit the note at given array position
+            sc.deleteLastNote(TrackNumber.TRACK0); // delete the last note added
+            sc.editNote(TrackNumber.TRACK0, 0, new uMusicNote("b", 8, 7, SharpFlat.SHARP, uMusicChord.NONE));
 	}
 
-	public static void makeTrack2 () {
-		track2 = new uMusicTrack (TrackNumber.TRACK2);
+	public static void makeTrack2 (uMusicSongController sc) {
+            sc.addTrack(TrackNumber.TRACK1, "Piano Track");
+            sc.setInstrument(TrackNumber.TRACK1, "Piano");
+            sc.setTrackVolume(TrackNumber.TRACK1, 70);
 
-		track2.setInstrument("Piano");
-		track2.setTempo("Allegro");
-		track2.setTimeSignature(4, 4);
-		track2.setVolume(80);
-
-		track2.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("c", 16, 5, SharpFlat.NONE, uMusicChord.MINOR);
-		track2.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("r", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("c", 16, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR);
-		track2.addNextNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR);
-		track2.addNextNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR);
-		track2.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track2.addNextNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track2.addNextNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
+	    sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 16, 5, SharpFlat.NONE, uMusicChord.MINOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("r", 8, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 16, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("e", 2, 3, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("f", 8, 3, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("a", 4, 7, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK1, new uMusicNote("b", 8, 7, SharpFlat.SHARP, uMusicChord.NONE));
 	}
 
-	public static void makeTrack3 () {
-		track3 = new uMusicTrack (TrackNumber.TRACK3);
+	public static void makeTrack3 (uMusicSongController sc) {
+            sc.addTrack(TrackNumber.TRACK2, "Violin Track");
+            sc.setInstrument(TrackNumber.TRACK2, "Violin");
+            sc.setTrackVolume(TrackNumber.TRACK2, 40);
 
-		track3.setInstrument("Violin");
-		track3.setTempo("Allegro");
-		track3.setTimeSignature(4, 4);
-		track3.setVolume(120);
-
-		track3.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("c", 16, 5, SharpFlat.NONE, uMusicChord.MINOR);
-		track3.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("r", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("c", 16, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR);
-		track3.addNextNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR);
-		track3.addNextNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR);
-		track3.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR);
-		track3.addNextNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE);
-		track3.addNextNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE);
+	    sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 16, 5, SharpFlat.NONE, uMusicChord.MINOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("e", 2, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("a", 4, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("b", 8, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("r", 8, 7, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 1, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("e", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("r", 8, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 16, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("c", 8, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("g", 1, 3, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("e", 2, 3, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("f", 8, 3, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("a", 4, 7, SharpFlat.SHARP, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK2, new uMusicNote("b", 8, 7, SharpFlat.SHARP, uMusicChord.NONE));
 	}
 
-//	public static void makeTrackFromDisc (uMusicTrack track, uMusicPatternParser parse) {
-			
-//	}
-	
-	public static void testManagedPlayer(Sequence seq, Pattern p) throws InvalidMidiDataException, FileNotFoundException, IOException {
-		Scanner input = new Scanner(System.in);
+	//Test 1 tests adding 3 tracks to the song controller.  Notes are added to each track.
+	//The uMusicSongController is passed to the uMusicPlayerController to be played
+	public static void test1(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
 		String line;
-		boolean runloop = true;
-		ManagedPlayer mp = new ManagedPlayer();
 
+		sc.setName("My Song");
+		sc.setTempo("Allegro");
+		sc.setTimeSignature(4, 4);
+		sc.setMasterVolume(125);
+		
+		makeTrack1(sc);
+		makeTrack2(sc);
+		makeTrack3(sc);
+	
+		pc.addSong(sc);
+
+		boolean runloop = true;
 		while (runloop) {
-			System.out.println("Please enter a command: <start:pause:resume:finish:save:open_midi:open_jfugue> ");
+			System.out.println("Please enter a command: <start:pause:finish> ");
 			line = input.nextLine();
 			switch (line) {
 				case "start":
-					try {
-						mp.start(seq);
-					} catch (MidiUnavailableException ex) {
-						Logger.getLogger(UMusic.class.getName()).log(Level.SEVERE, null, ex);
-					}
+					pc.startSong();
 					break;
 				case "pause":
-					mp.pause();
-					break;
-				case "resume":
-					mp.resume();
+					pc.pauseSong();
 					break;
 				case "finish":
-					mp.finish();
+					pc.finishSong();
 					runloop = false;
-					break;
-				case "save":
-					saveMidi(seq, p);
-					break;
-				case "open_midi":
-					openMidi();
-					break;
-				case "open_jfugue":
-					openJfugue();
 					break;
 			}
 		}
 	}
 
-	public static void saveMidi (Sequence s, Pattern p) {
-		try {
-                	MidiFileManager.save(s, new File("pattern.mid"));
-                } catch (IOException e) {
-                        e.printStackTrace();
-                }
-		try {
-			p.save(new File("pattern.jfugue"));
-		} catch (IOException ex) {
-			Logger.getLogger(UMusic.class.getName()).log(Level.SEVERE, null, ex);
+	public static void test2(uMusicPlayerController pc, Scanner input) {
+		String line;
+		int volume = 100;
+		int _volume = 0;
+
+		boolean runloop = true;
+		while (runloop) {
+			System.out.println("Please enter a note and press <enter>: <a:b:c:d:e:f:g:volume:finish> ");
+
+			line = input.nextLine();
+			switch (line) {
+				case "a":
+				case "b":
+				case "c":
+				case "d":
+				case "e":
+				case "f":
+				case "g":
+					uMusicNote note = new uMusicNote(line, 8, 5, SharpFlat.NONE, uMusicChord.NONE);
+					pc.playLiveNote(note, volume);
+					break;
+				case "volume":
+					System.out.println("Please enter a value between 0 and 125");
+					_volume = Integer.parseInt(input.nextLine());
+					if (volume < 0 || volume > 125)
+						System.out.println("Invalid value");
+					else
+						volume = _volume;
+					break;
+				case "finish":
+					runloop = false;
+					break;
+			}
 		}
 	}
 
-	public static void openMidi () {
-		Pattern pattern1 = null;
-		try {
-			pattern1 = MidiFileManager.loadPatternFromMidi(new File("pattern.mid"));
-		} catch (IOException ex) {
-			Logger.getLogger(UMusic.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (InvalidMidiDataException ex) {
-			Logger.getLogger(UMusic.class.getName()).log(Level.SEVERE, null, ex);
+	public static void test3(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
+		String line;
+		int volume = 100;
+		int _volume = 0;
+
+		sc.setTimeSignature(4, 4);
+		sc.setMasterVolume(volume);
+		sc.addTrack(TrackNumber.TRACK0, "Track 1");
+                sc.setInstrument(TrackNumber.TRACK0, "Flute");
+                sc.setTrackVolume(TrackNumber.TRACK0, volume);
+
+		boolean runloop = true;
+		while (runloop) {
+			System.out.println("Please enter a note and press <enter>: <a:b:c:d:e:f:g:volume:start:pause:finish> ");
+
+			line = input.nextLine();
+			switch (line) {
+				case "a":
+				case "b":
+				case "c":
+				case "d":
+				case "e":
+				case "f":
+				case "g":
+					uMusicNote note = new uMusicNote(line, 8, 5, SharpFlat.NONE, uMusicChord.NONE);
+					uMusicNote copy = new uMusicNote(note);
+					pc.playLiveNote(note, volume);
+					sc.addNoteToTrack(TrackNumber.TRACK0, copy);
+					break;
+				case "volume":
+					System.out.println("Please enter a value between 0 and 125");
+					_volume = Integer.parseInt(input.nextLine());
+					if (volume < 0 || volume > 125) {
+						System.out.println("Invalid value");
+					} else {
+						sc.setMasterVolume(volume);
+						volume = _volume;
+					}
+					break;
+				case "start":
+					pc.addSong(sc);
+					pc.startSong();
+					break;
+				case "pause":
+					pc.pauseSong();
+					break;
+				case "finish":
+					pc.finishSong();
+					runloop = false;
+					break;
+			}
 		}
-                System.out.println("from the midi file");
-                System.out.println(pattern1);
+	}
 
-		uMusicPatternParser parser = new uMusicPatternParser(pattern1);
-		System.out.println("number tracks is: " + parser.getNumTracks());
+	public static void makeTwinkle (uMusicSongController sc) {
+            sc.addTrack(TrackNumber.TRACK0, "Track 1");
+            sc.setInstrument(TrackNumber.TRACK0, "Piano");
+            sc.setTrackVolume(TrackNumber.TRACK0, 100);
 
-		uMusicTrack track = parser.parseTrack(uMusicTrack.TrackNumber.TRACK1);
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("d", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("d", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("d", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("d", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("a", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("g", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("f", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("e", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("d", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("d", 4, 5, SharpFlat.NONE, uMusicChord.NONE));
+            sc.addNoteToTrack(TrackNumber.TRACK0, new uMusicNote("c", 2, 5, SharpFlat.NONE, uMusicChord.NONE));
+	}
+
+	//create the song twinkle, twinkle, little star
+	public static void test4(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
+		String line;
+
+		sc.setName("Twinkle Twinle little star");
+		sc.setTempo("Allegro");
+		sc.setTimeSignature(4, 4);
+		sc.setMasterVolume(125);
+	
+		makeTwinkle(sc);	
+		pc.addSong(sc);
+
+		boolean runloop = true;
+		while (runloop) {
+			System.out.println("Please enter a command: <start:pause:finish> ");
+			line = input.nextLine();
+			switch (line) {
+				case "start":
+					pc.startSong();
+					break;
+				case "pause":
+					pc.pauseSong();
+					break;
+				case "finish":
+					pc.finishSong();
+					runloop = false;
+					break;
+			}
+		}
 	}
 
 	
-	public static void openJfugue () throws FileNotFoundException, IOException {
-		BufferedReader reader = new BufferedReader(new FileReader("pattern.jfugue"));
-                Pattern pattern = new Pattern();
-                String line = null;
-                while ((line = reader.readLine()) != null) {
-                        pattern.add(line);
-                }
-                reader.close();
 
-	 	
-		
-                System.out.println("from the jfugue file");
-                System.out.println(pattern);
-
-		uMusicPatternParser parser = new uMusicPatternParser(pattern);
-		System.out.println("number tracks is: " + parser.getNumTracks());
-
-		uMusicTrack track = parser.parseTrack(uMusicTrack.TrackNumber.TRACK1);
-	}
 	
-	public static void main(String[] args) 
-		throws InvalidMidiDataException, MidiUnavailableException, FileNotFoundException, IOException {
+	public static void main(String[] args) {
 
-		makeTrack1();
-		makeTrack2();
-		makeTrack3();
-		
-		System.out.println (track1.buildTrackString());
-		System.out.println (track2.buildTrackString());
-		System.out.println (track3.buildTrackString());
+		uMusicSongController sc = new uMusicSongController();
+		uMusicPlayerController pc = new uMusicPlayerController();
+		Scanner input = new Scanner(System.in);
+		String line;
 
-		Sequence seq = new Player().getSequence(track1.buildTrackString(), 
-			track2.buildTrackString(), track3.buildTrackString());
-		Pattern p = new Pattern(track1.buildTrackString(), 
-			track2.buildTrackString(), track3.buildTrackString());
-		testManagedPlayer(seq, p);
+
+		boolean runloop = true;
+		while (runloop) {
+			System.out.println("Please enter the test number, 'help' or 'quit' to exit: <1:2:3:4:help:quit> ");
+			line = input.nextLine();
+			switch (line) {
+				case "1":
+		                    test1(sc, pc, input);
+				    break;
+				case "2":
+				    test2(pc, input);
+				    break;
+				case "3":
+		                    test3(sc, pc, input);
+				    break;
+				case "4":
+		                    test4(sc, pc, input);
+				    break;
+				case "help":
+					System.out.println("Test 1 creates 3 tracks, adds notes to the tracks and then allows");
+					System.out.println("       the user to control playback (start, pause and finish)");
+					System.out.println("Test 2 accepts notes (a,b,c,d,e,f,g) from the keyboard to be played live");
+					System.out.println("Test 3 combined test 1 and test 2.  As notes are played live, the");
+					System.out.println("       the notes are stored in a single track of a song.");
+					break;
+				case "quit":
+					runloop = false;
+					break;
+			}
+		}
 		
+		System.out.println("END");
+		return;
 	}
-	
-
 }
