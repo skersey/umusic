@@ -14,6 +14,10 @@ public class uMusicTrack {
 	private TrackNumber trackNumber;
 	private ArrayList <uMusicNote> notes = new ArrayList<>();
 
+    uMusicTrack(TrackNumber trackNumber) {
+        this(trackNumber, null);
+    }
+
 	//inversions
 
 	public enum TrackNumber {TRACK0, TRACK1, TRACK2, TRACK3, TRACK4, TRACK5, TRACK6, TRACK7, TRACKMAX};

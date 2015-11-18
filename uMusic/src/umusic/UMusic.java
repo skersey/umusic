@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Sequence;
@@ -20,13 +25,24 @@ import umusic.uMusicNote.uMusicChord;
 import umusic.uMusicNote.SharpFlat;
 import umusic.uMusicTrack.TrackNumber;
 
-public class UMusic {
+public class UMusic extends Application {
 	static ArrayList <uMusicNote> voice1 = new ArrayList<>();
 
 	static uMusicTrack track1;
 	static uMusicTrack track2;
 	static uMusicTrack track3;
 
+        
+            @Override
+        public void start(Stage stage) throws Exception {
+            Parent root = FXMLLoader.load(getClass().getResource("UMusicFXML.fxml"));
+
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+        }
+        
 	public static void makeTrack1 (uMusicSongController sc) {
             sc.addTrack(TrackNumber.TRACK0, "Track 1");
             sc.setInstrument(TrackNumber.TRACK0, "Flute");
@@ -403,7 +419,7 @@ public class UMusic {
 
 		boolean runloop = true;
 		while (runloop) {
-			System.out.println("Please enter the test number, 'help' or 'quit' to exit: <1:2:3:4:help:quit> ");
+			System.out.println("Please enter the test number, 'help' or 'quit' to exit: <1:2:3:4:gui:help:quit> ");
 			line = input.nextLine();
 			switch (line) {
 				case "1":
@@ -418,6 +434,8 @@ public class UMusic {
 				case "4":
 		                    test4(sc, pc, input);
 				    break;
+                                case "gui":
+                                    launch(args);
 				case "help":
 					System.out.println("Test 1 creates 3 tracks, adds notes to the tracks and then allows");
 					System.out.println("       the user to control playback (start, pause and finish)");
