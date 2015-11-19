@@ -7,53 +7,65 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<VBox id="MainController" prefWidth="650" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umusic.gui.UMusicFXMLController">
+<VBox id="MainController" prefWidth="650" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
     <children>
         <MenuBar>
-            <Menu text = "File">
-                <items>
-                    <MenuItem text = "create"/>
-                    <MenuItem text = "save"/>
-                    <MenuItem text = "open"/>
-                    <SeparatorMenuItem />
-                    <MenuItem text="exit"/>
-                </items>
-            </Menu>
-            <Menu text = "Edit">
-                <items>
-                    <MenuItem text = "Add Track"/>
-                </items>
-            </Menu>
+           <menus>
+               <Menu text="File">
+                   <items>
+                       <MenuItem text="create" />
+                       <MenuItem text="save" />
+                       <MenuItem text="open" />
+                       <SeparatorMenuItem />
+                       <MenuItem text="exit" />
+                   </items>
+               </Menu>
+               <Menu text="Edit">
+                   <items>
+                       <MenuItem text="Add Track" />
+                   </items>
+               </Menu>
+           </menus>
         </MenuBar>
         <ToolBar>
-            <HBox spacing="20" alignment="BOTTOM_LEFT">
-                <VBox>
-                    <Label text="Song Title: "/>
-                    <TextField text="" editable="false"/>
-                </VBox>
-                <VBox>
-                    <Label text="Time Signature"/>
-                    <ChoiceBox>
-                        <items>
-                            <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="2/4"/>
-                                <String fx:value="3/4"/>
-                                <String fx:value="4/4"/>
-                                <String fx:value="5/4"/>
-                            </FXCollections>
-                        </items>
-                    </ChoiceBox>
-                </VBox>
-                <VBox>
-                    <Label text="Tempo"/>
-                    <TextField text="120"/>                 
-                </VBox>
-                <Button text="Add Track"/>
-                <Pane HBox.hgrow="ALWAYS" />
-                <Button text="o"/>
-                <Button text="||"/>
-                <Button text=">"/>
-            </HBox>
+           <items>
+               <HBox alignment="BOTTOM_LEFT" spacing="20">
+                  <children>
+                      <VBox>
+                         <children>
+                             <Label text="Song Title: " />
+                             <TextField editable="false" text="" />
+                         </children>
+                      </VBox>
+                      <VBox>
+                         <children>
+                             <Label text="Time Signature" />
+                             <ChoiceBox>
+                                 <items>
+                                     <FXCollections fx:factory="observableArrayList">
+                                         <String fx:value="2/4" />
+                                         <String fx:value="3/4" />
+                                         <String fx:value="4/4" />
+                                         <String fx:value="5/4" />
+                                     </FXCollections>
+                                 </items>
+                             </ChoiceBox>
+                         </children>
+                      </VBox>
+                      <VBox>
+                         <children>
+                             <Label text="Tempo" />
+                             <TextField text="120" />
+                         </children>                 
+                      </VBox>
+                      <Button text="Add Track" />
+                      <Pane style="-fx-background-color: green;" HBox.hgrow="ALWAYS" />
+                      <Button contentDisplay="CENTER" text="o" />
+                      <Button text="||" />
+                      <Button text="&gt;" />
+                  </children>
+               </HBox>
+           </items>
         </ToolBar>
     </children>
 </VBox>
