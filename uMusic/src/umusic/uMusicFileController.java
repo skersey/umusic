@@ -26,7 +26,7 @@ public class uMusicFileController {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(sc);
         
-        try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("src/resource/" + fileName + ".json"), "utf-8"))) {
+        try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("src/umusic/resource/" + fileName + ".json"), "utf-8"))) {
                  writer.write(json);
         } catch (IOException e){
             System.out.println("fail");
