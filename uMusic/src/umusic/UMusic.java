@@ -406,9 +406,60 @@ public class UMusic extends Application {
 		}
 	}
 
-	
+	public static void saveSong(uMusicSongController sc, Scanner input){
+            String fileName;
+            System.out.println("Please enter a file name:");
+            fileName = input.nextLine();
+            uMusicFileController fc = new uMusicFileController(sc);
+            fc.save(fileName);
+        }
+        
+        public static uMusicSongController loadSong(uMusicSongController sc, uMusicPlayerController pc, Scanner input){
+            String fileName;
+            System.out.println("Please select a song: <1:2:3:4> ");
+			fileName = input.nextLine();
+			switch (fileName) {
+				case "1":
+					System.out.println("Selected Song 1");
+					break;
+				case "2":
+					System.out.println("Selected Song 2");
+					break;
+				case "3":
+					System.out.println("Selected Song 3");
+					break;
+                                case "4":
+					System.out.println("Selected Song 4");
+					break;
+                                default:
+                                        System.out.println("Selected Song 1");
+                                        fileName = "1";
+			}
+			
+            uMusicFileController fc = new uMusicFileController(sc);
+            sc = fc.load(fileName);
+            pc.addSong(sc);
+            String line;
+            boolean runloop = true;
+		while (runloop) {
+			System.out.println("Please enter a command: <start:pause:finish> ");
+			line = input.nextLine();
+			switch (line) {
+				case "start":
+					pc.startSong();
+					break;
+				case "pause":
+					pc.pauseSong();
+					break;
+				case "finish":
+					pc.finishSong();
+					runloop = false;
+					break;
+			}
+                }
+            return sc;
+        }
 
-	
 	public static void main(String[] args) {
 
 		uMusicSongController sc = new uMusicSongController();
@@ -419,7 +470,7 @@ public class UMusic extends Application {
 
 		boolean runloop = true;
 		while (runloop) {
-			System.out.println("Please enter the test number, 'help' or 'quit' to exit: <1:2:3:4:gui:help:quit> ");
+			System.out.println("Please enter the test number, gui, save, load, 'help' or 'quit' to exit: <1:2:3:4:gui:save:load:help:quit> ");
 			line = input.nextLine();
 			switch (line) {
 				case "1":
@@ -446,6 +497,12 @@ public class UMusic extends Application {
 				case "quit":
 					runloop = false;
 					break;
+				case "save":
+                                    saveSong(sc, input);
+                                    break;
+                                case "load":
+                                    sc = loadSong(sc, pc, input);
+                                    break;
 			}
 		}
 		
