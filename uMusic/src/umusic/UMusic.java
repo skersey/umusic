@@ -379,7 +379,7 @@ public class UMusic extends Application {
 	public static void test4(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
 		String line;
 
-		sc.setName("Twinkle Twinle little star");
+		sc.setName("Twinkle Twinkle Little Star");
 		sc.setTempo("Allegro");
 		sc.setTimeSignature(4, 4);
 		sc.setMasterVolume(125);
@@ -406,6 +406,11 @@ public class UMusic extends Application {
 		}
 	}
 
+	public static void test5(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
+            uMusicNote note = new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.NONE);
+
+	    System.out.println("jfugue: " + note.toString() + " lilypond: " + note.toLilyPond());
+	}
 	
 
 	
@@ -434,6 +439,9 @@ public class UMusic extends Application {
 				case "4":
 		                    test4(sc, pc, input);
 				    break;
+				case "5":
+		                    test5(sc, pc, input);
+				    break;
                                 case "gui":
                                     launch(args);
 				case "help":
@@ -442,6 +450,7 @@ public class UMusic extends Application {
 					System.out.println("Test 2 accepts notes (a,b,c,d,e,f,g) from the keyboard to be played live");
 					System.out.println("Test 3 combined test 1 and test 2.  As notes are played live, the");
 					System.out.println("       the notes are stored in a single track of a song.");
+					System.out.println("Test 4 Play Twinkle, Twinkle, Little Star");
 					break;
 				case "quit":
 					runloop = false;

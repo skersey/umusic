@@ -14,9 +14,9 @@ public class uMusicTrack {
 	private TrackNumber trackNumber;
 	private ArrayList <uMusicNote> notes = new ArrayList<>();
 
-    uMusicTrack(TrackNumber trackNumber) {
-        this(trackNumber, null);
-    }
+        uMusicTrack(TrackNumber trackNumber) {
+            this(trackNumber, null);
+        }
 
 	//inversions
 
