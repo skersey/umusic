@@ -36,7 +36,7 @@ public class uMusicFileController {
     
     public uMusicSongController load(String fileName){    
         try(
-            Reader reader = new InputStreamReader(uMusicSongController.class.getResourceAsStream("/resource/test" + fileName + ".json"), "UTF-8")){
+            Reader reader = new InputStreamReader(uMusicSongController.class.getResourceAsStream("resource/test" + fileName + ".json"), "UTF-8")){
             Gson gson = new GsonBuilder().create();
             sc = gson.fromJson(reader, uMusicSongController.class);
         }
