@@ -6,14 +6,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" minHeight="200.0" minWidth="700.0" prefHeight="200" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
+<AnchorPane fx:id="anchorPane" minHeight="200.0" minWidth="700.0" prefHeight="200" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
     <children>
-        <BorderPane id="Root" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <BorderPane fx:id="root" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <top> 
-<fx:include source="gui/MainController.fxml" />
+                <fx:include source="gui/MainController.fxml" />
             </top>
             <center>
-<fx:include source="gui/TrackRecord.fxml" />                
+                <VBox fx:id="centerPane">
+                </VBox>             
             </center>
         </BorderPane>
     </children>
