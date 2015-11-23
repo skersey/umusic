@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<VBox id="MainController" prefWidth="650" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
+<VBox fx:id="mainController" prefWidth="650" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
     <children>
         <MenuBar>
            <menus>
@@ -58,7 +58,7 @@
                              <TextField text="120" />
                          </children>                 
                       </VBox>
-                      <Button text="Add Track" />
+                      <Button text="Add Track" onAction="#addTrack" />
                       <Pane style="-fx-background-color: green;" HBox.hgrow="ALWAYS" />
                       <Button contentDisplay="CENTER" text="o" />
                       <Button text="||" />

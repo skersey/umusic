@@ -547,6 +547,7 @@ public class UMusic extends Application {
 				    break;
                                 case "gui":
                                     launch(args);
+                                    break;
 				case "help":
 					System.out.println("Test 1 creates 3 tracks, adds notes to the tracks and then allows");
 					System.out.println("       the user to control playback (start, pause and finish)");
