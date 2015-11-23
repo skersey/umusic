@@ -3,74 +3,194 @@
   "timeSignatureNumerator": 4,
   "timeSignatureDenominator": 4,
   "tempo": "Allegro",
-  "name": "Satisfaction Rift",
+  "name": "Brian Song",
   "trackList": [
     {
-      "volume": 125,
-      "instrument": "Guitar",
+      "volume": 100,
+      "instrument": "Flute",
       "trackName": "Track 1",
-      "trackString": " V0 :CON(7,125) I24 B3q B3q B3i B3i C4i D4i D4q Ri D4i D4i C4i C4i B3i B3q B3q B3i B3i C4i D4i D4q Ri D4i D4i C4i C4i B3i B3q B3q B3i B3i C4i D4i D4q Ri D4i D4i C4i C4i B3i B3q B3q B3i B3i C4i D4i D4q Ri D4i D4i C4i C4i B3i",
+      "trackString": " V0 :CON(7,100) I73 B#7i C5i G5w E5h F5i A5q B5i Ri C5mins C5maji C5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E3h F3i A7q B7i Ri C5i G5w E5h F5i A5q B5i Ri Cbb5mins Cbb5maji Cbb5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E#3h F#3i A#7q",
       "trackNumber": "TRACK0",
       "notes": [
         {
-          "duration": 4,
-          "octave": 3,
-          "sharpFlat": "NONE",
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "SHARP",
           "chord": "NONE",
           "note": "b",
-          "noteString": " B3q"
-        },
-        {
-          "duration": 4,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3q"
+          "noteString": " B#7i"
         },
         {
           "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
+          "octave": 5,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "c",
-          "noteString": " C4i"
+          "noteString": " C5i"
+        },
+        {
+          "duration": 1,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G5w"
+        },
+        {
+          "duration": 2,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E5h"
         },
         {
           "duration": 8,
-          "octave": 4,
+          "octave": 5,
           "sharpFlat": "NONE",
           "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
+          "note": "f",
+          "noteString": " F5i"
         },
         {
           "duration": 4,
-          "octave": 4,
+          "octave": 5,
           "sharpFlat": "NONE",
           "chord": "NONE",
-          "note": "d",
-          "noteString": " D4q"
+          "note": "a",
+          "noteString": " A5q"
         },
         {
           "duration": 8,
-          "octave": 4,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B5i"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "r",
+          "noteString": " Ri"
+        },
+        {
+          "duration": 16,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MINOR",
+          "note": "c",
+          "noteString": " C5mins"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C3i"
+        },
+        {
+          "duration": 1,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G3w"
+        },
+        {
+          "duration": 2,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E3h"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F3i"
+        },
+        {
+          "duration": 4,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A7q"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B7i"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "r",
@@ -78,360 +198,872 @@
         },
         {
           "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
+          "octave": 5,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "c",
-          "noteString": " C4i"
+          "noteString": " C5i"
+        },
+        {
+          "duration": 1,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G5w"
+        },
+        {
+          "duration": 2,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E5h"
         },
         {
           "duration": 8,
-          "octave": 4,
+          "octave": 5,
           "sharpFlat": "NONE",
           "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
+          "note": "f",
+          "noteString": " F5i"
         },
         {
           "duration": 4,
-          "octave": 3,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A5q"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "b",
-          "noteString": " B3q"
-        },
-        {
-          "duration": 4,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3q"
+          "noteString": " B5i"
         },
         {
           "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 4,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4q"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
+          "octave": 5,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
+          "duration": 16,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MINOR",
           "note": "c",
-          "noteString": " C4i"
+          "noteString": " Cbb5mins"
         },
         {
           "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MAJOR",
           "note": "c",
-          "noteString": " C4i"
+          "noteString": " Cbb5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " Cbb5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 3,
           "sharpFlat": "NONE",
           "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
+          "note": "c",
+          "noteString": " C3i"
+        },
+        {
+          "duration": 1,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G3w"
+        },
+        {
+          "duration": 2,
+          "octave": 3,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E#3h"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F#3i"
         },
         {
           "duration": 4,
-          "octave": 3,
-          "sharpFlat": "NONE",
+          "octave": 7,
+          "sharpFlat": "SHARP",
           "chord": "NONE",
-          "note": "b",
-          "noteString": " B3q"
-        },
-        {
-          "duration": 4,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3q"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 4,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4q"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "r",
-          "noteString": " Ri"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 4,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3q"
-        },
-        {
-          "duration": 4,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3q"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 4,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4q"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "r",
-          "noteString": " Ri"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "d",
-          "noteString": " D4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 4,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C4i"
-        },
-        {
-          "duration": 8,
-          "octave": 3,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "b",
-          "noteString": " B3i"
+          "note": "a",
+          "noteString": " A#7q"
         }
       ]
     },
-    null,
-    null,
+    {
+      "volume": 70,
+      "instrument": "Piano",
+      "trackName": "Piano Track",
+      "trackString": " V1 :CON(7,70) I0 C5i G5w E5h F5i A5q B5i Ri C5mins C5maji C5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E3h F3i A7q B7i Ri C5i G5w E5h F5i A5q B5i Ri Cbb5mins Cbb5maji Cbb5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E#3h F#3i A#7q B#7i",
+      "trackNumber": "TRACK1",
+      "notes": [
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C5i"
+        },
+        {
+          "duration": 1,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G5w"
+        },
+        {
+          "duration": 2,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E5h"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F5i"
+        },
+        {
+          "duration": 4,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A5q"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B5i"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "r",
+          "noteString": " Ri"
+        },
+        {
+          "duration": 16,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MINOR",
+          "note": "c",
+          "noteString": " C5mins"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C3i"
+        },
+        {
+          "duration": 1,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G3w"
+        },
+        {
+          "duration": 2,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E3h"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F3i"
+        },
+        {
+          "duration": 4,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A7q"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B7i"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "r",
+          "noteString": " Ri"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C5i"
+        },
+        {
+          "duration": 1,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G5w"
+        },
+        {
+          "duration": 2,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E5h"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F5i"
+        },
+        {
+          "duration": 4,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A5q"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B5i"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "r",
+          "noteString": " Ri"
+        },
+        {
+          "duration": 16,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MINOR",
+          "note": "c",
+          "noteString": " Cbb5mins"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " Cbb5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " Cbb5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C3i"
+        },
+        {
+          "duration": 1,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G3w"
+        },
+        {
+          "duration": 2,
+          "octave": 3,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E#3h"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F#3i"
+        },
+        {
+          "duration": 4,
+          "octave": 7,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A#7q"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B#7i"
+        }
+      ]
+    },
+    {
+      "volume": 40,
+      "instrument": "Violin",
+      "trackName": "Violin Track",
+      "trackString": " V2 :CON(7,40) I40 C5i G5w E5h F5i A5q B5i Ri C5mins C5maji C5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E3h F3i A7q B7i Ri C5i G5w E5h F5i A5q B5i Ri Cbb5mins Cbb5maji Cbb5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E#3h F#3i A#7q B#7i",
+      "trackNumber": "TRACK2",
+      "notes": [
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C5i"
+        },
+        {
+          "duration": 1,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G5w"
+        },
+        {
+          "duration": 2,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E5h"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F5i"
+        },
+        {
+          "duration": 4,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A5q"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B5i"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "r",
+          "noteString": " Ri"
+        },
+        {
+          "duration": 16,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MINOR",
+          "note": "c",
+          "noteString": " C5mins"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C3i"
+        },
+        {
+          "duration": 1,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G3w"
+        },
+        {
+          "duration": 2,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E3h"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F3i"
+        },
+        {
+          "duration": 4,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A7q"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B7i"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "r",
+          "noteString": " Ri"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C5i"
+        },
+        {
+          "duration": 1,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G5w"
+        },
+        {
+          "duration": 2,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E5h"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F5i"
+        },
+        {
+          "duration": 4,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A5q"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B5i"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "r",
+          "noteString": " Ri"
+        },
+        {
+          "duration": 16,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MINOR",
+          "note": "c",
+          "noteString": " Cbb5mins"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " Cbb5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "DOUBLE_FLAT",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " Cbb5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "c",
+          "noteString": " C5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "f",
+          "noteString": " F5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 5,
+          "sharpFlat": "NONE",
+          "chord": "MAJOR",
+          "note": "g",
+          "noteString": " G5maji"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "c",
+          "noteString": " C3i"
+        },
+        {
+          "duration": 1,
+          "octave": 3,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "note": "g",
+          "noteString": " G3w"
+        },
+        {
+          "duration": 2,
+          "octave": 3,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "e",
+          "noteString": " E#3h"
+        },
+        {
+          "duration": 8,
+          "octave": 3,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "f",
+          "noteString": " F#3i"
+        },
+        {
+          "duration": 4,
+          "octave": 7,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "a",
+          "noteString": " A#7q"
+        },
+        {
+          "duration": 8,
+          "octave": 7,
+          "sharpFlat": "SHARP",
+          "chord": "NONE",
+          "note": "b",
+          "noteString": " B#7i"
+        }
+      ]
+    },
     null,
     null,
     null,

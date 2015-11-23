@@ -8,12 +8,13 @@ import umusic.uMusicTrack.TrackNumber;
 
 public class uMusicSongController {
 
-    private int masterVolume;
+    private int masterVolume = 125;
     private int timeSignatureNumerator = 4;
     private int timeSignatureDenominator = 4;
     private String tempo= "Allegro";
     private String name;
     private uMusicTrack[] trackList;
+    private uMusicPercussionTrack percussionTrack;
     
 	
         public uMusicSongController() {
@@ -63,11 +64,11 @@ public class uMusicSongController {
 	    return 0;
 	}
 
-	
+	//melody and chord tracks	
         public void addTrack(TrackNumber trackNumber, String trackName) {
             trackList[trackNumber.ordinal()] = new uMusicTrack(trackNumber, trackName);
         }
-   
+
         public void addNoteToTrack(TrackNumber trackNumber, uMusicNote note) {
 	    trackList[trackNumber.ordinal()].addNextNote(note);
         }
@@ -99,6 +100,38 @@ public class uMusicSongController {
 	    return trackList[trackNumber.ordinal()].getTrackNotes(); 
         }
 
+	//percussion tracks
+        public void addPercussionTrack(String trackName) {
+	    percussionTrack = new uMusicPercussionTrack(trackName);
+        }
+   
+	public void addRhythmToTrack(uMusicRhythm rhythm) {
+	    percussionTrack.addNextRhythm(rhythm);
+        }
+   
+        public void editRhythm(int arrayIndex, uMusicRhythm rhythm) {
+	    percussionTrack.editRhythm(arrayIndex, rhythm);
+        }
+
+        public void deleteLastRhythm() {
+	    percussionTrack.deleteLastRhythm();
+        }
+   
+        public int setPercussionTrackVolume(int volume) {
+	    int v;
+	
+	    if (volume == 0 || masterVolume == 0)
+                v=0;
+            else	
+	        v = (volume * masterVolume) / 125;
+
+	    return percussionTrack.setVolume(v);
+        }
+   
+        public ArrayList<uMusicRhythm> getTrackRhythms() {
+	    return percussionTrack.getTrackRhythms(); 
+        }
+	
         public Sequence getSongSequence() {
 	    String song = "";
 	    song += " TIME:" + timeSignatureNumerator + "/" + timeSignatureDenominator;
@@ -108,7 +141,10 @@ public class uMusicSongController {
 		if (trackList[i] != null)
                     song += trackList[i].buildTrackString();
 	    }
-	
+
+	    if (percussionTrack != null)
+	    	song += percussionTrack.buildTrackString();
+
 	    System.out.println (song);
  	    return new Player().getSequence(song);
         }

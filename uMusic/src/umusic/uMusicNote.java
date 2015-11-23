@@ -21,12 +21,11 @@ public class uMusicNote {
 	public enum Inversion {NONE, SINGLE, DOUBLE} 
 	public enum uMusicChord {NONE, MAJOR, MINOR, MAJOR7, MINOR7, MAJOR9, MINOR9} //Add other chords 
 	
-	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord c) {
+	public uMusicNote (String note, int dur, int octave, SharpFlat sf) {
 		this.note = note;	
 		this.duration = dur; 
 		this.octave = octave;
 		this.sharpFlat = sf;
-		this.chord = c;
 	}
 	
 	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord c, Inversion i) {
