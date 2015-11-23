@@ -214,6 +214,8 @@ public class UMusic extends Application {
 		int volume = 100;
 		int _volume = 0;
 
+		pc.setLiveInstrument("PIANO");
+		
 		boolean runloop = true;
 		while (runloop) {
 			System.out.println("Please enter a note and press <enter>: <a:b:c:d:e:f:g:volume:finish> ");
@@ -253,8 +255,9 @@ public class UMusic extends Application {
 		sc.setTimeSignature(4, 4);
 		sc.setMasterVolume(volume);
 		sc.addTrack(TrackNumber.TRACK0, "Track 1");
-                sc.setInstrument(TrackNumber.TRACK0, "Flute");
                 sc.setTrackVolume(TrackNumber.TRACK0, volume);
+                sc.setInstrument(TrackNumber.TRACK0, "Flute");
+		pc.setLiveInstrument("FLUTE");
 
 		boolean runloop = true;
 		while (runloop) {
@@ -391,10 +394,10 @@ public class UMusic extends Application {
 	}
 	
 	public static void test6(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
-		String line;
-		sc.setTempo("Allegro");
-		sc.setTimeSignature(4, 4);
-		sc.setMasterVolume(125);
+	    String line;
+	    sc.setTempo("Allegro");
+	    sc.setTimeSignature(4, 4);
+	    sc.setMasterVolume(125);
 	    
             uMusicRhythm r = new uMusicRhythm("beat1");
 	    r.setRhythmDuration(8);
