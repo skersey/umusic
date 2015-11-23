@@ -1,26 +1,12 @@
 package umusic;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javax.sound.midi.InvalidMidiDataException;
-import javax.sound.midi.MidiUnavailableException;
-import javax.sound.midi.Sequence;
-import org.jfugue.midi.MidiFileManager;
-import org.jfugue.pattern.Pattern;
-import org.jfugue.player.ManagedPlayer;
-import org.jfugue.player.Player;
 import umusic.uMusicNote.Inversion;
 import umusic.uMusicNote.uMusicChord;
 import umusic.uMusicNote.SharpFlat;
@@ -549,12 +535,14 @@ public class UMusic extends Application {
                                     launch(args);
                                     break;
 				case "help":
-					System.out.println("Test 1 creates 3 tracks, adds notes to the tracks and then allows");
-					System.out.println("       the user to control playback (start, pause and finish)");
-					System.out.println("Test 2 accepts notes (a,b,c,d,e,f,g) from the keyboard to be played live");
-					System.out.println("Test 3 combined test 1 and test 2.  As notes are played live, the");
-					System.out.println("       the notes are stored in a single track of a song.");
-					System.out.println("Test 4 Play Twinkle, Twinkle, Little Star");
+					System.out.println("Test 1 : Creates 3 tracks, adds notes to the tracks and then allows");
+					System.out.println("         the user to control playback (start, pause and finish)");
+					System.out.println("Test 2 : Accepts notes (a,b,c,d,e,f,g) from the keyboard to be played live");
+					System.out.println("Test 3 : Combined test 1 and test 2.  As notes are played live, the");
+					System.out.println("         the notes are stored in a single track of a song.");
+					System.out.println("Test 4 : Play Twinkle, Twinkle, Little Star");
+					System.out.println("Test 5 : Test the LiliPond Parser code");
+					System.out.println("Test 6 : Test the Percussion Track");
 					break;
 				case "quit":
 					runloop = false;
