@@ -5,7 +5,7 @@ package umusic;
  * @author bkersey
  */
 public class uMusicRhythm {
-	private int duration = 8;
+	private int duration = 4; //1,2,4,8,16 where 2=1/2, 4=1/4, 8=1/8, 16=1/16
 	private String rhythmName;
 	private String rhythmString;
 	private String[] layer = new String[PercussionInstrument.INSTRUMENT_MAX.ordinal()];

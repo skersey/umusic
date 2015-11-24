@@ -47,12 +47,11 @@ public class uMusicPercussionTrack {
 		trackString  = " V9";
 		trackString += " :CON(7," + volume + ")";
 
-		
-			Iterator <uMusicRhythm> iter = rhythms.iterator();
-			while (iter.hasNext()) {
-				uMusicRhythm next = iter.next();
-				trackString+=next.toString();
-			}
+		Iterator <uMusicRhythm> iter = rhythms.iterator();
+		while (iter.hasNext()) {
+			uMusicRhythm next = iter.next();
+			trackString+=next.toString();
+		}
 
 		return trackString;
 	}

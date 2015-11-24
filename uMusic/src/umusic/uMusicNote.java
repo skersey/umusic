@@ -7,6 +7,7 @@ import org.staccato.StaccatoParser;
 public class uMusicNote {
 	private int duration = 4; //1,2,4,8, 16 where 2=1/2, 4=1/4, 8=1/8, 16=1/16
 	private int octave = 5;   //range is 0-10
+	private boolean dotted = false;
 	private SharpFlat sharpFlat = SharpFlat.NONE;
 	private uMusicChord chord = uMusicChord.NONE;
 	private Inversion inversion = Inversion.NONE;
@@ -21,11 +22,12 @@ public class uMusicNote {
 	public enum Inversion {NONE, SINGLE, DOUBLE} 
 	public enum uMusicChord {NONE, MAJOR, MINOR, MAJOR7, MINOR7, MAJOR9, MINOR9} //Add other chords 
 	
-	public uMusicNote (String note, int dur, int octave, SharpFlat sf) {
+	public uMusicNote (String note, int dur, int octave, SharpFlat sf, boolean dotted) {
 		this.note = note;	
 		this.duration = dur; 
 		this.octave = octave;
 		this.sharpFlat = sf;
+		this.dotted = dotted;
 	}
 	
 	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord c, Inversion i) {
@@ -44,6 +46,7 @@ public class uMusicNote {
 		this.sharpFlat = copy.sharpFlat;
 		this.chord = copy.chord;
 		this.inversion = copy.inversion;
+		this.dotted = copy.dotted;
 	}
 	
 	private void buildNoteString() {
@@ -116,6 +119,9 @@ public class uMusicNote {
 				noteString += "s"; 
 			    break;
 		}
+
+		if (dotted)
+			noteString += "."; 
 	}
 	
 	@Override

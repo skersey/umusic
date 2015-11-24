@@ -10,7 +10,7 @@ public class uMusicTrack {
 	private String trackName;
 	private String trackString;
 	private TrackNumber trackNumber;
-	private ArrayList <uMusicNote> notes = new ArrayList<>();
+	private final ArrayList <uMusicNote> notes = new ArrayList<>();
 
         uMusicTrack(TrackNumber trackNumber) {
             this(trackNumber, null);
@@ -39,6 +39,7 @@ public class uMusicTrack {
 		case "Violin":
 		case "Tuba":
 		case "Oboe":
+		case "Acoustic_Bass":
 		this.instrument = i;
 			break;
 		default:
