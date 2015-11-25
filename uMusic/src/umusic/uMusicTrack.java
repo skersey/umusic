@@ -3,8 +3,6 @@ package umusic;
 import java.util.ArrayList;
 import java.util.Iterator;
 import org.jfugue.midi.MidiDictionary;
-import umusic.uMusicNote.uMusicChord;
-import umusic.uMusicNote.SharpFlat;
 
 public class uMusicTrack {
 	private int volume = 100;
@@ -12,13 +10,11 @@ public class uMusicTrack {
 	private String trackName;
 	private String trackString;
 	private TrackNumber trackNumber;
-	private ArrayList <uMusicNote> notes = new ArrayList<>();
+	private final ArrayList <uMusicNote> notes = new ArrayList<>();
 
-    uMusicTrack(TrackNumber trackNumber) {
-        this(trackNumber, null);
-    }
-
-	//inversions
+        uMusicTrack(TrackNumber trackNumber) {
+            this(trackNumber, null);
+        }
 
 	public enum TrackNumber {TRACK0, TRACK1, TRACK2, TRACK3, TRACK4, TRACK5, TRACK6, TRACK7, TRACKMAX};
 	
@@ -43,6 +39,7 @@ public class uMusicTrack {
 		case "Violin":
 		case "Tuba":
 		case "Oboe":
+		case "Acoustic_Bass":
 		this.instrument = i;
 			break;
 		default:
