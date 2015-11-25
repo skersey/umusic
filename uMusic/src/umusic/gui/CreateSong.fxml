@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="createSong" prefHeight="400.0" prefWidth="600.0" fx:controller="umusic.gui.CreateSongController">
+    <HBox>
+        <Label text="Song Title"/>
+        <TextField fx:id="title"/>
+    </HBox>
+     <HBox>
+        <Label text="Time Signature"/>
+        <fx:include source="choicebox/TimeSignatures.fxml" fx:id="timeSignature"/>
+    </HBox>    
+     <HBox>
+         <Label text="Tempo"/>
+         <TextField fx:id="tempo"/>
+    </HBox>
+    <HBox>
+        <Button text="Cancel" fx:id="closeButton" onAction="#closeButtonAction"/>
+        <Button text="Create" fx:id="createButton" onAction="#createButtonAction"/>
+    </HBox>
+</VBox>

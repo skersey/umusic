@@ -8,8 +8,11 @@ package umusic.gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,6 +29,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+import javafx.stage.WindowEvent;
 
 /**
  *
@@ -36,12 +41,10 @@ public class UMusicFXMLController implements Initializable {
     @FXML
     private Label label;
 
-    @FXML
-    BorderPane root;
 
     @FXML
-    VBox mainController ;
-    
+    VBox mainController;
+
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -49,40 +52,39 @@ public class UMusicFXMLController implements Initializable {
     }
 
     @FXML
+    private void createSong(ActionEvent event) {
+        try {
+            Parent root;
+            root = FXMLLoader.load(getClass().getResource("CreateSong.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Create New Song");
+            stage.setScene(new Scene(root, 450, 450));
+            Window owner = mainController.getScene().getWindow();
+            stage.initOwner(owner);
+//            stage.initOwner();
+            stage.show();
+        } catch (IOException ex) {
+            Logger.getLogger(UMusicFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @FXML
     private void removeTrack(ActionEvent event) throws IOException {
         Object source = event.getSource();
         if (source instanceof Button) {
-            
-            Parent parent = ((Button)source).getParent();
+
+            Parent parent = ((Button) source).getParent();
             if (parent instanceof HBox) {
-                
+
                 BorderPane rooter = (BorderPane) parent.getParent();
-                ((BorderPane)parent.getParent()).getChildren().remove(parent);
+                ((BorderPane) parent.getParent()).getChildren().remove(parent);
             }
         }
     }
 
-    @FXML
-    private void addTrack(ActionEvent event) throws IOException {
-        Node track = (Node)FXMLLoader.load(getClass().getResource("TrackRecord.fxml"));
-    
-        if (track instanceof Node) {
-            Parent parent = mainController.getParent();
-            if (parent instanceof BorderPane) {
-                BorderPane bp = (BorderPane) parent;
-                Node center = bp.getCenter();
-                if (center instanceof VBox) {
-         
-                    ((VBox) center).getChildren().add((BorderPane)track);
-                    
-                }
-            }
-        }
-    }
-
+  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }
 
 }

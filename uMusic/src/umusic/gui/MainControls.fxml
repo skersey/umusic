@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="mainController" prefWidth="650" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="create" onAction="#createSong"/>
+                        <MenuItem text="save" />
+                        <MenuItem text="open" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="exit" />
+                    </items>
+                </Menu>
+                <Menu text="Edit">
+                    <items>
+                        <MenuItem text="Add Track" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <fx:include source="SongControls.fxml"/>
+    </children>
+</VBox>

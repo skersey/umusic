@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ToolBar fx:id="songController" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umusic.gui.SongControlsController">
+           <items>
+               <HBox alignment="BOTTOM_LEFT" spacing="20">
+                  <children>
+                      <VBox>
+                         <children>
+                             <Label text="Song Title: " />
+                             <TextField editable="false" text="" fx:id="title"/>
+                         </children>
+                      </VBox>
+                      <VBox>
+                         <children>
+                             <Label text="Time Signature" />
+                             <fx:include source="choicebox/TimeSignatures.fxml" fx:id="timeSignature"/>
+                         </children>
+                      </VBox>
+                      <VBox>
+                         <children>
+                             <Label text="Tempo" />
+                             <TextField editable="false" fx:id="tempo"/>
+                         </children>                 
+                      </VBox>
+                      <Button fx:id="addTrackButton" text="Add Track" onAction="#addTrack" />
+                      
+                      
+                      <Pane style="-fx-background-color: green;" HBox.hgrow="ALWAYS" />
+                      
+                      
+                      <Button contentDisplay="CENTER" text="o" />
+                      <Button text="||" />
+                      <Button text="&gt;" />
+                  </children>
+               </HBox>
+           </items>
+        </ToolBar>    
+

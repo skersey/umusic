@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umusic.gui.UMusicFXMLController" style="-fx-padding: 10; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController" style="-fx-padding: 10; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
     <center>
         <HBox spacing="20" alignment="CENTER">
             <VBox>
@@ -25,16 +25,7 @@
             <VBox>
                 <children>
                     <Label text="Instrument" />
-                    <ChoiceBox minWidth="70.0" prefWidth="70.0">
-                        <items>
-                            <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="Clarinet" />
-                                <String fx:value="Saxaphone" />
-                                <String fx:value="Piano" />
-                                <String fx:value="Flute" />
-                            </FXCollections>
-                        </items>
-                    </ChoiceBox>
+                    <fx:include source="choicebox/Instruments.fxml"/>
                 </children>
             </VBox>
             <VBox>
