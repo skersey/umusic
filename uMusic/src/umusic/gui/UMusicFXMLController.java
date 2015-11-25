@@ -67,21 +67,6 @@ public class UMusicFXMLController implements Initializable {
             Logger.getLogger(UMusicFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    @FXML
-    private void removeTrack(ActionEvent event) throws IOException {
-        Object source = event.getSource();
-        if (source instanceof Button) {
-
-            Parent parent = ((Button) source).getParent();
-            if (parent instanceof HBox) {
-
-                BorderPane rooter = (BorderPane) parent.getParent();
-                ((BorderPane) parent.getParent()).getChildren().remove(parent);
-            }
-        }
-    }
-
   
     @Override
     public void initialize(URL url, ResourceBundle rb) {

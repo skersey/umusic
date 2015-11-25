@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -30,23 +31,44 @@ import javafx.stage.Stage;
 public class CreateTrackController implements Initializable {
 
     @FXML
-    VBox createTrack;
+    VBox ctContainer;
+    
+    @FXML
+    TextField ctName;
+    
+    @FXML
+    ChoiceBox ctType;
+    
+    @FXML
+    ChoiceBox ctInstrument;
 
     @FXML
     void createButtonAction(ActionEvent even) throws IOException {
-        Stage stage = (Stage) createTrack.getScene().getWindow();
         BorderPane trackRecord = (BorderPane)FXMLLoader.load(getClass().getResource("TrackRecord.fxml"));
-
+        
+        Stage stage = (Stage) ctContainer.getScene().getWindow();
         Scene ownerScene = stage.getOwner().getScene();
         BorderPane mainLayout = (BorderPane)ownerScene.lookup("#mainLayout");
         VBox center = (VBox)mainLayout.getCenter();
+        
+        TextField trName = (TextField) trackRecord.lookup("#trName");
+        String trackName = ctName.getText();
+        trName.setText(trackName);
+        
+        String selectedType = (String) ctType.getSelectionModel().getSelectedItem();
+        Label trTypes = (Label) trackRecord.lookup("#trType");
+        trTypes.setText(selectedType);
+        
+        ChoiceBox trInstrument = (ChoiceBox) trackRecord.lookup("#trInstrument");
+        trInstrument.setSelectionModel(ctInstrument.getSelectionModel());
+trInstrument.getSelectionModel().select(ctInstrument.getSelectionModel().getSelectedIndex());
         center.getChildren().add(trackRecord);
         stage.close();
     }
 
     @FXML
-    public void closeButtonAction(ActionEvent event) throws IOException {
-        Stage stage = (Stage) createTrack.getScene().getWindow();
+    public void cancelButtonAction(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ctContainer.getScene().getWindow();
 
         stage.close();
     }

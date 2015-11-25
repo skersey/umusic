@@ -6,27 +6,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="createTrack" prefHeight="400.0" prefWidth="600.0" fx:controller="umusic.gui.CreateTrackController">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="ctContainer" prefHeight="400.0" prefWidth="600.0" fx:controller="umusic.gui.CreateTrackController">
     <HBox>
         <children>
             <Label text="Track Name" />
-            <TextField text="Track Name Value" fx:id="name" />
+            <TextField text="Track Name Value" fx:id="ctName" />
         </children>
     </HBox>
     <HBox>
         <children>
             <Label text="Track Type" />
-            <fx:include source="choicebox/TrackTypes.fxml" fx:id="type"/>
+            <fx:include source="choicebox/TrackTypes.fxml" fx:id="ctType"/>
         </children>
     </HBox>
     <HBox>
         <children>
             <Label text="Instrument" />
-            <fx:include source="choicebox/Instruments.fxml" fx:id="instrument"/>
+            <fx:include source="choicebox/Instruments.fxml" fx:id="ctInstrument"/>
         </children>
     </HBox>
     <HBox>
-        <Button text="Cancel" fx:id="closeButton" onAction="#closeButtonAction"/>
-        <Button text="Create" fx:id="createButton" onAction="#createButtonAction"/>
+        <Button fx:id="ctCancelButton" text="Cancel" onAction="#cancelButtonAction"/>
+        <Button fx:id="ctCreateButton" text="Create" onAction="#createButtonAction"/>
     </HBox>
 </VBox>

@@ -7,35 +7,35 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController" style="-fx-padding: 10; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+<BorderPane fx:id="trContainer" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.TrackRecordController" style="-fx-padding: 10; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
     <center>
         <HBox spacing="20" alignment="CENTER">
             <VBox>
                 <children>
                     <Label text="Track Name" />
-                    <TextField editable="false" text="Track Name Value" />
+                    <TextField editable="false" text="Track Name Value" fx:id="trName" onAction="#editTrack"/>
                 </children>
             </VBox>
             <VBox>
                 <children>
                     <Label text="Track Type" />
-                    <TextField editable="false" text="Melody" />
+                    <Label fx:id="trType"/>
                 </children>
             </VBox>
             <VBox>
                 <children>
                     <Label text="Instrument" />
-                    <fx:include source="choicebox/Instruments.fxml"/>
+                    <fx:include source="choicebox/Instruments.fxml" fx:id="trInstrument"/>
                 </children>
             </VBox>
             <VBox>
                 <children>
                     <Label text="Track Volume" />
-                    <Slider max="100" min="0" maxWidth="100" />                 
+                    <Slider max="100" min="0" maxWidth="100" fx:id="trVolume"/>                 
                 </children>
             </VBox>
-            <Button text="Edit"/>
-            <Button text="X" onAction="#removeTrack"/>
+            <Button text="Edit" fx:id="trEditButton" onAction="#editTrack"/>
+            <Button text="X" fx:id="trRemoveButton" onAction="#removeTrack"/>
         </HBox> 
     </center>
     

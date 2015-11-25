@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.MelodyTrackEditorController" AnchorPane.rightAnchor="0.0" >
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" >
+        <HBox>
+            <ScrollPane fx:id="sheetMusicScroll" minWidth="400">                
+                <Label text="Sheet Music"/>
+            </ScrollPane>
+            <VBox prefWidth="150">
+                <fx:define>
+                    <ToggleGroup fx:id="durationGroup"/>
+                </fx:define>
+                <Label text="Note Duration"/>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-whole.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton text="whole" selected="true" toggleGroup="$durationGroup"/>
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-half.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton  text="half" toggleGroup="$durationGroup"/>
+    
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-quarter.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton  text="quarter" toggleGroup="$durationGroup"/>
+    
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15">
+                        <image>
+                            <Image url="@img/note-eighth.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton  text="eighth" toggleGroup="$durationGroup"/>
+    
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-sixteenth.png"/>
+                        </image>
+                    </ImageView>
+                    <RadioButton  text="sixteenth" toggleGroup="$durationGroup"/>
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/mod-dotted.png"/>
+                        </image>
+                    </ImageView>
+                    <CheckBox text="dotted" fx:id="mteDotted"/>
+    
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/mod-rest.png"/>
+                        </image>
+                    </ImageView>
+                    <CheckBox text="rest" fx:id="mteRest"/>
+    
+                </HBox>
+    
+            </VBox>
+        </HBox>
+        <ScrollPane>
+            <HBox>
+                <Label text="Enter Note Value here"/>
+                <fx:include fx:id="mteNote" source="choicebox/Notes.fxml"/>
+                <fx:include fx:id="mteOctave" source="choicebox/Octave.fxml"/>    
+                <Button text="Add" onAction="#addNote"/>
+            </HBox>
+        </ScrollPane>
+        
+    </VBox>
+</AnchorPane>

@@ -27,7 +27,12 @@ public class UMusic extends Application {
             Scene scene = new Scene(root);
 
             stage.setScene(scene);
+            stage.setMinHeight(400);
+            stage.setMinWidth(725);
+            stage.setHeight(400);
+            stage.setWidth(725);
             stage.show();
+            
         }
         
 	public static void makeTrack1 (uMusicSongController sc) {

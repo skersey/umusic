@@ -57,6 +57,7 @@ public class CreateSongController implements Initializable {
         
         ChoiceBox targetTimeSignature = (ChoiceBox) ownerScene.lookup("#timeSignature");
         targetTimeSignature.setSelectionModel(timeSignature.getSelectionModel());
+        targetTimeSignature.hide();
         
         Button targetButton = (Button) ownerScene.lookup("#addTrackButton");
         targetButton.setDisable(false);
