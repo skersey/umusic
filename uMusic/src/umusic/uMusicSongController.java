@@ -6,6 +6,10 @@ import org.jfugue.midi.MidiDictionary;
 import org.jfugue.player.Player;
 import umusic.uMusicTrack.TrackNumber;
 
+/**
+ *
+ * @author bkersey
+ */
 public class uMusicSongController {
 
     private int masterVolume = 125;
@@ -19,6 +23,8 @@ public class uMusicSongController {
 	
         public uMusicSongController() {
             trackList = new uMusicTrack[TrackNumber.TRACKMAX.ordinal()];
+	    for (int i = 0; i < TrackNumber.TRACKMAX.ordinal(); i++) 
+		trackList[i] = null; 
         }
 	
         public void setName(String name) {
@@ -34,8 +40,8 @@ public class uMusicSongController {
         }
    
         public void setTimeSignature(int numerator, int denominator) {
-	    this.timeSignatureNumerator = numerator;	//add check for errors
-	    this.timeSignatureDenominator = denominator;	//add check for errors
+	    this.timeSignatureNumerator = numerator;	
+	    this.timeSignatureDenominator = denominator;
         }
 
 	public int setTempo (String t) {
@@ -65,10 +71,30 @@ public class uMusicSongController {
 	}
 
 	//melody and chord tracks	
-        public void addTrack(TrackNumber trackNumber, String trackName) {
-            trackList[trackNumber.ordinal()] = new uMusicTrack(trackNumber, trackName);
+        public TrackNumber addTrack(String trackName) {
+	    for (int i = 0; i < TrackNumber.TRACKMAX.ordinal(); i++) {
+		if (trackList[i] == null) {
+		    TrackNumber tn = TrackNumber.values()[i];
+            	    trackList[i] = new uMusicTrack(tn, trackName);
+		    
+		    return tn;
+		}
+	    }
+
+	    return TrackNumber.TRACKMAX;
         }
 
+        public void deleteTrack(TrackNumber trackNumber) {
+            	trackList[trackNumber.ordinal()] = null;
+        }
+
+        public void deleteAllTracks() {
+	    for (int i = 0; i < TrackNumber.TRACKMAX.ordinal(); i++) 
+		trackList[i] = null;
+
+	    percussionTrack = null;
+	}
+	
         public void addNoteToTrack(TrackNumber trackNumber, uMusicNote note) {
 	    trackList[trackNumber.ordinal()].addNextNote(note);
         }
@@ -105,6 +131,10 @@ public class uMusicSongController {
 	    percussionTrack = new uMusicPercussionTrack(trackName);
         }
    
+        public void deletePercussionTrack() {
+		percussionTrack = null;
+        }
+
 	public void addRhythmToTrack(uMusicRhythm rhythm) {
 	    percussionTrack.addNextRhythm(rhythm);
         }

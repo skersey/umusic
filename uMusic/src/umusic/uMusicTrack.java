@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import org.jfugue.midi.MidiDictionary;
 
+/**
+ *
+ * @author bkersey
+ */
 public class uMusicTrack {
 	private int volume = 100;
 	private String instrument = "Piano";	
@@ -63,6 +67,10 @@ public class uMusicTrack {
 		notes.remove(notes.size()-1);
 	}
 
+	public String getTrackName() {
+		return trackName;	
+	}
+	
 	public ArrayList<uMusicNote> getTrackNotes() {
 		return (ArrayList<uMusicNote>)notes.clone();
 	}

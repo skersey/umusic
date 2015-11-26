@@ -4,6 +4,10 @@ import org.jfugue.integration.LilyPondParserListener;
 import org.jfugue.pattern.Pattern;
 import org.staccato.StaccatoParser;
 
+/**
+ *
+ * @author bkersey
+ */
 public class uMusicNote {
 	private int duration = 4; //1,2,4,8, 16 where 2=1/2, 4=1/4, 8=1/8, 16=1/16
 	private int octave = 5;   //range is 0-10
@@ -20,7 +24,22 @@ public class uMusicNote {
 	
 	public enum SharpFlat {NONE, SHARP, DOUBLE_SHARP, FLAT, DOUBLE_FLAT} 
 	public enum Inversion {NONE, SINGLE, DOUBLE} 
-	public enum uMusicChord {NONE, MAJOR, MINOR, MAJOR7, MINOR7, MAJOR9, MINOR9} //Add other chords 
+	public enum uMusicChord {
+		NONE ("none"), AUGMENTED("aug"), DIMINISHED("dim"), DIMINISHED7("dim7"), 
+		DOMINANT9("dom9"), DOMINANT11("dom11"), DOMINANT13("dom13"),
+		MAJOR("maj"), MINOR("min"), MAJOR6("maj6"), MINOR6("min6"),
+		MAJOR7("maj7"), MINOR7("min7"), MAJOR9("maj9"), MINOR9("min9"), 
+		MAJOR13("maj13"), MINOR13("min13"), SUSPENDED2("sus2"), SUSPENDED4("sus4"); 
+
+		private final String jfugue;
+    		uMusicChord(final String jfugue) {
+        		this.jfugue = jfugue;
+    		}
+
+		public String toJfugueString() {
+			return this.jfugue;
+		}
+	}
 	
 	public uMusicNote (String note, int dur, int octave, SharpFlat sf, boolean dotted) {
 		this.note = note;	
@@ -71,26 +90,7 @@ public class uMusicNote {
 			noteString += octave;
 
 		if (chord != uMusicChord.NONE) {
-			switch (chord) {
-				case MAJOR:
-					noteString += "maj";
-					break;
-				case MINOR:
-					noteString += "min";
-					break; 
-				case MAJOR7:
-					noteString += "maj7";
-					break;
-				case MINOR7:
-					noteString += "min7";
-					break; 
-				case MAJOR9:
-					noteString += "maj9";
-					break;
-				case MINOR9:
-					noteString += "min9";
-					break; 
-			}
+			noteString += chord.toJfugueString();
 
 			switch(inversion) {
 				case SINGLE:	

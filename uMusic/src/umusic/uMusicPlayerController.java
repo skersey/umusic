@@ -9,6 +9,10 @@ import org.jfugue.midi.MidiDictionary;
 import org.jfugue.player.ManagedPlayer;
 import org.jfugue.realtime.RealtimePlayer;
 
+/**
+ *
+ * @author bkersey
+ */
 public class uMusicPlayerController {
     private RealtimePlayer realTime;
     private ManagedPlayer mp;
@@ -45,6 +49,7 @@ public class uMusicPlayerController {
     }
 
     public void addSong(uMusicSongController song) {
+	mp  = new ManagedPlayer();
         sequence = song.getSongSequence();
     }
 
