@@ -6,14 +6,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<ToolBar fx:id="songController" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umusic.gui.SongControlsController">
+<ToolBar fx:id="songControlsContainer" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umusic.gui.SongControlsController">
            <items>
                <HBox alignment="BOTTOM_LEFT" spacing="20">
                   <children>
                       <VBox>
                          <children>
                              <Label text="Song Title: " />
-                             <TextField editable="false" text="" fx:id="title"/>
+                             <TextField text="" fx:id="title"/>
                          </children>
                       </VBox>
                       <VBox>
@@ -25,7 +25,7 @@
                       <VBox>
                          <children>
                              <Label text="Tempo" />
-                             <TextField editable="false" fx:id="tempo"/>
+                             <fx:include source="choicebox/Tempos.fxml" fx:id="tempo"/>
                          </children>                 
                       </VBox>
                       <Button fx:id="addTrackButton" text="Add Track" onAction="#addTrack" />
@@ -34,9 +34,9 @@
                       <Pane style="-fx-background-color: green;" HBox.hgrow="ALWAYS" />
                       
                       
-                      <Button contentDisplay="CENTER" text="o" />
-                      <Button text="||" />
-                      <Button text="&gt;" />
+                      <Button contentDisplay="CENTER" text="o" fx:id="stopButton" onAction="#stopSong"/>
+                      <Button text="||" fx:id="pauseButton" onAction="#pauseSong"/>
+                      <Button text="&gt;" fx:id="playButton" onAction="#playSong"/>
                   </children>
                </HBox>
            </items>

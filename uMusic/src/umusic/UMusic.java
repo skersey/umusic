@@ -25,7 +25,7 @@ public class UMusic extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("gui/UMusicMain.fxml"));
 
             Scene scene = new Scene(root);
-
+            uMusicAppData.getInstance().setRootScene(scene);
             stage.setScene(scene);
             stage.setMinHeight(400);
             stage.setMinWidth(725);

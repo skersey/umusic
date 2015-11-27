@@ -10,10 +10,12 @@
 <ChoiceBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <items>
         <FXCollections fx:factory="observableArrayList">
-            <String fx:value="Clarinet" />
-            <String fx:value="Saxaphone" />
-            <String fx:value="Piano" />
             <String fx:value="Flute" />
+            <String fx:value="Oboe" />
+            <String fx:value="Piano" />
+            <String fx:value="Violin" />
+            <String fx:value="Tuba" />
+            <String fx:value="Acoustic_Bass" />
         </FXCollections>
     </items>
 </ChoiceBox>

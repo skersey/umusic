@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.DrumTrackEditorController" AnchorPane.rightAnchor="0.0" >
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" >
+        <HBox>
+            <ScrollPane fx:id="dteSequencePane" minWidth="400">                
+                <Label text="Sequence Editor"/>
+            </ScrollPane>
+            <VBox prefWidth="150">
+                <Button fx:id="newBeatButton" text="New Beat"/>
+                <ScrollPane fx:id="dteBeatBank">
+                    <Label text="Beat Bank!"/>
+                </ScrollPane>
+            </VBox>
+        </HBox>
+        <ScrollPane fx:id="dteBeatEditor">
+            <VBox>
+                <HBox>
+                    <Label text="Rhythm Name"/>
+                    <TextField fx:id="dteRhythmName"/>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+        
+    </VBox>
+</AnchorPane>

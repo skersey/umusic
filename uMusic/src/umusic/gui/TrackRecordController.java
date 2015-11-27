@@ -24,12 +24,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import umusic.uMusicAppData;
+import umusic.uMusicTrack.TrackNumber;
 
 /**
  *
  * @author bruce.sailer
  */
 public class TrackRecordController implements Initializable {
+
+    private TrackNumber trackNumber;
 
     @FXML
     BorderPane trContainer;
@@ -52,22 +56,46 @@ public class TrackRecordController implements Initializable {
     @FXML
     Button trRemoveButton;
 
+    public void setTrackName(String name) {
+        trName.setText(name);
+    }
+
+    public void setType(String type) {
+        trType.setText(type);
+    }
+
+    public void setInstrument(int index) {
+        trInstrument.getSelectionModel().select(index);
+    }
+
+    public String getInstrument() {
+        return (String) trInstrument.getSelectionModel().getSelectedItem();
+    }
     @FXML
     private void editTrack(ActionEvent event) throws IOException {
         String type = trType.getText();
         Node editor = null;
+        FXMLLoader loader = null;
+        TrackEditorController controller = null;
         switch (type.toLowerCase()) {
             case "melody":
-                editor = FXMLLoader.load(getClass().getResource("MelodyTrackEditor.fxml"));
+                loader = new FXMLLoader(getClass().getResource("MelodyTrackEditor.fxml"));
+                editor = loader.load();
+                controller = (MelodyTrackEditorController) loader.getController();
+                controller.setTrackRecord(this);
                 break;
             case "rhythm":
                 break;
             case "drum":
+                editor = FXMLLoader.load(getClass().getResource("DrumTrackEditor.fxml"));
                 break;
             default:
                 System.out.println("Unknown track type: " + type);
         }
         if (editor != null) {
+            if (controller != null) {
+                controller.setTrackNumber(trackNumber);
+            }
             Stage stage = (Stage) trContainer.getScene().getWindow();
             Scene scene = stage.getScene();
             BorderPane mainLayout = (BorderPane) scene.lookup("#mainLayout");
@@ -77,11 +105,19 @@ public class TrackRecordController implements Initializable {
 
     @FXML
     private void removeTrack(ActionEvent event) throws IOException {
-
+        uMusicAppData.getInstance().getSongController().deleteTrack(trackNumber);
         Stage stage = (Stage) trContainer.getScene().getWindow();
         Scene scene = stage.getScene();
         VBox tracksContainer = (VBox) scene.lookup("#tracks");
         tracksContainer.getChildren().remove(trContainer);
+    }
+
+    public void setTrackNumber(TrackNumber trackNumber) {
+        this.trackNumber = trackNumber;
+    }
+
+    public TrackNumber getTrackNumber() {
+        return this.trackNumber;
     }
 
     @Override

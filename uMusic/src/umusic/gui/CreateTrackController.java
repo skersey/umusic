@@ -22,6 +22,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import umusic.uMusicAppData;
+import umusic.uMusicTrack.TrackNumber;
 
 /**
  * FXML Controller class
@@ -32,37 +34,33 @@ public class CreateTrackController implements Initializable {
 
     @FXML
     VBox ctContainer;
-    
+
     @FXML
     TextField ctName;
-    
+
     @FXML
     ChoiceBox ctType;
-    
+
     @FXML
     ChoiceBox ctInstrument;
 
     @FXML
     void createButtonAction(ActionEvent even) throws IOException {
-        BorderPane trackRecord = (BorderPane)FXMLLoader.load(getClass().getResource("TrackRecord.fxml"));
-        
+        TrackNumber trackNumber = uMusicAppData.getInstance().getSongController().addTrack(ctName.getText());
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("TrackRecord.fxml"));
+        BorderPane trackRecord = (BorderPane) loader.load();
+        TrackRecordController trController = loader.getController();
+
+        trController.setTrackNumber(trackNumber);
+        trController.setTrackName(ctName.getText());
+        trController.setType((String) ctType.getSelectionModel().getSelectedItem());
+        trController.setInstrument(ctInstrument.getSelectionModel().getSelectedIndex());
+
+        // add the track record to the song editor
+        uMusicAppData.getInstance().getSongEditor().getChildren().add(trackRecord);
+
         Stage stage = (Stage) ctContainer.getScene().getWindow();
-        Scene ownerScene = stage.getOwner().getScene();
-        BorderPane mainLayout = (BorderPane)ownerScene.lookup("#mainLayout");
-        VBox center = (VBox)mainLayout.getCenter();
-        
-        TextField trName = (TextField) trackRecord.lookup("#trName");
-        String trackName = ctName.getText();
-        trName.setText(trackName);
-        
-        String selectedType = (String) ctType.getSelectionModel().getSelectedItem();
-        Label trTypes = (Label) trackRecord.lookup("#trType");
-        trTypes.setText(selectedType);
-        
-        ChoiceBox trInstrument = (ChoiceBox) trackRecord.lookup("#trInstrument");
-        trInstrument.setSelectionModel(ctInstrument.getSelectionModel());
-trInstrument.getSelectionModel().select(ctInstrument.getSelectionModel().getSelectedIndex());
-        center.getChildren().add(trackRecord);
         stage.close();
     }
 
@@ -78,7 +76,8 @@ trInstrument.getSelectionModel().select(ctInstrument.getSelectionModel().getSele
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        this.ctInstrument.getSelectionModel().select(2);
+        this.ctType.getSelectionModel().select(0);
     }
 
 }

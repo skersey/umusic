@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -22,8 +23,10 @@ import javafx.scene.control.ToolBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import umusic.uMusicAppData;
 
 /**
  * FXML Controller class
@@ -33,10 +36,10 @@ import javafx.stage.Stage;
 public class CreateSongController implements Initializable {
 
     @FXML
-    VBox createSong;
+    VBox createSongContainer;
 
     @FXML
-    TextField tempo;
+    ChoiceBox tempo;
 
     @FXML
     TextField title;
@@ -46,32 +49,29 @@ public class CreateSongController implements Initializable {
 
     @FXML
     void createButtonAction(ActionEvent even) throws IOException {
-        Stage stage = (Stage) createSong.getScene().getWindow();
+        Stage stage = (Stage) createSongContainer.getScene().getWindow();
 
         Scene ownerScene = stage.getOwner().getScene();
-        TextField targetTitle = (TextField) ownerScene.lookup("#title");
-        targetTitle.setText(title.getText());
-        
-        TextField targetTempo = (TextField) ownerScene.lookup("#tempo");
-        targetTempo.setText(tempo.getText());
-        
-        ChoiceBox targetTimeSignature = (ChoiceBox) ownerScene.lookup("#timeSignature");
-        targetTimeSignature.setSelectionModel(timeSignature.getSelectionModel());
-        targetTimeSignature.hide();
-        
-        Button targetButton = (Button) ownerScene.lookup("#addTrackButton");
-        targetButton.setDisable(false);
-        
-        BorderPane mainLayout = (BorderPane) ownerScene.lookup("#mainLayout");
-        VBox tracks = new VBox();
-        tracks.setId("tracks");
-        mainLayout.setCenter(tracks);
+
+        uMusicAppData.getInstance().createSong(title.getText(), (String) tempo.getSelectionModel().getSelectedItem(), (String) timeSignature.getSelectionModel().getSelectedItem());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SongControls.fxml"));
+        ToolBar newSongControls = (ToolBar) loader.load();
+        SongControlsController scController = loader.getController();
+        Pane existingSongControls = (Pane) ownerScene.lookup("#mcSongControls");
+        existingSongControls.getChildren().clear();
+        existingSongControls.getChildren().add(newSongControls);
+
+        scController.setTitle(title.getText());
+        scController.setTimeSignature(timeSignature.getSelectionModel().getSelectedIndex());
+        scController.setTempo(tempo.getSelectionModel().getSelectedIndex());
+        scController.enableControls();
+        uMusicAppData.getInstance().initSongEditor().showSongEditor();
         stage.close();
     }
 
     @FXML
     public void closeButtonAction(ActionEvent event) throws IOException {
-        Stage stage = (Stage) createSong.getScene().getWindow();
+        Stage stage = (Stage) createSongContainer.getScene().getWindow();
 
         stage.close();
     }
@@ -81,9 +81,8 @@ public class CreateSongController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        if (rb == null) {
-
-        }
+        this.timeSignature.getSelectionModel().select(3);
+        this.tempo.getSelectionModel().select(10);
     }
 
 }

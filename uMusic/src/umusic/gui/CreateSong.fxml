@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="createSong" prefHeight="400.0" prefWidth="600.0" fx:controller="umusic.gui.CreateSongController">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="createSongContainer" prefHeight="400.0" prefWidth="600.0" fx:controller="umusic.gui.CreateSongController">
     <HBox>
         <Label text="Song Title"/>
         <TextField fx:id="title"/>
@@ -17,7 +17,7 @@
     </HBox>    
      <HBox>
          <Label text="Tempo"/>
-         <TextField fx:id="tempo"/>
+         <fx:include source="choicebox/Tempos.fxml" fx:id="tempo"/>
     </HBox>
     <HBox>
         <Button text="Cancel" fx:id="closeButton" onAction="#closeButtonAction"/>

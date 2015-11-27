@@ -10,8 +10,12 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.MelodyTrackEditorController" AnchorPane.rightAnchor="0.0" >
     <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" >
         <HBox>
+           <Button text="Back" onAction="#backButtonAction"/>
+        </HBox>
+        <HBox>
             <ScrollPane fx:id="sheetMusicScroll" minWidth="400">                
-                <Label text="Sheet Music"/>
+                <TextArea fx:id="mteMusic" text="Sheet Music"/>
+                
             </ScrollPane>
             <VBox prefWidth="150">
                 <fx:define>
@@ -92,6 +96,7 @@
                 <fx:include fx:id="mteNote" source="choicebox/Notes.fxml"/>
                 <fx:include fx:id="mteOctave" source="choicebox/Octave.fxml"/>    
                 <Button text="Add" onAction="#addNote"/>
+                <Button text="Play Note" onAction="#playNote"/>
             </HBox>
         </ScrollPane>
         

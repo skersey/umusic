@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorPane" minHeight="400.0" minWidth="700.0" prefHeight="200" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
+<AnchorPane fx:id="anchorPane" minHeight="400.0" minWidth="700.0" prefHeight="200" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
     <children>
         <BorderPane fx:id="mainLayout" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <top> 

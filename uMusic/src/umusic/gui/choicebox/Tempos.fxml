@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<ChoiceBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Grave" />
+            <String fx:value="Largo" />
+            <String fx:value="Larghetto" />
+            <String fx:value="Lento" />
+            <String fx:value="Adagio" />
+            <String fx:value="Adagietto" />
+            <String fx:value="Andante" />
+            <String fx:value="Andantino" />
+            <String fx:value="Moderato" />
+            <String fx:value="Allegretto" />
+            <String fx:value="Allegro" />
+            <String fx:value="Vivace" />
+            <String fx:value="Presto" />
+            <String fx:value="Pretissimo" />
+        </FXCollections>
+    </items>
+</ChoiceBox>

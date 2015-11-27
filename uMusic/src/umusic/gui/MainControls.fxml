@@ -27,6 +27,8 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <fx:include source="SongControls.fxml"/>
+        <Pane fx:id="mcSongControls">
+            <fx:include source="SongControls.fxml"/>
+        </Pane>
     </children>
 </VBox>
