@@ -1,6 +1,7 @@
 package umusic;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.sound.midi.Sequence;
 import org.jfugue.midi.MidiDictionary;
 import org.jfugue.player.Player;
@@ -19,7 +20,10 @@ public class uMusicSongController {
     private String name;
     private uMusicTrack[] trackList;
     private uMusicPercussionTrack percussionTrack;
-    
+    public ArrayList<String> tempoList = new ArrayList<>(Arrays.asList("Grave", 
+	    "Largo", "Larghetto", "Lento", "Adagio", "Adagietto", "Andante", 
+	    "Andantino", "Moderato", "Allegretto", "Allegro", "Vivace", 
+	    "Presto", "Pretissimo")); 
 	
         public uMusicSongController() {
             trackList = new uMusicTrack[TrackNumber.TRACKMAX.ordinal()];
@@ -44,32 +48,16 @@ public class uMusicSongController {
 	    this.timeSignatureDenominator = denominator;
         }
 
-	public int setTempo (String t) {
-            switch (t) {
-		case "Grave":
-		case "Largo":
-		case "Larghetto":
-		case "Lento":
-		case "Adagio":
-		case "Adagietto":
-		case "Andante":
-		case "Andantino":
-		case "Moderato":
-		case "Allegretto":
-		case "Allegro":
-		case "Vivace":
-		case "Presto":
-		case "Pretissimo":
-		this.tempo = t;
-			break;
-		default:
-		    System.out.println("The tempo name is not valid: " + t );	
-		    return -1;
-            }
-
+	public int setTempo (String t) { 
+	    if (tempoList.contains(t) == false) {
+	        System.out.println("The tempo name is not valid: " + t );	
+	        return -1;
+	    }
+		
+	    this.tempo = t;
 	    return 0;
 	}
-
+	
 	//melody and chord tracks	
         public TrackNumber addTrack(String trackName) {
 	    for (int i = 0; i < TrackNumber.TRACKMAX.ordinal(); i++) {
@@ -161,6 +149,10 @@ public class uMusicSongController {
         public ArrayList<uMusicRhythm> getTrackRhythms() {
 	    return percussionTrack.getTrackRhythms(); 
         }
+
+	public ArrayList<String> getSupportedTempos() {
+		return (ArrayList<String>) tempoList.clone();
+	}
 	
         public Sequence getSongSequence() {
 	    String song = "";

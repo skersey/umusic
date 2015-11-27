@@ -220,7 +220,7 @@ public class UMusic extends Application {
 		String line;
 
 		sc.setName("My Song");
-		sc.setTempo("Allegro");
+		sc.setTempo("Largo");
 		sc.setTimeSignature(4, 4);
 		sc.setMasterVolume(125);
 		

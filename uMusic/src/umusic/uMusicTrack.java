@@ -1,6 +1,7 @@
 package umusic;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import org.jfugue.midi.MidiDictionary;
 
@@ -15,7 +16,10 @@ public class uMusicTrack {
 	private String trackString;
 	private TrackNumber trackNumber;
 	private final ArrayList <uMusicNote> notes = new ArrayList<>();
-
+        public ArrayList<String> InstrumentList = new ArrayList<>(Arrays.asList(
+		 "Flute", "Piano", "Guitar", "Alto_Sax", "Soprano_Sax", "Clarinet",
+		 "Violin", "Tuba", "Oboe", "Acoustic_Bass"));
+		
         uMusicTrack(TrackNumber trackNumber) {
             this(trackNumber, null);
         }
@@ -36,22 +40,13 @@ public class uMusicTrack {
 	}
 	
 	public int setInstrument (String i) {
-            switch (i) {
-		case "Flute":
-		case "Piano":
-		case "Guitar":
-		case "Violin":
-		case "Tuba":
-		case "Oboe":
-		case "Acoustic_Bass":
-		this.instrument = i;
-			break;
-		default:
+		if (InstrumentList.contains(i) == false) {
 		    System.out.println("The instrument is not valid: " + i );	
 		    return -1;
-            }
+	        }
 
-	    return 0;
+		this.instrument = i;
+	    	return 0;
 	}
 
 	public int addNextNote (uMusicNote n) {
@@ -73,6 +68,10 @@ public class uMusicTrack {
 	
 	public ArrayList<uMusicNote> getTrackNotes() {
 		return (ArrayList<uMusicNote>)notes.clone();
+	}
+
+	public ArrayList<String> getSupportedInstruments() {
+		return (ArrayList<String>) InstrumentList.clone();
 	}
 	
 	public String buildTrackString () {
