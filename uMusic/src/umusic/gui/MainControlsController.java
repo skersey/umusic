@@ -31,12 +31,13 @@ import javafx.stage.Popup;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
+import umusic.uMusicAppData;
 
 /**
  *
  * @author bruce.sailer
  */
-public class UMusicFXMLController implements Initializable {
+public class MainControlsController implements Initializable {
 
     @FXML
     private Label label;
@@ -59,17 +60,28 @@ public class UMusicFXMLController implements Initializable {
             Stage stage = new Stage();
             stage.setTitle("Create New Song");
             stage.setScene(new Scene(root, 450, 450));
-            Window owner = mainController.getScene().getWindow();
-            stage.initOwner(owner);
-//            stage.initOwner();
             stage.show();
         } catch (IOException ex) {
-            Logger.getLogger(UMusicFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MainControlsController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
   
+    
+    @FXML
+    private void addTrack(ActionEvent event) throws IOException {
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("CreateTrack.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Create New Track");
+        stage.setScene(new Scene(root, 450, 450));
+//        Window owner = songControlsContainer.getScene().getWindow();
+//        stage.initOwner(owner);
+        stage.show();
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        uMusicAppData.getInstance().setMainControlsController(this);
     }
 
 }

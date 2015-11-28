@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="mainController" prefWidth="650" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.UMusicFXMLController">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="mainController" xmlns="http://javafx.com/javafx/8" fx:controller="umusic.gui.MainControlsController">
     <children>
         <MenuBar>
             <menus>
@@ -22,13 +22,12 @@
                 </Menu>
                 <Menu text="Edit">
                     <items>
-                        <MenuItem text="Add Track" />
+                        <MenuItem text="Add Track" onAction="#addTrack"/>
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <Pane fx:id="mcSongControls">
-            <fx:include source="SongControls.fxml"/>
-        </Pane>
+        
+        <fx:include source="SongControls.fxml"/>
     </children>
 </VBox>

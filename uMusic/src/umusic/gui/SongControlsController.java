@@ -67,25 +67,20 @@ public class SongControlsController implements Initializable {
     void pauseSong(ActionEvent event) {
         uMusicAppData.getInstance().pauseSong();
     }
-    
+
     @FXML
     void stopSong(ActionEvent event) {
         uMusicAppData.getInstance().stopSong();
     }
+
     @FXML
     private void addTrack(ActionEvent event) throws IOException {
-        try {
-            Parent root;
-            root = FXMLLoader.load(getClass().getResource("CreateTrack.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("Create New Track");
-            stage.setScene(new Scene(root, 450, 450));
-            Window owner = songControlsContainer.getScene().getWindow();
-            stage.initOwner(owner);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(UMusicFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("CreateTrack.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Create New Track");
+        stage.setScene(new Scene(root, 450, 450));
+        stage.show();
     }
 
     public void setTitle(String titleStr) {
@@ -119,6 +114,7 @@ public class SongControlsController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        uMusicAppData.getInstance().setSongControlsController(this);
         disableControls();
     }
 

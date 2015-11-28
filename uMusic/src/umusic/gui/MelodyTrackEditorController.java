@@ -133,10 +133,12 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     private List<Node> renderTrackDisplay() {
         List<Node> trackRender = new ArrayList<Node>();
         ArrayList<uMusicNote> trackNotes = uMusicAppData.getInstance().getSongController().getTrackNotes(getTrackNumber());
-        
+        int noteIndex = 0;
         for (uMusicNote note : trackNotes) {
             Label noteLabel = new Label();
             noteLabel.setText(note.toString());
+            NoteLabelData data = new NoteLabelData(getTrackNumber(), getTrackRecord(), noteIndex++);
+            noteLabel.setUserData(data);
             noteLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
                 @Override
@@ -144,12 +146,14 @@ public class MelodyTrackEditorController extends TrackEditorController implement
                     if (event.getButton().equals(MouseButton.SECONDARY)) {
                         final ContextMenu contextMenu = new ContextMenu();
                         MenuItem removeNote = new MenuItem("Remove");
-                        
+
                         MenuItem editNote = new MenuItem("Edit");
                         removeNote.setOnAction(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
-                                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                                NoteLabelData data = (NoteLabelData) noteLabel.getUserData();
+                                uMusicAppData.getInstance().getSongController().deleteNote(getTrackNumber(), data.noteIndex);
+                                refreshEditor();
                             }
                         });
                         editNote.setOnAction(new EventHandler<ActionEvent>() {
@@ -164,7 +168,6 @@ public class MelodyTrackEditorController extends TrackEditorController implement
                 }
             });
             trackRender.add(noteLabel);
-
         }
         return trackRender;
     }
@@ -183,4 +186,28 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         mteOctave.getSelectionModel().select(4);
     }
 
+    private class NoteLabelData {
+
+        TrackNumber trackNumber;
+        TrackRecordController trackRecord;
+        int noteIndex;
+
+        public NoteLabelData(TrackNumber trackNumber, TrackRecordController trackRecord, int noteIndex) {
+            this.trackNumber = trackNumber;
+            this.trackRecord = trackRecord;
+            this.noteIndex = noteIndex;
+        }
+
+        public TrackNumber getTrackNumber() {
+            return trackNumber;
+        }
+
+        public TrackRecordController getTrackRecord() {
+            return trackRecord;
+        }
+
+        public int getNoteIndex() {
+            return noteIndex;
+        }
+    }
 }

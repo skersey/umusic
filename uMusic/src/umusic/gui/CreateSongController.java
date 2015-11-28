@@ -50,17 +50,15 @@ public class CreateSongController implements Initializable {
     @FXML
     void createButtonAction(ActionEvent even) throws IOException {
         Stage stage = (Stage) createSongContainer.getScene().getWindow();
-
-        Scene ownerScene = stage.getOwner().getScene();
-
         uMusicAppData.getInstance().createSong(title.getText(), tempo.getSelectionModel().getSelectedItem().toString(), timeSignature.getSelectionModel().getSelectedItem().toString());
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("SongControls.fxml"));
-        ToolBar newSongControls = (ToolBar) loader.load();
-        SongControlsController scController = loader.getController();
-        Pane existingSongControls = (Pane) ownerScene.lookup("#mcSongControls");
-        existingSongControls.getChildren().clear();
-        existingSongControls.getChildren().add(newSongControls);
-
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("SongControls.fxml"));
+//        AnchorPane newSongControls = (AnchorPane) loader.load();
+//        SongControlsController scController = loader.getController();
+//        BorderPane mainLayout = uMusicAppData.getInstance().getMainLayout();
+//        AnchorPane existingSongControls = (AnchorPane) mainLayout.lookup("#mcSongControls");
+//        existingSongControls.getChildren().clear();
+//        existingSongControls.getChildren().add(newSongControls);
+        SongControlsController scController = uMusicAppData.getInstance().getSongControlsController();
         scController.setTitle(title.getText());
         scController.setTimeSignature(timeSignature.getSelectionModel().getSelectedIndex());
         scController.setTempo(tempo.getSelectionModel().getSelectedIndex());

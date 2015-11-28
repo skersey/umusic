@@ -9,18 +9,24 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import umusic.gui.MainControlsController;
+import umusic.gui.SongControlsController;
 
 /**
  *
  * @author bruce.sailer
  */
-public class uMusicAppData {    
+public class uMusicAppData {
+
     private static final String ID_SONG_EDITOR = "songEditorNode";
     private static uMusicAppData instance = null;
     private uMusicSongController songController = null;
     private final uMusicPlayerController playerController = new uMusicPlayerController();
     private Scene rootScene;
     private VBox songEditorNode;
+    private MainControlsController mainControlsController;
+    private SongControlsController songControlsController;
+
     protected uMusicAppData() {
     }
 
@@ -37,7 +43,6 @@ public class uMusicAppData {
         return instance;
     }
 
-
     public uMusicAppData closeSong() {
         songController = null;
         return instance;
@@ -52,17 +57,17 @@ public class uMusicAppData {
     public VBox getSongEditor() {
         return songEditorNode;
     }
-    
+
     public uMusicAppData showSongEditor() {
         BorderPane mainLayout = getMainLayout();
         mainLayout.setCenter(songEditorNode);
         return instance;
     }
-    
+
     public BorderPane getMainLayout() {
         return (BorderPane) rootScene.lookup("#mainLayout");
     }
-    
+
     public uMusicAppData createSong(String name, String tempo, String timeSignature) {
         songController = new uMusicSongController();
         songController.setName(name);
@@ -82,15 +87,15 @@ public class uMusicAppData {
         playerController.addSong(songController);
         playerController.startSong();
     }
-    
+
     public void pauseSong() {
         playerController.pauseSong();
     }
-    
+
     public void stopSong() {
         playerController.finishSong();
     }
-    
+
     public uMusicPlayerController getPlayerController() {
         return playerController;
     }
@@ -98,5 +103,21 @@ public class uMusicAppData {
     public uMusicAppData setRootScene(Scene scene) {
         rootScene = scene;
         return instance;
+    }
+
+    public MainControlsController getMainControlsController() {
+        return mainControlsController;
+    }
+
+    public void setMainControlsController(MainControlsController controller) {
+        this.mainControlsController = controller;
+    }
+
+    public void setSongControlsController(SongControlsController controller) {
+        this.songControlsController = controller;
+    }
+    
+    public SongControlsController getSongControlsController() {
+        return songControlsController;
     }
 }

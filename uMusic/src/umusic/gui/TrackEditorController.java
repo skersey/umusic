@@ -13,7 +13,7 @@ import umusic.uMusicTrack.TrackNumber;
  */
 abstract class TrackEditorController {
 
-    TrackNumber trackNumber;
+    private TrackNumber trackNumber;
     private TrackRecordController trackRecord;
 
     public TrackNumber getTrackNumber() {
