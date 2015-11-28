@@ -7,16 +7,24 @@ package umusic.gui;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import umusic.uMusicAppData;
 import umusic.uMusicNote;
 import umusic.uMusicNote.SharpFlat;
@@ -30,7 +38,7 @@ import umusic.uMusicTrack.TrackNumber;
 public class MelodyTrackEditorController extends TrackEditorController implements Initializable {
 
     @FXML
-    TextArea mteMusic;
+    HBox sheetMusicPane;
 
     @FXML
     ChoiceBox mteNote;
@@ -40,6 +48,9 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
     @FXML
     ToggleGroup durationGroup;
+
+    @FXML
+    ToggleGroup sharpFlatGroup;
 
     @FXML
     CheckBox mteRest;
@@ -55,7 +66,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         boolean dotted = false;
 
         if (!mteRest.isSelected()) {
-            note = (String) mteNote.getSelectionModel().getSelectedItem();
+            note = mteNote.getSelectionModel().getSelectedItem().toString();
         }
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
         String durationStr = selectedDuration.getText();
@@ -76,7 +87,21 @@ public class MelodyTrackEditorController extends TrackEditorController implement
                 duration = 16;
                 break;
         }
-        octave = Integer.valueOf((String) mteOctave.getSelectionModel().getSelectedItem());
+
+        RadioButton selectedSharpFlat = (RadioButton) sharpFlatGroup.getSelectedToggle();
+        String sharpFlatStr = selectedSharpFlat.getText();
+        switch (sharpFlatStr) {
+            case "sharp":
+                sf = SharpFlat.SHARP;
+                break;
+            case "flat":
+                sf = SharpFlat.FLAT;
+                break;
+            default:
+                sf = SharpFlat.NONE;
+                break;
+        }
+        octave = Integer.valueOf(mteOctave.getSelectionModel().getSelectedItem().toString());
         dotted = mteDotted.isSelected();
         return new uMusicNote(note, duration, octave, sf, dotted);
     }
@@ -95,8 +120,53 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
         uMusicAppData.getInstance().getPlayerController().playLiveNote(note, 100);
         uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
+        refreshEditor();
+    }
 
-        this.mteMusic.setText(uMusicAppData.getInstance().getSongController().getTrackNotes(getTrackNumber()).toString());
+    @Override
+    public MelodyTrackEditorController refreshEditor() {
+        sheetMusicPane.getChildren().clear();
+        sheetMusicPane.getChildren().addAll(renderTrackDisplay());
+        return this;
+    }
+
+    private List<Node> renderTrackDisplay() {
+        List<Node> trackRender = new ArrayList<Node>();
+        ArrayList<uMusicNote> trackNotes = uMusicAppData.getInstance().getSongController().getTrackNotes(getTrackNumber());
+        
+        for (uMusicNote note : trackNotes) {
+            Label noteLabel = new Label();
+            noteLabel.setText(note.toString());
+            noteLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent event) {
+                    if (event.getButton().equals(MouseButton.SECONDARY)) {
+                        final ContextMenu contextMenu = new ContextMenu();
+                        MenuItem removeNote = new MenuItem("Remove");
+                        
+                        MenuItem editNote = new MenuItem("Edit");
+                        removeNote.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                            }
+                        });
+                        editNote.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                            }
+                        });
+                        contextMenu.getItems().addAll(removeNote, editNote);
+                        noteLabel.setContextMenu(contextMenu);
+                    }
+                }
+            });
+            trackRender.add(noteLabel);
+
+        }
+        return trackRender;
     }
 
     @FXML

@@ -53,7 +53,7 @@ public class CreateSongController implements Initializable {
 
         Scene ownerScene = stage.getOwner().getScene();
 
-        uMusicAppData.getInstance().createSong(title.getText(), (String) tempo.getSelectionModel().getSelectedItem(), (String) timeSignature.getSelectionModel().getSelectedItem());
+        uMusicAppData.getInstance().createSong(title.getText(), tempo.getSelectionModel().getSelectedItem().toString(), timeSignature.getSelectionModel().getSelectedItem().toString());
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SongControls.fxml"));
         ToolBar newSongControls = (ToolBar) loader.load();
         SongControlsController scController = loader.getController();

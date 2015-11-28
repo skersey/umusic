@@ -11,9 +11,9 @@ import umusic.uMusicTrack.TrackNumber;
  *
  * @author bruce.sailer
  */
-class TrackEditorController {
+abstract class TrackEditorController {
 
-    private TrackNumber trackNumber;
+    TrackNumber trackNumber;
     private TrackRecordController trackRecord;
 
     public TrackNumber getTrackNumber() {
@@ -31,4 +31,6 @@ class TrackEditorController {
     public TrackRecordController getTrackRecord() {
         return this.trackRecord;
     }
+    
+    public abstract TrackEditorController refreshEditor();
 }

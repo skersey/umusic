@@ -69,7 +69,7 @@ public class TrackRecordController implements Initializable {
     }
 
     public String getInstrument() {
-        return (String) trInstrument.getSelectionModel().getSelectedItem();
+        return trInstrument.getSelectionModel().getSelectedItem().toString();
     }
     @FXML
     private void editTrack(ActionEvent event) throws IOException {
@@ -95,6 +95,7 @@ public class TrackRecordController implements Initializable {
         if (editor != null) {
             if (controller != null) {
                 controller.setTrackNumber(trackNumber);
+                controller.refreshEditor();
             }
             Stage stage = (Stage) trContainer.getScene().getWindow();
             Scene scene = stage.getScene();
@@ -106,10 +107,7 @@ public class TrackRecordController implements Initializable {
     @FXML
     private void removeTrack(ActionEvent event) throws IOException {
         uMusicAppData.getInstance().getSongController().deleteTrack(trackNumber);
-        Stage stage = (Stage) trContainer.getScene().getWindow();
-        Scene scene = stage.getScene();
-        VBox tracksContainer = (VBox) scene.lookup("#tracks");
-        tracksContainer.getChildren().remove(trContainer);
+        uMusicAppData.getInstance().getSongEditor().getChildren().remove(trContainer);
     }
 
     public void setTrackNumber(TrackNumber trackNumber) {

@@ -10,16 +10,19 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.MelodyTrackEditorController" AnchorPane.rightAnchor="0.0" >
     <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" >
         <HBox>
-           <Button text="Back" onAction="#backButtonAction"/>
+            <Button text="Back" onAction="#backButtonAction"/>
         </HBox>
         <HBox>
-            <ScrollPane fx:id="sheetMusicScroll" minWidth="400">                
-                <TextArea fx:id="mteMusic" text="Sheet Music"/>
+            <ScrollPane fx:id="sheetMusicScroll" minWidth="400">               
+                <HBox fx:id="sheetMusicPane"/>
                 
             </ScrollPane>
             <VBox prefWidth="150">
                 <fx:define>
                     <ToggleGroup fx:id="durationGroup"/>
+                </fx:define>
+                <fx:define>
+                    <ToggleGroup fx:id="sharpFlatGroup"/>
                 </fx:define>
                 <Label text="Note Duration"/>
                 <HBox>
@@ -85,13 +88,17 @@
                         </image>
                     </ImageView>
                     <CheckBox text="rest" fx:id="mteRest"/>
-    
+                </HBox>
+                <HBox>
+                    <RadioButton text="flat" toggleGroup="$sharpFlatGroup"/>
+                    <RadioButton selected="true" text="none" toggleGroup="$sharpFlatGroup"/>
+                    <RadioButton text="sharp" toggleGroup="$sharpFlatGroup"/>
                 </HBox>
     
             </VBox>
         </HBox>
         <ScrollPane>
-            <HBox>
+            <HBox spacing="10">
                 <Label text="Enter Note Value here"/>
                 <fx:include fx:id="mteNote" source="choicebox/Notes.fxml"/>
                 <fx:include fx:id="mteOctave" source="choicebox/Octave.fxml"/>    

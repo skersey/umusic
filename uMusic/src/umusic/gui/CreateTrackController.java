@@ -54,7 +54,7 @@ public class CreateTrackController implements Initializable {
 
         trController.setTrackNumber(trackNumber);
         trController.setTrackName(ctName.getText());
-        trController.setType((String) ctType.getSelectionModel().getSelectedItem());
+        trController.setType(ctType.getSelectionModel().getSelectedItem().toString());
         trController.setInstrument(ctInstrument.getSelectionModel().getSelectedIndex());
 	// set the instrument in the songController
         uMusicAppData.getInstance().getSongController().setInstrument(trackNumber, ctInstrument.getSelectionModel().getSelectedItem().toString());
