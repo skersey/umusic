@@ -174,4 +174,16 @@ public class uMusicSongController {
 	    System.out.println (song);
  	    return new Player().getSequence(song);
         }
+
+	public Sequence getTrackSequence(TrackNumber trackNumber) {
+	    String song = "";
+	    song += " TIME:" + timeSignatureNumerator + "/" + timeSignatureDenominator;
+            song += " T" + MidiDictionary.TEMPO_STRING_TO_INT.get(tempo.toUpperCase());
+	
+	    if (trackList[trackNumber.ordinal()] != null)
+                song += trackList[trackNumber.ordinal()].buildTrackString();
+
+	    System.out.println (song);
+ 	    return new Player().getSequence(song);
+        }
 }

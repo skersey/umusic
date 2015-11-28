@@ -141,7 +141,7 @@ public class UMusic extends Application {
 	public static void makeChordTrack (uMusicSongController sc) {
             TrackNumber tn = sc.addTrack("Piano Track");
             sc.setInstrument(tn, "Piano");
-            sc.setTrackVolume(tn, 50);
+            sc.setTrackVolume(tn, 60);
 
 	    sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.AUGMENTED, Inversion.NONE));
             sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DIMINISHED, Inversion.NONE));
@@ -186,6 +186,31 @@ public class UMusic extends Application {
             sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.SUSPENDED4, Inversion.DOUBLE));
 	}
 
+	public static void playChordsLive (uMusicPlayerController pc) {
+            pc.setLiveInstrument("Piano");
+
+	     pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.AUGMENTED, Inversion.NONE), 100);
+             pc.playLiveNote(new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DIMINISHED, Inversion.NONE), 100);
+             pc.playLiveNote(new uMusicNote("c", 2, 5, SharpFlat.NONE, uMusicChord.DIMINISHED7, Inversion.NONE), 100);
+             pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT9, Inversion.NONE), 100);
+             pc.playLiveNote(new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DOMINANT11, Inversion.NONE), 100);
+             pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT13, Inversion.NONE), 100);
+
+	     pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR, Inversion.SINGLE), 100);
+             pc.playLiveNote(new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MINOR, Inversion.SINGLE), 100);
+             pc.playLiveNote(new uMusicNote("b", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR6, Inversion.SINGLE), 100);
+             pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR6, Inversion.SINGLE), 100);
+             pc.playLiveNote(new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MAJOR7, Inversion.SINGLE), 100);
+             pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR7, Inversion.SINGLE), 100);
+
+	     pc.playLiveNote(new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR9, Inversion.DOUBLE), 100);
+             pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.MINOR9, Inversion.DOUBLE), 100);
+             pc.playLiveNote(new uMusicNote("g", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR13, Inversion.DOUBLE), 100);
+             pc.playLiveNote(new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MINOR13, Inversion.DOUBLE), 100);
+             pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED2, Inversion.DOUBLE), 100);
+             pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED4, Inversion.DOUBLE), 100);
+
+	}	
 
 	public static void makePercussionTrack (uMusicSongController sc) {
 	    uMusicRhythm r = new uMusicRhythm("beat1");
@@ -233,7 +258,7 @@ public class UMusic extends Application {
 
 		boolean runloop = true;
 		while (runloop) {
-			System.out.println("Please enter a command: <start:pause:finish> ");
+			System.out.println("Please enter a command: <start:pause:finish:track1:track2:allTracks> ");
 			line = input.nextLine();
 			switch (line) {
 				case "start":
@@ -246,6 +271,15 @@ public class UMusic extends Application {
 					pc.finishSong();
 					sc.deleteAllTracks();
 					runloop = false;
+					break;
+				case "track1":
+					pc.addTrack(TrackNumber.TRACK1, sc);
+					break;
+				case "track2":
+					pc.addTrack(TrackNumber.TRACK2, sc);
+					break;
+				case "allTracks":
+					pc.addSong(sc);
 					break;
 			}
 		}
@@ -476,6 +510,10 @@ public class UMusic extends Application {
 	    sc.setTimeSignature(4, 4);
 	    sc.setMasterVolume(125);
 
+	    System.out.println("Testing the chords using the Live Player");
+	    playChordsLive(pc);
+
+	    System.out.println("Testing the chords using the Managed Player");
 	    makeChordTrack(sc);
 	    pc.addSong(sc);
 	    boolean runloop = true;

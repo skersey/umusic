@@ -32,7 +32,7 @@ public class uMusicPercussionTrack {
 	}
 
 	public void editRhythm (int arrayIndex, uMusicRhythm r) {
-		rhythms.add(arrayIndex, r);
+		rhythms.set(arrayIndex, r);
 	}
 	
 	public void deleteLastRhythm () {

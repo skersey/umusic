@@ -21,13 +21,13 @@ public class uMusicTrack {
             "Flute", "Piano", "Guitar", "Alto_Sax", "Soprano_Sax", "Clarinet",
             "Violin", "Tuba", "Oboe", "Acoustic_Bass"));
 
-    uMusicTrack(TrackNumber trackNumber) {
-        this(trackNumber, null);
-    }
-
     public enum TrackNumber {
         TRACK0, TRACK1, TRACK2, TRACK3, TRACK4, TRACK5, TRACK6, TRACK7, TRACKMAX
     };
+
+    uMusicTrack(TrackNumber trackNumber) {
+        this(trackNumber, null);
+    }
 
     public uMusicTrack(TrackNumber trackNumber, String name) {
         this.trackNumber = trackNumber;

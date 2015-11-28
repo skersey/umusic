@@ -8,6 +8,7 @@ import javax.sound.midi.Sequence;
 import org.jfugue.midi.MidiDictionary;
 import org.jfugue.player.ManagedPlayer;
 import org.jfugue.realtime.RealtimePlayer;
+import umusic.uMusicTrack.TrackNumber;
 
 /**
  *
@@ -26,10 +27,6 @@ public class uMusicPlayerController {
 	    }
 
 	    mp  = new ManagedPlayer();
-
-	   realTime.play("V9 "); 
-	   realTime.play("L1 R1 Ri");
-	   setLiveInstrument("piano");
     }
 
     public void playLiveNote(uMusicNote note, int volume) {
@@ -53,6 +50,11 @@ public class uMusicPlayerController {
         sequence = song.getSongSequence();
     }
 
+    public void addTrack(TrackNumber trackNumber, uMusicSongController song) {
+	mp  = new ManagedPlayer();
+        sequence = song.getTrackSequence(trackNumber);
+    }
+    
     public void startSong() {
 	    if (mp.isPaused()) {
 		    mp.resume();
