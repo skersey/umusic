@@ -65,6 +65,7 @@ public class uMusicTrack {
     public void deleteNote(int arrayIndex) {
         notes.remove(arrayIndex);
     }
+    
     public void deleteLastNote() {
         notes.remove(notes.size() - 1);
     }

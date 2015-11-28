@@ -91,6 +91,10 @@ public class uMusicSongController {
 	    trackList[trackNumber.ordinal()].editNote(arrayIndex, note);
         }
 
+        public void deleteNote(TrackNumber trackNumber, int arrayIndex) {
+            trackList[trackNumber.ordinal()].deleteNote(arrayIndex);
+        }
+        
         public void deleteLastNote(TrackNumber trackNumber) {
 	    trackList[trackNumber.ordinal()].deleteLastNote();
         }
