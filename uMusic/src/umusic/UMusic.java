@@ -26,8 +26,6 @@ public class UMusic extends Application {
         
             @Override
         public void start(Stage stage) throws Exception {
-            
-            
             Parent root = FXMLLoader.load(getClass().getResource("gui/UMusicMain.fxml"));
 
             Scene scene = new Scene(root);

@@ -21,10 +21,12 @@ import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import umusic.uMusicAppData;
 import umusic.uMusicNote;
 import umusic.uMusicNote.SharpFlat;
@@ -37,6 +39,12 @@ import umusic.uMusicTrack.TrackNumber;
  */
 public class MelodyTrackEditorController extends TrackEditorController implements Initializable {
 
+    @FXML
+    ScrollPane sheetMusicScroll;
+    
+    @FXML
+    HBox sheetMusicPane2;
+    
     @FXML
     HBox sheetMusicPane;
 
@@ -125,6 +133,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
     @Override
     public MelodyTrackEditorController refreshEditor() {
+        sheetMusicPane2.setStyle("-fx-background-color: rgba(0, 100, 100, 0.5); -fx-background-radius: 0;");
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
         return this;
@@ -167,11 +176,22 @@ public class MelodyTrackEditorController extends TrackEditorController implement
                     }
                 }
             });
+            StackPane sp = new StackPane();
+            sp = noteGraphic(noteLabel);
+            
+            if (sp.getChildren().size() > 1){
+                noteLabel.setText("");
+            }
+            noteLabel.setGraphic(sp);
             trackRender.add(noteLabel);
         }
         return trackRender;
     }
 
+    public StackPane noteGraphic(Label noteLabel){
+        MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic(noteLabel);
+        return graphic.parseNote();
+    }
     @FXML
     private void backButtonAction(ActionEvent event) {
         uMusicAppData.getInstance().showSongEditor();

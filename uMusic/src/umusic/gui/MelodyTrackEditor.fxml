@@ -13,10 +13,18 @@
             <Button text="Back" onAction="#backButtonAction"/>
         </HBox>
         <HBox>
-            <ScrollPane fx:id="sheetMusicScroll" minWidth="400">               
-                <HBox fx:id="sheetMusicPane"/>
-                
-            </ScrollPane>
+            <VBox>
+                <ScrollPane fx:id="sheetMusicScroll" minWidth="400" minHeight="150" fitToHeight="true">   
+                    <HBox fx:id="sheetMusicPane2" fillHeight="true" minWidth="400"  style="-fx-background-image:url('/img/note-sixteenth.png');" >
+                        <ImageView fitHeight="150" >
+                            <image>
+                                <Image url="@img/melody/Standard.png"/>
+                            </image>
+                        </ImageView>
+                        <HBox fx:id="sheetMusicPane"/>
+                    </HBox>            
+                </ScrollPane>
+            </VBox>
             <VBox prefWidth="150">
                 <fx:define>
                     <ToggleGroup fx:id="durationGroup"/>
