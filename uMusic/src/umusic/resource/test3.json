@@ -15,6 +15,17 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
+          "sharpFlat": "NONE",
+          "chord": "NONE",
+          "inversion": "NONE",
+          "note": "c",
+          "noteString": " C5q"
+        },
+        {
+          "duration": 4,
+          "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "c",
@@ -23,14 +34,7 @@
         {
           "duration": 4,
           "octave": 5,
-          "sharpFlat": "NONE",
-          "chord": "NONE",
-          "note": "c",
-          "noteString": " C5q"
-        },
-        {
-          "duration": 4,
-          "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -39,6 +43,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -47,6 +52,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "a",
@@ -55,6 +61,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "a",
@@ -63,6 +70,7 @@
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -71,6 +79,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -79,6 +88,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -87,6 +97,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -95,6 +106,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -103,6 +115,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "d",
@@ -111,6 +124,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "d",
@@ -119,6 +133,7 @@
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "c",
@@ -127,6 +142,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -135,6 +151,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -143,6 +160,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -151,6 +169,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -159,6 +178,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -167,6 +187,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -175,6 +196,7 @@
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "d",
@@ -183,6 +205,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -191,6 +214,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -199,6 +223,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -207,6 +232,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -215,6 +241,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -223,6 +250,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -231,6 +259,7 @@
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "d",
@@ -239,6 +268,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "c",
@@ -247,6 +277,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "c",
@@ -255,6 +286,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -263,6 +295,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -271,6 +304,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "a",
@@ -279,6 +313,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "a",
@@ -287,6 +322,7 @@
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "g",
@@ -295,6 +331,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -303,6 +340,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "f",
@@ -311,6 +349,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -319,6 +358,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "e",
@@ -327,6 +367,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "d",
@@ -335,6 +376,7 @@
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "d",
@@ -343,6 +385,7 @@
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
           "note": "c",
@@ -357,5 +400,21 @@
     null,
     null,
     null
+  ],
+  "tempoList": [
+    "Grave",
+    "Largo",
+    "Larghetto",
+    "Lento",
+    "Adagio",
+    "Adagietto",
+    "Andante",
+    "Andantino",
+    "Moderato",
+    "Allegretto",
+    "Allegro",
+    "Vivace",
+    "Presto",
+    "Pretissimo"
   ]
 }
