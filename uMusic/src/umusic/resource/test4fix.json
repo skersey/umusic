@@ -15,344 +15,430 @@
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B#7i"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5i"
         },
         {
           "duration": 1,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5w"
         },
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E5h"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5i"
         },
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A5q"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B5i"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 16,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MINOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5mins"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C3i"
         },
         {
           "duration": 1,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G3w"
         },
         {
           "duration": 2,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E3h"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F3i"
         },
         {
           "duration": 4,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A7q"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B7i"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5i"
         },
         {
           "duration": 1,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5w"
         },
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E5h"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5i"
         },
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A5q"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B5i"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 16,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MINOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5mins"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C3i"
         },
         {
           "duration": 1,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G3w"
         },
         {
           "duration": 2,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E#3h"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F#3i"
         },
         {
           "duration": 4,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A#7q"
         }
@@ -368,344 +454,430 @@
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5i"
         },
         {
           "duration": 1,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5w"
         },
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E5h"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5i"
         },
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A5q"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B5i"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 16,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MINOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5mins"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C3i"
         },
         {
           "duration": 1,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G3w"
         },
         {
           "duration": 2,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E3h"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F3i"
         },
         {
           "duration": 4,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A7q"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B7i"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5i"
         },
         {
           "duration": 1,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5w"
         },
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E5h"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5i"
         },
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A5q"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B5i"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 16,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MINOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5mins"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C3i"
         },
         {
           "duration": 1,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G3w"
         },
         {
           "duration": 2,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E#3h"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F#3i"
         },
         {
           "duration": 4,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A#7q"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B#7i"
         }
@@ -721,344 +893,430 @@
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5i"
         },
         {
           "duration": 1,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5w"
         },
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E5h"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5i"
         },
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A5q"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B5i"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 16,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MINOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5mins"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C3i"
         },
         {
           "duration": 1,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G3w"
         },
         {
           "duration": 2,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E3h"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F3i"
         },
         {
           "duration": 4,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A7q"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B7i"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5i"
         },
         {
           "duration": 1,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5w"
         },
         {
           "duration": 2,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E5h"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5i"
         },
         {
           "duration": 4,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A5q"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B5i"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "r",
           "noteString": " Ri"
         },
         {
           "duration": 16,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MINOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5mins"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "DOUBLE_FLAT",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " Cbb5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F5maji"
         },
         {
           "duration": 8,
           "octave": 5,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "MAJOR",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G5maji"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "c",
           "noteString": " C3i"
         },
         {
           "duration": 1,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "NONE",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "g",
           "noteString": " G3w"
         },
         {
           "duration": 2,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "e",
           "noteString": " E#3h"
         },
         {
           "duration": 8,
           "octave": 3,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "f",
           "noteString": " F#3i"
         },
         {
           "duration": 4,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "a",
           "noteString": " A#7q"
         },
         {
           "duration": 8,
           "octave": 7,
+          "dotted": false,
           "sharpFlat": "SHARP",
           "chord": "NONE",
+          "inversion": "NONE",
           "note": "b",
           "noteString": " B#7i"
         }
@@ -1069,5 +1327,21 @@
     null,
     null,
     null
+  ],
+  "tempoList": [
+    "Grave",
+    "Largo",
+    "Larghetto",
+    "Lento",
+    "Adagio",
+    "Adagietto",
+    "Andante",
+    "Andantino",
+    "Moderato",
+    "Allegretto",
+    "Allegro",
+    "Vivace",
+    "Presto",
+    "Pretissimo"
   ]
 }

@@ -18,10 +18,16 @@ public class UMusic extends Application {
 	static uMusicTrack track1;
 	static uMusicTrack track2;
 	static uMusicTrack track3;
+        
+        public static Stage stage; //need to be able to access the stage djm 11/29/15
+        public static uMusicSongController sc;
+        public static uMusicPlayerController pc;
 
         
             @Override
         public void start(Stage stage) throws Exception {
+            
+            
             Parent root = FXMLLoader.load(getClass().getResource("gui/UMusicMain.fxml"));
 
             Scene scene = new Scene(root);
@@ -31,7 +37,8 @@ public class UMusic extends Application {
             stage.setMinWidth(725);
             stage.setHeight(400);
             stage.setWidth(725);
-            stage.show();
+            this.stage = stage; //need to be able to access the stage djm 11/29/15
+            this.stage.show();
             
         }
         
@@ -592,8 +599,8 @@ public class UMusic extends Application {
 
 	public static void main(String[] args) {
 
-		uMusicSongController sc = new uMusicSongController();
-		uMusicPlayerController pc = new uMusicPlayerController();
+		sc = new uMusicSongController(); //need access to song controller djm 11/29/2015
+		pc = new uMusicPlayerController(); //need access to player controller djm 11/29/2015
 		Scanner input = new Scanner(System.in);
 		String line;
 
@@ -639,18 +646,17 @@ public class UMusic extends Application {
 					System.out.println("Test 7 : Test the Chord Track");
 					break;
 				case "quit":
-					runloop = false;
-					break;
+                                    runloop = false;
+                                    break;
 				case "save":
                                     saveSong(sc, input);
                                     break;
-                                case "load":
+                                case "load":                                   
                                     sc = loadSong(sc, pc, input);
                                     break;
 			}
 		}
 		
 		System.out.println("END");
-		return;
 	}
 }

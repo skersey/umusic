@@ -59,8 +59,11 @@ public class SongControlsController implements Initializable {
     Button playButton;
 
     @FXML
-    void playSong(ActionEvent event) {
-        uMusicAppData.getInstance().playSong();
+    void playSong() {
+        //uMusicAppData.getInstance().playSong(); djm 11/29/2015
+        System.out.println("testing");
+        umusic.UMusic.pc.addSong(umusic.UMusic.sc);
+        umusic.UMusic.pc.startSong();
     }
 
     @FXML
@@ -115,7 +118,7 @@ public class SongControlsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         uMusicAppData.getInstance().setSongControlsController(this);
-        disableControls();
+        //disableControls(); not sure how to enable externally djm 11/29/2015
     }
 
 }

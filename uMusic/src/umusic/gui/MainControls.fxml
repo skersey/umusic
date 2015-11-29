@@ -14,8 +14,8 @@
                 <Menu text="File">
                     <items>
                         <MenuItem text="create" onAction="#createSong"/>
-                        <MenuItem text="save" />
-                        <MenuItem text="open" />
+                        <MenuItem text="save" onAction="#saveSong"/>
+                        <MenuItem text="open" onAction="#openSong"/>
                         <SeparatorMenuItem />
                         <MenuItem text="exit" />
                     </items>
@@ -31,3 +31,4 @@
         <fx:include source="SongControls.fxml"/>
     </children>
 </VBox>
+
