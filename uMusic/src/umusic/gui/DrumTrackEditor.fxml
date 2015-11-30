@@ -23,7 +23,7 @@
         <ScrollPane fx:id="dteBeatEditor">
             <VBox>
                 <HBox>
-                    <Label text="Rhythm Name"/>
+                    <Label text="Rhythm Name" />
                     <TextField fx:id="dteRhythmName"/>
                 </HBox>
             </VBox>
