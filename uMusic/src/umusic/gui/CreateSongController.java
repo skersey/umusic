@@ -38,7 +38,6 @@ public class CreateSongController implements Initializable {
 
     @FXML
     void createButtonAction(ActionEvent even) throws IOException {
-        Stage stage = (Stage) createSongContainer.getScene().getWindow();
         uMusicAppData.getInstance().createSong(title.getText(), tempo.getSelectionModel().getSelectedItem().toString(), timeSignature.getSelectionModel().getSelectedItem().toString());
         SongControlsController scController = uMusicAppData.getInstance().getSongControlsController();
         scController.setTitle(title.getText());
@@ -46,6 +45,8 @@ public class CreateSongController implements Initializable {
         scController.setTempo(tempo.getSelectionModel().getSelectedIndex());
         scController.enableControls();
         uMusicAppData.getInstance().initSongEditor().showSongEditor();
+        
+        Stage stage = (Stage) createSongContainer.getScene().getWindow();
         stage.close();
     }
 

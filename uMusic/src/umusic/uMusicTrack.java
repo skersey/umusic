@@ -20,17 +20,19 @@ public class uMusicTrack {
     public ArrayList<String> InstrumentList = new ArrayList<>(Arrays.asList(
             "Flute", "Piano", "Guitar", "Alto_Sax", "Soprano_Sax", "Clarinet",
             "Violin", "Tuba", "Oboe", "Acoustic_Bass"));
+    private String trackType;
 
     public enum TrackNumber {
         TRACK0, TRACK1, TRACK2, TRACK3, TRACK4, TRACK5, TRACK6, TRACK7, TRACKMAX
     };
 
-    uMusicTrack(TrackNumber trackNumber) {
-        this(trackNumber, null);
+    uMusicTrack(TrackNumber trackNumber, String type) {
+        this(trackNumber, type, null);
     }
 
-    public uMusicTrack(TrackNumber trackNumber, String name) {
+    public uMusicTrack(TrackNumber trackNumber, String type, String name) {
         this.trackNumber = trackNumber;
+        this.trackType = type;
         this.trackName = name;
     }
 
@@ -72,6 +74,22 @@ public class uMusicTrack {
 
     public String getTrackName() {
         return trackName;
+    }
+
+    public TrackNumber getTrackNumber() {
+        return trackNumber;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public String getInstrument() {
+        return instrument;
+    }
+
+    public String getType() {
+        return trackType;
     }
 
     public ArrayList<uMusicNote> getTrackNotes() {

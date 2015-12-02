@@ -5,6 +5,11 @@
  */
 package umusic;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -12,6 +17,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import umusic.gui.MainControlsController;
 import umusic.gui.SongControlsController;
+import umusic.gui.TrackRecordController;
+import umusic.uMusicTrack.TrackNumber;
 
 /**
  *
@@ -29,6 +36,7 @@ public class uMusicAppData {
     private MainControlsController mainControlsController;
     private SongControlsController songControlsController;
     private Stage stage;
+    private File lastFile;
 
     protected uMusicAppData() {
     }
@@ -51,10 +59,39 @@ public class uMusicAppData {
         return instance;
     }
 
-    public uMusicAppData initSongEditor() {
+    public uMusicAppData initSongEditor() throws IOException {
         songEditorNode = new VBox();
         songEditorNode.setId(ID_SONG_EDITOR);
+
+        List<uMusicTrack> tracks = Arrays.asList(songController.getTracks());
+        for (uMusicTrack track : tracks) {
+            if (track != null) {
+                this.addTrackToSongEditor(track);
+            }
+        }
         return instance;
+    }
+
+    public void addTrackToSongEditor(uMusicTrack track) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("gui/TrackRecord.fxml"));
+        BorderPane trackRecord = (BorderPane) loader.load();
+        TrackRecordController trController = loader.getController();
+
+        trController.setTrackNumber(track.getTrackNumber());
+        trController.setTrackName(track.getTrackName());
+        trController.setType(track.getType());
+        trController.setInstrument(track.getInstrument());
+
+        // add the track record to the song editor
+        songEditorNode.getChildren().add(trackRecord);
+    }
+
+    public void addTrack(String trackName, String type, String instrument) throws IOException {
+        if (songController != null) {
+            uMusicTrack.TrackNumber trackNumber = songController.addTrack(trackName);
+            songController.setInstrument(trackNumber, instrument);
+            addTrackToSongEditor(songController.getTrack(trackNumber));
+        }
     }
 
     public VBox getSongEditor() {
@@ -69,17 +106,6 @@ public class uMusicAppData {
 
     public BorderPane getMainLayout() {
         return (BorderPane) rootScene.lookup("#mainLayout");
-    }
-
-    public uMusicAppData createSong(String name, String tempo, String timeSignature) {
-        songController = new uMusicSongController();
-        songController.setName(name);
-        songController.setTempo(tempo);
-        int split = timeSignature.indexOf("/");
-        String top = timeSignature.substring(0, split);
-        String bottom = timeSignature.substring(split + 1);
-        songController.setTimeSignature(Integer.valueOf(top), Integer.valueOf(bottom));
-        return instance;
     }
 
     public uMusicSongController getSongController() {
@@ -132,16 +158,41 @@ public class uMusicAppData {
         return stage;
     }
 
-    public void setSongController(uMusicSongController sc) {
+    public void setSongController(uMusicSongController sc) throws IOException {
         this.songController = sc;
 
         SongControlsController scController = uMusicAppData.getInstance().getSongControlsController();
         scController.setTitle(songController.getName());
-//        scController.setTimeSignature(timeSignature.getSelectionModel().getSelectedIndex());
+        scController.setTimeSignature(songController.getTimeSignatureString());
         scController.setTempo(songController.getTempo());
         scController.enableControls();
-        
+
         initSongEditor();
         showSongEditor();
+    }
+
+    public void createSong(String name, String tempo, String timeSignature) throws IOException {
+        int split = timeSignature.indexOf("/");
+        String top = timeSignature.substring(0, split);
+        String bottom = timeSignature.substring(split + 1);
+
+        uMusicSongController sc = new uMusicSongController(name, tempo, Integer.valueOf(top), Integer.valueOf(bottom));
+        setSongController(sc);
+    }
+
+    public void setLastFile(File file) {
+        this.lastFile = file;
+    }
+
+    public File getLastFile() {
+        return this.lastFile;
+    }
+
+    public File getLastFileDir() {
+        if (this.lastFile != null) {
+            return this.lastFile.getParentFile();
+        } else {
+            return null;
+        }
     }
 }

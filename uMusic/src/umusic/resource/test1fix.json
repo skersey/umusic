@@ -9,6 +9,7 @@
       "volume": 100,
       "instrument": "Flute",
       "trackName": "Track 1",
+	  "trackType": "Melody",
       "trackString": " V0 :CON(7,100) I73 B#7i C5i G5w E5h F5i A5q B5i Ri C5mins C5maji C5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E3h F3i A7q B7i Ri C5i G5w E5h F5i A5q B5i Ri Cbb5mins Cbb5maji Cbb5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E#3h F#3i A#7q",
       "trackNumber": "TRACK0",
       "notes": [
@@ -448,6 +449,7 @@
       "volume": 70,
       "instrument": "Piano",
       "trackName": "Piano Track",
+	  "trackType": "Melody",
       "trackString": " V1 :CON(7,70) I0 C5i G5w E5h F5i A5q B5i Ri C5mins C5maji C5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E3h F3i A7q B7i Ri C5i G5w E5h F5i A5q B5i Ri Cbb5mins Cbb5maji Cbb5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E#3h F#3i A#7q B#7i",
       "trackNumber": "TRACK1",
       "notes": [
@@ -887,6 +889,7 @@
       "volume": 40,
       "instrument": "Violin",
       "trackName": "Violin Track",
+	  "trackType": "Melody",
       "trackString": " V2 :CON(7,40) I40 C5i G5w E5h F5i A5q B5i Ri C5mins C5maji C5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E3h F3i A7q B7i Ri C5i G5w E5h F5i A5q B5i Ri Cbb5mins Cbb5maji Cbb5maji F5maji G5maji C5maji F5maji G5maji C3i G3w E#3h F#3i A#7q B#7i",
       "trackNumber": "TRACK2",
       "notes": [

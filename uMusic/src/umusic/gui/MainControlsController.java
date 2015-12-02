@@ -70,11 +70,12 @@ public class MainControlsController implements Initializable {
     @FXML
     private void openSong() throws IOException {
         FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(uMusicAppData.getInstance().getLastFileDir());
         fileChooser.setTitle("Open Song...");
         fileChooser.getExtensionFilters().add(
                 new FileChooser.ExtensionFilter("Song Files", "*.json"));
         File file = fileChooser.showOpenDialog(umusic.UMusic.stage);
-
+        uMusicAppData.getInstance().setLastFile(file);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         String json = new String(Files.readAllBytes(file.toPath()));

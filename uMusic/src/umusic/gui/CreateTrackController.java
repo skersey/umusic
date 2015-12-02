@@ -46,21 +46,7 @@ public class CreateTrackController implements Initializable {
 
     @FXML
     public void createButtonAction(ActionEvent even) throws IOException {
-        TrackNumber trackNumber = uMusicAppData.getInstance().getSongController().addTrack(ctName.getText());
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("TrackRecord.fxml"));
-        BorderPane trackRecord = (BorderPane) loader.load();
-        TrackRecordController trController = loader.getController();
-
-        trController.setTrackNumber(trackNumber);
-        trController.setTrackName(ctName.getText());
-        trController.setType(ctType.getSelectionModel().getSelectedItem().toString());
-        trController.setInstrument(ctInstrument.getSelectionModel().getSelectedIndex());
-	// set the instrument in the songController
-        uMusicAppData.getInstance().getSongController().setInstrument(trackNumber, ctInstrument.getSelectionModel().getSelectedItem().toString());
-        // add the track record to the song editor
-        uMusicAppData.getInstance().getSongEditor().getChildren().add(trackRecord);
-
+        uMusicAppData.getInstance().addTrack(ctName.getText(), ctType.getSelectionModel().getSelectedItem().toString(), ctInstrument.getSelectionModel().getSelectedItem().toString());
         Stage stage = (Stage) ctContainer.getScene().getWindow();
         stage.close();
     }

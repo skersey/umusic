@@ -86,8 +86,16 @@ public class SongControlsController implements Initializable {
         timeSignature.getSelectionModel().select(index);
     }
 
+    public void setTimeSignature(String timeSignature) {
+        this.timeSignature.getSelectionModel().select(timeSignature);
+    }
+    
+    public void setTempo(String tempo) {
+        this.tempo.getSelectionModel().select(tempo);
+    }
+    
     public void setTempo(int index) {
-        tempo.getSelectionModel().select(index);
+        this.tempo.getSelectionModel().select(index);
     }
 
     public void disableControls() {

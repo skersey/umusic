@@ -9,6 +9,7 @@
       "volume": 100,
       "instrument": "Guitar",
       "trackName": "Track 1",
+	  "trackType": "Melody",
       "trackString": " V0 :CON(7,100) I24 E5q E5q E5h E5q E5q E5h E5q G5q C5q Ri D5i E5w F5q F5q F5q Ri F5i F5q E5q E5q E5i E5i E5q D5q D5q E5q D5h G5h E5q E5q E5h E5q E5q E5h E5q G5q C5q Ri D5i E5w F5q F5q F5q F5q F5q E5q E5q E5i E5i G5q G5q F5q D5q C5w",
       "trackNumber": "TRACK0",
       "notes": [

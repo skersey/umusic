@@ -69,9 +69,14 @@ public class TrackRecordController implements Initializable {
         trInstrument.getSelectionModel().select(index);
     }
 
+    public void setInstrument(String index) {
+        trInstrument.getSelectionModel().select(index);
+    }
+
     public String getInstrument() {
         return trInstrument.getSelectionModel().getSelectedItem().toString();
     }
+
     @FXML
     private void editTrack(ActionEvent event) throws IOException {
         String type = trType.getText();
