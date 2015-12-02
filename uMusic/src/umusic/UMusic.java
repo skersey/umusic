@@ -545,8 +545,7 @@ public class UMusic extends Application {
             String fileName;
             System.out.println("Please enter a file name:");
             fileName = input.nextLine();
-            uMusicFileController fc = new uMusicFileController(sc);
-            fc.save(fileName);
+            uMusicFileController.save(fileName, sc);
         }
         
         public static uMusicSongController loadSong(uMusicSongController sc, uMusicPlayerController pc, Scanner input){
@@ -571,8 +570,7 @@ public class UMusic extends Application {
                                         fileName = "1";
 			}
 			
-            uMusicFileController fc = new uMusicFileController(sc);
-            sc = fc.load(fileName);
+            sc =  uMusicFileController.load(fileName);
             pc.addSong(sc);
             String line;
             boolean runloop = true;

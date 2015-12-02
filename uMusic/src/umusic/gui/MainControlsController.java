@@ -5,9 +5,13 @@
  */
 package umusic.gui;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,6 +28,7 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import umusic.uMusicAppData;
 import umusic.uMusicFileController;
+import umusic.uMusicSongController;
 
 /**
  *
@@ -33,7 +38,6 @@ public class MainControlsController implements Initializable {
 
     @FXML
     private Label label;
-
 
     @FXML
     VBox mainController;
@@ -57,20 +61,29 @@ public class MainControlsController implements Initializable {
             Logger.getLogger(MainControlsController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     @FXML
     private void saveSong() throws IOException {
-        uMusicFileController fc = new umusic.uMusicFileController(umusic.UMusic.sc);
-        fc.save_gui();       
+        save_gui();
     }
-  
+
     @FXML
     private void openSong() throws IOException {
-        uMusicFileController fc = new umusic.uMusicFileController(umusic.UMusic.sc);
-        umusic.UMusic.sc = fc.open_gui();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Song...");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Song Files", "*.json"));
+        File file = fileChooser.showOpenDialog(umusic.UMusic.stage);
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        String json = new String(Files.readAllBytes(file.toPath()));
+
+        uMusicSongController sc = gson.fromJson(json, uMusicSongController.class);
+        uMusicAppData.getInstance().setSongController(sc);
         
     }
-    
+
     @FXML
     private void addTrack(ActionEvent event) throws IOException {
         Parent root;
@@ -82,15 +95,35 @@ public class MainControlsController implements Initializable {
 //        stage.initOwner(owner);
         stage.show();
     }
-   
+
     @FXML
     private void handleExit(ActionEvent event) throws IOException {
-	    System.exit(0);
+        System.exit(0);
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         uMusicAppData.getInstance().setMainControlsController(this);
     }
 
+    public void save_gui() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Song...");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Song Files", "*.json"));
+        File file = fileChooser.showSaveDialog(umusic.UMusic.stage);
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(uMusicAppData.getInstance().getSongController());
+
+        try {
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(json);
+            fileWriter.close();
+
+        } catch (IOException e) {
+            System.out.println("fail");
+        }
+        System.out.println("File Saved.");
+    }
 }

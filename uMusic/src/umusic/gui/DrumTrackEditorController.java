@@ -7,15 +7,15 @@ package umusic.gui;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.Node;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextInputDialog;
 
 /**
  * FXML Controller class
@@ -25,35 +25,23 @@ import javafx.scene.control.ToggleGroup;
 public class DrumTrackEditorController implements Initializable {
 
     @FXML
-    ChoiceBox mteNote;
-    
-    @FXML
-    ChoiceBox mteOctave;
+    ScrollPane dteRhythmEditor;
 
     @FXML
-    ToggleGroup durationGroup;
-
-    @FXML
-    CheckBox mteRest;
-
-    @FXML
-    CheckBox mteDotted;
-
-    @FXML
-    private void addNote(ActionEvent event) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        if (mteRest.isSelected()) {
-            sb.append("Rest");
-        } else {
-            sb.append(mteNote.getSelectionModel().getSelectedItem());
+    private void addRhythm(ActionEvent event) throws IOException {
+        TextInputDialog dialog = new TextInputDialog("Beat Name");
+        dialog.setTitle("Enter Beat Name");
+        dialog.setHeaderText("Please enter a name for your beat.");
+        Optional<String> result = dialog.showAndWait();
+        String beatName = null;
+        if (result.isPresent()) {
+            
+            beatName = result.get();
         }
-        RadioButton selectedToggle = (RadioButton) durationGroup.getSelectedToggle();
-        sb.append(": ").append(selectedToggle.getText());
-        if (mteDotted.isSelected()) {
-            sb.append(": dotted");
-        }
-
-        System.out.println("Adding Note! " + sb.toString());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("BeatEditor.fxml"));
+        Node editor = loader.load();
+        BeatEditorController controller = (BeatEditorController) loader.getController();
+        dteRhythmEditor.setContent(editor);
     }
 
     /**

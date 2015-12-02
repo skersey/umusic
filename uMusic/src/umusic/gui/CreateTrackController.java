@@ -45,7 +45,7 @@ public class CreateTrackController implements Initializable {
     ChoiceBox ctInstrument;
 
     @FXML
-    void createButtonAction(ActionEvent even) throws IOException {
+    public void createButtonAction(ActionEvent even) throws IOException {
         TrackNumber trackNumber = uMusicAppData.getInstance().getSongController().addTrack(ctName.getText());
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TrackRecord.fxml"));

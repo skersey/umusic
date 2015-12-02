@@ -14,19 +14,14 @@
                 <Label text="Sequence Editor"/>
             </ScrollPane>
             <VBox prefWidth="150">
-                <Button fx:id="newBeatButton" text="New Beat"/>
+                <Button fx:id="newBeatButton" text="New Beat" onAction="#addRhythm"/>
                 <ScrollPane fx:id="dteBeatBank">
                     <Label text="Beat Bank!"/>
                 </ScrollPane>
             </VBox>
         </HBox>
-        <ScrollPane fx:id="dteBeatEditor">
-            <VBox>
-                <HBox>
-                    <Label text="Rhythm Name" />
-                    <TextField fx:id="dteRhythmName"/>
-                </HBox>
-            </VBox>
+        <ScrollPane fx:id="dteRhythmEditor">
+            
         </ScrollPane>
         
     </VBox>

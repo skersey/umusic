@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import umusic.gui.MainControlsController;
 import umusic.gui.SongControlsController;
 
@@ -20,12 +21,14 @@ public class uMusicAppData {
 
     private static final String ID_SONG_EDITOR = "songEditorNode";
     private static uMusicAppData instance = null;
+
     private uMusicSongController songController = null;
     private final uMusicPlayerController playerController = new uMusicPlayerController();
     private Scene rootScene;
     private VBox songEditorNode;
     private MainControlsController mainControlsController;
     private SongControlsController songControlsController;
+    private Stage stage;
 
     protected uMusicAppData() {
     }
@@ -116,8 +119,29 @@ public class uMusicAppData {
     public void setSongControlsController(SongControlsController controller) {
         this.songControlsController = controller;
     }
-    
+
     public SongControlsController getSongControlsController() {
         return songControlsController;
+    }
+
+    void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    public Stage getStage() {
+        return stage;
+    }
+
+    public void setSongController(uMusicSongController sc) {
+        this.songController = sc;
+
+        SongControlsController scController = uMusicAppData.getInstance().getSongControlsController();
+        scController.setTitle(songController.getName());
+//        scController.setTimeSignature(timeSignature.getSelectionModel().getSelectedIndex());
+        scController.setTempo(songController.getTempo());
+        scController.enableControls();
+        
+        initSongEditor();
+        showSongEditor();
     }
 }

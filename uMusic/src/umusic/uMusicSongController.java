@@ -24,6 +24,7 @@ public class uMusicSongController {
 	    "Largo", "Larghetto", "Lento", "Adagio", "Adagietto", "Andante", 
 	    "Andantino", "Moderato", "Allegretto", "Allegro", "Vivace", 
 	    "Presto", "Pretissimo")); 
+
 	
         public uMusicSongController() {
             trackList = new uMusicTrack[TrackNumber.TRACKMAX.ordinal()];
@@ -186,4 +187,12 @@ public class uMusicSongController {
 	    System.out.println (song);
  	    return new Player().getSequence(song);
         }
+
+    int getTempo() {
+        return Integer.valueOf(this.tempo);
+    }
+
+    String getName() {
+        return name;
+    }
 }
