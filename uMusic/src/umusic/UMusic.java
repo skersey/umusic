@@ -602,7 +602,13 @@ public class UMusic extends Application {
 		Scanner input = new Scanner(System.in);
 		String line;
 
-
+		//If no arguments are provided, then start the GUI
+		if (args.length == 0) {
+                        launch(args);
+			System.exit(0);
+		}
+			
+		//Any argument will get you here.  The command line is used for whitebox testing.
 		boolean runloop = true;
 		while (runloop) {
 			System.out.println("Please enter the test number, gui, save, load, 'help' or 'quit' to exit: <1:2:3:4:5:6:gui:save:load:help:quit> ");
@@ -656,5 +662,6 @@ public class UMusic extends Application {
 		}
 		
 		System.out.println("END");
+		System.exit(0);
 	}
 }

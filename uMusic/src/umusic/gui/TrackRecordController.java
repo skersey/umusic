@@ -25,6 +25,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import umusic.uMusicAppData;
+import umusic.uMusicNote.uMusicChord;
 import umusic.uMusicTrack.TrackNumber;
 
 /**
@@ -84,7 +85,14 @@ public class TrackRecordController implements Initializable {
                 controller = (MelodyTrackEditorController) loader.getController();
                 controller.setTrackRecord(this);
                 break;
-            case "rhythm":
+            case "chord":
+                loader = new FXMLLoader(getClass().getResource("ChordTrackEditor.fxml"));
+                editor = loader.load();
+	        ChoiceBox chords = (ChoiceBox) editor.lookup("#mteChord");
+	        uMusicChord c = uMusicChord.NONE;
+                chords.getItems().setAll(java.util.Arrays.asList(c.values()));	
+                controller = (ChordTrackEditorController) loader.getController();
+                controller.setTrackRecord(this);
                 break;
             case "drum":
                 editor = FXMLLoader.load(getClass().getResource("DrumTrackEditor.fxml"));

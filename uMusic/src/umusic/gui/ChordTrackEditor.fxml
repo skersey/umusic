@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="chordEditorContainer" fx:controller="umusic.gui.ChordTrackEditorController" AnchorPane.rightAnchor="0.0" >
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" >
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="Back" onAction="#backButtonAction"/>
+        </HBox>
+        <HBox>
+            <VBox>
+                <ScrollPane fx:id="sheetMusicScroll" minWidth="450" minHeight="150" fitToHeight="true">   
+                    <HBox fx:id="sheetMusicPane2" fillHeight="true" minWidth="450"  style="-fx-background-image:url('/img/note-sixteenth.png');" >
+                        <ImageView fitHeight="150" >
+                            <image>
+                                <Image url="@img/melody/Standard.png"/>
+                            </image>
+                        </ImageView>
+                        <HBox fx:id="sheetMusicPane"/>
+                    </HBox>            
+                </ScrollPane>
+            </VBox>
+            <VBox minWidth="200" >
+            <Label text="Note Duration"/>
+	        <fx:define>
+                    <ToggleGroup fx:id="durationGroup"/>
+                </fx:define>
+                <fx:define>
+                    <ToggleGroup fx:id="sharpFlatGroup"/>
+                </fx:define>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-whole.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton text="whole" selected="true" toggleGroup="$durationGroup"/>
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-half.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton  text="half" toggleGroup="$durationGroup"/>
+    
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-quarter.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton  text="quarter" toggleGroup="$durationGroup"/>
+    
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15">
+                        <image>
+                            <Image url="@img/note-eighth.png"/>
+                        </image>
+                    </ImageView>
+    
+                    <RadioButton  text="eighth" toggleGroup="$durationGroup"/>
+    
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/note-sixteenth.png"/>
+                        </image>
+                    </ImageView>
+                    <RadioButton  text="sixteenth" toggleGroup="$durationGroup"/>
+                </HBox>
+                <HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/mod-rest.png"/>
+                        </image>
+                    </ImageView>
+                    <CheckBox text="rest" fx:id="mteRest"/>
+                </HBox>
+                <HBox spacing="5">
+                    <RadioButton text="flat" toggleGroup="$sharpFlatGroup"/>
+                    <RadioButton selected="true" text="none" toggleGroup="$sharpFlatGroup"/>
+                    <RadioButton text="sharp" toggleGroup="$sharpFlatGroup"/>
+                </HBox>
+            </VBox>
+            <VBox minWidth="150" >
+                <Label text="Inversions"/>
+                <fx:define>
+                    <ToggleGroup fx:id="inversionGroup" />
+                </fx:define>
+                <RadioButton selected="true" text="0" toggleGroup="$inversionGroup"/>
+                <RadioButton                 text="1" toggleGroup="$inversionGroup"/>
+                <RadioButton                 text="2" toggleGroup="$inversionGroup"/>
+                <Label text=""/>
+                <Label text="Chords"/>
+                <fx:include fx:id="mteChord" source="choicebox/Chords.fxml"/>
+            </VBox>
+        </HBox>
+        <ScrollPane>
+            <HBox spacing="10">
+                <Label text="Enter Note Value here"/>
+                <fx:include fx:id="mteNote" source="choicebox/Notes.fxml"/>
+                <fx:include fx:id="mteOctave" source="choicebox/Octave.fxml"/>    
+                <Button text="Add" onAction="#addNote"/>
+                <Button text="Play Note" onAction="#playNote"/>
+            </HBox>
+        </ScrollPane>
+        
+    </VBox>
+</AnchorPane>

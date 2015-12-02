@@ -39,6 +39,19 @@ public class uMusicNote {
 		public String toJfugueString() {
 			return this.jfugue;
 		}
+
+		public uMusicChord getChordFromString(String value) {
+    			uMusicChord c = null;
+    			uMusicChord chords[] = values();
+    		
+			for (uMusicChord chord1 : chords) {
+				if (chord1.name().equals(value)) {
+					c = chord1;
+					break;
+				}
+			}
+			return c;
+		}
 	}
 	
 	public uMusicNote (String note, int dur, int octave, SharpFlat sf, boolean dotted) {

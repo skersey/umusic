@@ -17,7 +17,7 @@
                         <MenuItem text="save" onAction="#saveSong"/>
                         <MenuItem text="open" onAction="#openSong"/>
                         <SeparatorMenuItem />
-                        <MenuItem text="exit" />
+                        <MenuItem text="exit" onAction="#handleExit"/>
                     </items>
                 </Menu>
                 <Menu text="Edit">

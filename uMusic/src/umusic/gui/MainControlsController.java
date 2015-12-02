@@ -82,6 +82,11 @@ public class MainControlsController implements Initializable {
 //        stage.initOwner(owner);
         stage.show();
     }
+   
+    @FXML
+    private void handleExit(ActionEvent event) throws IOException {
+	    System.exit(0);
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -46,13 +46,13 @@ public class uMusicPlayerController {
     }
 
     public void addSong(uMusicSongController song) {
-	mp  = new ManagedPlayer();
-        sequence = song.getSongSequence();
+	   mp = new ManagedPlayer();
+           sequence = song.getSongSequence();
     }
 
     public void addTrack(TrackNumber trackNumber, uMusicSongController song) {
-	mp  = new ManagedPlayer();
-        sequence = song.getTrackSequence(trackNumber);
+   	   mp = new ManagedPlayer();
+           sequence = song.getTrackSequence(trackNumber);
     }
     
     public void startSong() {
