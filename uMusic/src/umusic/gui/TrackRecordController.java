@@ -88,9 +88,6 @@ public class TrackRecordController implements Initializable {
             case "chord":
                 loader = new FXMLLoader(getClass().getResource("ChordTrackEditor.fxml"));
                 editor = loader.load();
-	        ChoiceBox chords = (ChoiceBox) editor.lookup("#mteChord");
-	        uMusicChord c = uMusicChord.NONE;
-                chords.getItems().setAll(java.util.Arrays.asList(c.values()));	
                 controller = (ChordTrackEditorController) loader.getController();
                 controller.setTrackRecord(this);
                 break;

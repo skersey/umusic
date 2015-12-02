@@ -228,6 +228,10 @@ public class ChordTrackEditorController extends TrackEditorController implements
     public void initialize(URL url, ResourceBundle rb) {
         mteNote.getSelectionModel().select(3);
         mteOctave.getSelectionModel().select(4);
+
+	uMusicChord c = uMusicChord.NONE;
+	mteChord.getItems().setAll(java.util.Arrays.asList(c.values()));
+        mteChord.getSelectionModel().select(7);
     }
 
     private class NoteLabelData {

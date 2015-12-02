@@ -25,11 +25,12 @@ public class uMusicNote {
 	public enum SharpFlat {NONE, SHARP, DOUBLE_SHARP, FLAT, DOUBLE_FLAT} 
 	public enum Inversion {NONE, SINGLE, DOUBLE} 
 	public enum uMusicChord {
-		NONE ("none"), AUGMENTED("aug"), DIMINISHED("dim"), DIMINISHED7("dim7"), 
+		AUGMENTED("aug"), DIMINISHED("dim"), DIMINISHED7("dim7"), 
 		DOMINANT9("dom9"), DOMINANT11("dom11"), DOMINANT13("dom13"),
 		MAJOR("maj"), MINOR("min"), MAJOR6("maj6"), MINOR6("min6"),
 		MAJOR7("maj7"), MINOR7("min7"), MAJOR9("maj9"), MINOR9("min9"), 
-		MAJOR13("maj13"), MINOR13("min13"), SUSPENDED2("sus2"), SUSPENDED4("sus4"); 
+		MAJOR13("maj13"), MINOR13("min13"), SUSPENDED2("sus2"), 
+		SUSPENDED4("sus4"), NONE ("none"); 
 
 		private final String jfugue;
     		uMusicChord(final String jfugue) {
