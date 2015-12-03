@@ -86,9 +86,9 @@ public class uMusicAppData {
         songEditorNode.getChildren().add(trackRecord);
     }
 
-    public void addTrack(String trackName, String type, String instrument) throws IOException {
+    public void addTrack( String type, String trackName,String instrument) throws IOException {
         if (songController != null) {
-            uMusicTrack.TrackNumber trackNumber = songController.addTrack(trackName);
+            uMusicTrack.TrackNumber trackNumber = songController.addTrack(type, trackName, instrument);
             songController.setInstrument(trackNumber, instrument);
             addTrackToSongEditor(songController.getTrack(trackNumber));
         }

@@ -92,12 +92,25 @@ public class uMusicSongController {
         return 0;
     }
 
-    //melody and chord tracks	
+    public TrackNumber addTrack(String trackType, String trackName, String instrument) {
+        for (int i = 0; i < TrackNumber.TRACKMAX.ordinal(); i++) {
+            if (trackList[i] == null) {
+                TrackNumber tn = TrackNumber.values()[i];
+                trackList[i] = new uMusicTrack(tn, trackType, trackName, instrument);
+
+                return tn;
+            }
+        }
+
+        return TrackNumber.TRACKMAX;
+    }
+
+    @Deprecated
     public TrackNumber addTrack(String trackName) {
         for (int i = 0; i < TrackNumber.TRACKMAX.ordinal(); i++) {
             if (trackList[i] == null) {
                 TrackNumber tn = TrackNumber.values()[i];
-                trackList[i] = new uMusicTrack(tn, trackName);
+                trackList[i] = new uMusicTrack(tn, "Melody", trackName);
 
                 return tn;
             }
@@ -157,6 +170,7 @@ public class uMusicSongController {
     public uMusicTrack[] getTracks() {
         return this.trackList;
     }
+
     //percussion tracks
     public void addPercussionTrack(String trackName) {
         percussionTrack = new uMusicPercussionTrack(trackName);
@@ -237,7 +251,7 @@ public class uMusicSongController {
     public int getTimeSignatureDenominator() {
         return timeSignatureDenominator;
     }
-    
+
     public String getTimeSignatureString() {
         return timeSignatureNumerator + "/" + timeSignatureDenominator;
     }
@@ -253,6 +267,5 @@ public class uMusicSongController {
     uMusicTrack getTrack(TrackNumber trackNumber) {
         return trackList[trackNumber.ordinal()];
     }
-
 
 }

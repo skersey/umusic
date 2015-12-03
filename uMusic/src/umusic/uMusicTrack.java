@@ -26,8 +26,14 @@ public class uMusicTrack {
         TRACK0, TRACK1, TRACK2, TRACK3, TRACK4, TRACK5, TRACK6, TRACK7, TRACKMAX
     };
 
-    uMusicTrack(TrackNumber trackNumber, String type) {
-        this(trackNumber, type, null);
+    uMusicTrack(TrackNumber trackNumber, String type, String name, String instrument, int volume) {
+        this(trackNumber, type, name, instrument);
+        this.volume = volume;
+    }
+
+    uMusicTrack(TrackNumber trackNumber, String type, String name, String instrument) {
+        this(trackNumber, type, name);
+        this.instrument = instrument;
     }
 
     public uMusicTrack(TrackNumber trackNumber, String type, String name) {
@@ -67,7 +73,7 @@ public class uMusicTrack {
     public void deleteNote(int arrayIndex) {
         notes.remove(arrayIndex);
     }
-    
+
     public void deleteLastNote() {
         notes.remove(notes.size() - 1);
     }

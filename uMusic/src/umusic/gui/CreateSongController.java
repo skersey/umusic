@@ -11,6 +11,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -38,16 +40,25 @@ public class CreateSongController implements Initializable {
 
     @FXML
     void createButtonAction(ActionEvent even) throws IOException {
-        uMusicAppData.getInstance().createSong(title.getText(), tempo.getSelectionModel().getSelectedItem().toString(), timeSignature.getSelectionModel().getSelectedItem().toString());
-        SongControlsController scController = uMusicAppData.getInstance().getSongControlsController();
-        scController.setTitle(title.getText());
-        scController.setTimeSignature(timeSignature.getSelectionModel().getSelectedIndex());
-        scController.setTempo(tempo.getSelectionModel().getSelectedIndex());
-        scController.enableControls();
-        uMusicAppData.getInstance().initSongEditor().showSongEditor();
-        
-        Stage stage = (Stage) createSongContainer.getScene().getWindow();
-        stage.close();
+        String titleStr = title.getText();
+        String tempoStr = tempo.getSelectionModel().getSelectedItem().toString();
+        String timeSignatureStr = timeSignature.getSelectionModel().getSelectedItem().toString();
+        if (titleStr == null || titleStr.trim().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "You must provide a song title", ButtonType.OK);
+            alert.showAndWait();
+        } else {
+            uMusicAppData.getInstance().createSong(titleStr, tempoStr, timeSignatureStr);
+            SongControlsController scController = uMusicAppData.getInstance().getSongControlsController();
+            scController.setTitle(titleStr);
+            scController.setTimeSignature(timeSignature.getSelectionModel().getSelectedIndex());
+            scController.setTempo(tempo.getSelectionModel().getSelectedIndex());
+            scController.enableControls();
+            uMusicAppData.getInstance().initSongEditor().showSongEditor();
+
+            Stage stage = (Stage) createSongContainer.getScene().getWindow();
+            stage.close();
+        }
+
     }
 
     @FXML

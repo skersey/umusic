@@ -10,20 +10,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import umusic.uMusicAppData;
-import umusic.uMusicTrack.TrackNumber;
 
 /**
  * FXML Controller class
@@ -46,9 +41,17 @@ public class CreateTrackController implements Initializable {
 
     @FXML
     public void createButtonAction(ActionEvent even) throws IOException {
-        uMusicAppData.getInstance().addTrack(ctName.getText(), ctType.getSelectionModel().getSelectedItem().toString(), ctInstrument.getSelectionModel().getSelectedItem().toString());
-        Stage stage = (Stage) ctContainer.getScene().getWindow();
-        stage.close();
+        String trackName = ctName.getText();
+        String trackType = ctType.getSelectionModel().getSelectedItem().toString();
+        String instrument = ctInstrument.getSelectionModel().getSelectedItem().toString();
+        if (trackName == null || trackName.trim().isEmpty()) {
+            Alert alert = new Alert(AlertType.WARNING, "You must provide a track name", ButtonType.OK);
+            alert.showAndWait();
+        } else {
+            uMusicAppData.getInstance().addTrack(trackType, trackName, instrument);
+            Stage stage = (Stage) ctContainer.getScene().getWindow();
+            stage.close();
+        }
     }
 
     @FXML
