@@ -168,7 +168,13 @@ public class ChordTrackEditorController extends TrackEditorController implements
         List<Node> trackRender = new ArrayList<Node>();
         MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic();
         trackRender.add(new ImageView(new Image("umusic/gui/img/melody/staff/standard.png")));
-        trackRender.add(graphic.displayTimeSignature());
+        StackPane ts = graphic.displayTimeSignature();
+        Label tsLabel = new Label();
+	tsLabel.setText("");
+        tsLabel.setContentDisplay(ContentDisplay.BOTTOM);
+        tsLabel.setGraphic(ts);
+        trackRender.add(tsLabel);
+
         ArrayList<uMusicNote> trackNotes = uMusicAppData.getInstance().getSongController().getTrackNotes(getTrackNumber());
         int noteIndex = 0;
         for (uMusicNote note : trackNotes) {
@@ -209,14 +215,16 @@ public class ChordTrackEditorController extends TrackEditorController implements
             gp = graphic.parseNote(noteLabel.getText());
             
             if (gp.getChildren().size() > 1){
-                noteLabel.setText("");
+                noteLabel.setText(note.getChordString());
             }
             noteLabel.setContentDisplay(ContentDisplay.BOTTOM);
+            noteLabel.setGraphic(gp);
             trackRender.add(noteLabel);
         }
         return trackRender;
     }
 
+    @FXML
     private void backButtonAction(ActionEvent event) {
         uMusicAppData.getInstance().showSongEditor();
     }

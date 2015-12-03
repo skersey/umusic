@@ -15,7 +15,7 @@
         <HBox alignment="CENTER_RIGHT" >
             <VBox fillWidth="true" HBox.hgrow="ALWAYS" >
 		<ScrollPane fx:id="sheetMusicScroll" minWidth="450" minHeight="170" fitToHeight="true">   
-                        <HBox fx:id="sheetMusicPane"/>         
+                        <HBox fx:id="sheetMusicPane" alignment="BOTTOM_LEFT"/>         
                 </ScrollPane>
             </VBox>
             <VBox minWidth="200" >

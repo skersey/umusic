@@ -191,6 +191,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         return trackRender;
     }
 
+    @FXML
     private void backButtonAction(ActionEvent event) {
         uMusicAppData.getInstance().showSongEditor();
     }
