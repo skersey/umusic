@@ -15,17 +15,10 @@
         <HBox>
             <VBox>
                 <ScrollPane fx:id="sheetMusicScroll" minWidth="400" minHeight="150" fitToHeight="true">   
-                    <HBox fx:id="sheetMusicPane2" fillHeight="true" minWidth="400"  style="-fx-background-image:url('/img/note-sixteenth.png');" >
-                        <ImageView fitHeight="150" >
-                            <image>
-                                <Image url="@img/melody/Standard.png"/>
-                            </image>
-                        </ImageView>
-                        <HBox fx:id="sheetMusicPane"/>
-                    </HBox>            
+                        <HBox fx:id="sheetMusicPane" fillHeight="true" minWidth="400"/>
                 </ScrollPane>
             </VBox>
-            <VBox prefWidth="150">
+            <VBox minWidth="150">
                 <fx:define>
                     <ToggleGroup fx:id="durationGroup"/>
                 </fx:define>

@@ -23,10 +23,12 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import umusic.uMusicAppData;
 import umusic.uMusicNote;
 import umusic.uMusicNote.SharpFlat;
@@ -41,9 +43,6 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
     @FXML
     ScrollPane sheetMusicScroll;
-    
-    @FXML
-    HBox sheetMusicPane2;
     
     @FXML
     HBox sheetMusicPane;
@@ -133,7 +132,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
     @Override
     public MelodyTrackEditorController refreshEditor() {
-        sheetMusicPane2.setStyle("-fx-background-color: rgba(0, 100, 100, 0.5); -fx-background-radius: 0;");
+        sheetMusicPane.setStyle("-fx-background-color: rgba(0, 100, 100, 0.5); -fx-background-radius: 0;");
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
         return this;
@@ -141,6 +140,9 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
     private List<Node> renderTrackDisplay() {
         List<Node> trackRender = new ArrayList<Node>();
+        MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic();
+        trackRender.add(new ImageView(new Image("umusic/gui/img/melody/staff/standard.png")));
+        trackRender.add(graphic.displayTimeSignature());
         ArrayList<uMusicNote> trackNotes = uMusicAppData.getInstance().getSongController().getTrackNotes(getTrackNumber());
         int noteIndex = 0;
         for (uMusicNote note : trackNotes) {
@@ -148,6 +150,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
             noteLabel.setText(note.toString());
             NoteLabelData data = new NoteLabelData(getTrackNumber(), getTrackRecord(), noteIndex++);
             noteLabel.setUserData(data);
+            graphic = new MelodyTrackEditorGraphic();
             noteLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
                 @Override
@@ -176,23 +179,18 @@ public class MelodyTrackEditorController extends TrackEditorController implement
                     }
                 }
             });
-            StackPane sp = new StackPane();
-            sp = noteGraphic(noteLabel);
+            GridPane gp = new GridPane();
+            gp = graphic.parseNote(noteLabel.getText());
             
-            if (sp.getChildren().size() > 1){
+            if (gp.getChildren().size() > 1){
                 noteLabel.setText("");
             }
-            noteLabel.setGraphic(sp);
+            noteLabel.setGraphic(gp);
             trackRender.add(noteLabel);
         }
         return trackRender;
     }
 
-    public StackPane noteGraphic(Label noteLabel){
-        MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic(noteLabel);
-        return graphic.parseNote();
-    }
-    @FXML
     private void backButtonAction(ActionEvent event) {
         uMusicAppData.getInstance().showSongEditor();
     }
