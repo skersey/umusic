@@ -17,6 +17,8 @@ public class uMusicNote {
 	private Inversion inversion = Inversion.NONE;
 	private String note = "A";
 	private String noteString;
+	private String chordString;
+	private String chordLessString;
 
 	private StaccatoParser parser = null;
 	private LilyPondParserListener listener = null;
@@ -104,14 +106,18 @@ public class uMusicNote {
 			noteString += octave;
 
 		if (chord != uMusicChord.NONE) {
+			chordLessString = noteString;
 			noteString += chord.toJfugueString();
+			chordString = chord.toJfugueString();
 
 			switch(inversion) {
 				case SINGLE:	
 					noteString += "^";
+					chordString += "^";
 					break;
 				case DOUBLE:	
 					noteString += "^^";
+					chordString += "^^";
 					break;
 			}
 		}
@@ -119,18 +125,23 @@ public class uMusicNote {
 		switch (duration) {
 			case 1:
 				noteString += "w"; 
+				chordLessString += "w"; 
 			    break;
 			case 2:
 				noteString += "h"; 
+				chordLessString += "h"; 
 			    break;
 			case 4:
 				noteString += "q"; 
+				chordLessString += "q"; 
 			    break;
 			case 8:
 				noteString += "i"; 
+				chordLessString += "i"; 
 			    break;
 			case 16:
 				noteString += "s"; 
+				chordLessString += "s"; 
 			    break;
 		}
 
@@ -142,6 +153,16 @@ public class uMusicNote {
 	public String toString() {
 	    	buildNoteString();
 		return noteString;
+	}
+
+	public String getChordString() {
+	    	buildNoteString();
+		return chordString;
+	}
+
+	public String getChordLessString() {
+	    	buildNoteString();
+		return chordLessString;
 	}
 
 	public String toLilyPond() {

@@ -15,7 +15,7 @@
         <HBox alignment="CENTER_RIGHT" >
             <VBox fillWidth="true" HBox.hgrow="ALWAYS" >
 		    <ScrollPane fx:id="sheetMusicScroll" minWidth="450" minHeight="170" fitToHeight="true" vbarPolicy="ALWAYS"   >   
-                    <HBox fx:id="sheetMusicPane2" fillHeight="true"  minWidth="450"  style="-fx-background-image:url('/img/note-sixteenth.png');" >
+                    <HBox fx:id="sheetMusicPane2" alignment="BOTTOM_LEFT" fillHeight="true"  minWidth="450"  style="-fx-background-image:url('/img/note-sixteenth.png');" >
                         <ImageView fitHeight="150" >
                             <image>
                                 <Image url="@img/melody/Standard.png"/>

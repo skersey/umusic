@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -169,7 +170,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
         int noteIndex = 0;
         for (uMusicNote note : trackNotes) {
             Label noteLabel = new Label();
-            noteLabel.setText(note.toString());
+            noteLabel.setText(note.getChordLessString());
             NoteLabelData data = new NoteLabelData(getTrackNumber(), getTrackRecord(), noteIndex++);
             noteLabel.setUserData(data);
             noteLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -204,8 +205,9 @@ public class ChordTrackEditorController extends TrackEditorController implements
             sp = noteGraphic(noteLabel);
             
             if (sp.getChildren().size() > 1){
-                noteLabel.setText("");
+                noteLabel.setText(note.getChordString());
             }
+	    noteLabel.setContentDisplay(ContentDisplay.BOTTOM);
             noteLabel.setGraphic(sp);
             trackRender.add(noteLabel);
         }
