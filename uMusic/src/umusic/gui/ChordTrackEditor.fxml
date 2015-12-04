@@ -109,6 +109,6 @@
                 <Button text="Play Note" onAction="#playNote"/>
             </HBox>
         </ScrollPane>
-        
+            <HBox fx:id="sheetMusicKeyboard" />
     </VBox>
 </AnchorPane>

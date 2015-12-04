@@ -54,6 +54,9 @@ public class ChordTrackEditorController extends TrackEditorController implements
     HBox sheetMusicPane;
 
     @FXML
+    HBox sheetMusicKeyboard;
+    
+    @FXML
     ChoiceBox mteNote;
 
     @FXML
@@ -164,9 +167,82 @@ public class ChordTrackEditorController extends TrackEditorController implements
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
         sheetMusicScroll.setHvalue(1.0); 
+	sheetMusicKeyboard.getChildren().clear();
+        Keyboard key;
+        sheetMusicKeyboard.getChildren().add(key = new Keyboard(this));
         return this;
     }
 
+    private uMusicNote getNoteFromKeyboard(String pitch, int octave) {
+        String note = "R";
+        int duration = 0;
+        SharpFlat sf = SharpFlat.NONE;
+	uMusicChord chord = uMusicChord.MAJOR; 
+	Inversion inv = Inversion.NONE;
+
+        if (!mteRest.isSelected()) {
+            note = pitch;
+        }
+        RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
+	chord = chord.getChordFromString(mteChord.getSelectionModel().getSelectedItem().toString());
+        String durationStr = selectedDuration.getText();
+        switch (durationStr) {
+            case ("whole"):
+                duration = 1;
+                break;
+            case ("half"):
+                duration = 2;
+                break;
+            case ("quarter"):
+                duration = 4;
+                break;
+            case ("eighth"):
+                duration = 8;
+                break;
+            case ("sixteenth"):
+                duration = 16;
+                break;
+        }
+
+        RadioButton selectedSharpFlat = (RadioButton) sharpFlatGroup.getSelectedToggle();
+        String sharpFlatStr = selectedSharpFlat.getText();
+        switch (sharpFlatStr) {
+            case "sharp":
+                sf = SharpFlat.SHARP;
+                break;
+            case "flat":
+                sf = SharpFlat.FLAT;
+                break;
+            default:
+                sf = SharpFlat.NONE;
+                break;
+        }
+	RadioButton selectedInversion = (RadioButton) inversionGroup.getSelectedToggle();
+        String invStr = selectedInversion.getText();
+	switch (invStr) {
+            case "1":
+                inv = Inversion.SINGLE;
+                break;
+            case "2":
+                inv = Inversion.DOUBLE;
+                break;
+            default:
+                inv = Inversion.NONE;
+                break;
+        }
+	
+	return new uMusicNote (note, duration, octave, sf, chord, inv);
+    }
+
+    
+    public void callback(String pitch, int octave) {
+	uMusicNote note = getNoteFromKeyboard(pitch, octave);
+        uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
+        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, 100);
+        uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
+        refreshEditor();
+    }
+    
     private List<Node> renderTrackDisplay() {
         List<Node> trackRender = new ArrayList<Node>();
         MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic();

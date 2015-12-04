@@ -146,10 +146,67 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         sheetMusicScroll.setHvalue(1.0); 
         sheetMusicKeyboard.getChildren().clear();
         Keyboard key;
-        sheetMusicKeyboard.getChildren().add(key = new Keyboard()); 
+        sheetMusicKeyboard.getChildren().add(key = new Keyboard(this)); 
         return this;
     }
 
+    private uMusicNote getNoteFromKeyboard(String pitch, int octave) {
+        String note = "R";
+        int duration = 0;
+        SharpFlat sf = SharpFlat.NONE;
+        boolean dotted = false;
+
+        if (!mteRest.isSelected()) {
+            note = pitch;
+        }
+        RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
+        String durationStr = selectedDuration.getText();
+        switch (durationStr) {
+            case ("whole"):
+                duration = 1;
+                break;
+            case ("half"):
+                duration = 2;
+                break;
+            case ("quarter"):
+                duration = 4;
+                break;
+            case ("eighth"):
+                duration = 8;
+                break;
+            case ("sixteenth"):
+                duration = 16;
+                break;
+        }
+
+        RadioButton selectedSharpFlat = (RadioButton) sharpFlatGroup.getSelectedToggle();
+        String sharpFlatStr = selectedSharpFlat.getText();
+        switch (sharpFlatStr) {
+            case "sharp":
+                sf = SharpFlat.SHARP;
+                break;
+            case "flat":
+                sf = SharpFlat.FLAT;
+                break;
+            default:
+                sf = SharpFlat.NONE;
+                break;
+        }
+	
+        dotted = mteDotted.isSelected();
+        return new uMusicNote(note, duration, octave, sf, dotted);
+    }
+
+    
+    public void callback(String pitch, int octave) {
+	uMusicNote note = getNoteFromKeyboard(pitch, octave);
+        uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
+        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, 100);
+        uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
+        refreshEditor();
+    }
+
+    
     private List<Node> renderTrackDisplay() {
         List<Node> trackRender = new ArrayList<Node>();
         MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic();

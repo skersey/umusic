@@ -30,8 +30,22 @@ public class Keyboard extends ScrollPane {
     private int key_counter; //keeps track of current key
     private int xPos; //X axis position of next key
     private int octave_counter; //keeps track of current octave
+    private boolean isMelody = true;
+    private MelodyTrackEditorController mtec;
+    private ChordTrackEditorController ctec;
     
-    public Keyboard (){
+    public Keyboard (MelodyTrackEditorController mtec){
+	this(true);		    
+	this.mtec = mtec;
+    }
+
+    public Keyboard (ChordTrackEditorController ctec){
+	this(false);		    
+	this.ctec = ctec;
+    }
+    
+    public Keyboard (boolean isMelody){
+	this.isMelody = isMelody;
         //create black and white keys. +1 white key at end of keyboard so the
         //kbd does not terminate with a black key. there are 7 white keys and 5
         //black keys per octave.
@@ -78,6 +92,7 @@ public class Keyboard extends ScrollPane {
             key2 = new BlackKey();
             key2.setPitch(pitches2[key_counter]);
             key2.setOctave(octave_counter);
+///            key2.setController(mtec);
             key_counter++;           
             
             //add black keys to Keyboard
@@ -103,14 +118,18 @@ public class Keyboard extends ScrollPane {
         this.setHbarPolicy(ScrollBarPolicy.ALWAYS);
         this.setMinHeight(WHITEHEIGHT);
     }
-
+    
     private class Key extends ImageView {
         int octave;
         String pitch;
         
         private Key(){
             //sends pitch/octave out
-            this.setOnMouseClicked(e -> System.out.println(pitch + octave));
+            //this.setOnMouseClicked(e -> System.out.println(pitch + octave));
+	    if (isMelody == true)
+            	this.setOnMouseClicked(e -> mtec.callback(pitch, octave));
+	    else 
+            	this.setOnMouseClicked(e -> ctec.callback(pitch, octave));
         }
 
         private void setPitch(String pitch) {
