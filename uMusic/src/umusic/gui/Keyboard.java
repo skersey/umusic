@@ -24,7 +24,7 @@ public class Keyboard extends ScrollPane {
     private static final Double BLACKHEIGHT = BLACKKEY.getHeight();
     
     //Change number of octives keyboard covers here
-    private static final int NUM_OCTAVES = 4;
+    private static final int NUM_OCTAVES = 7;
     
     private Key[] keys; //array of all keys - haven't implemented - maybe unnecessary
     private int key_counter; //keeps track of current key
@@ -45,7 +45,7 @@ public class Keyboard extends ScrollPane {
         
         //Set pitches around midrange. Assuming 1 thru 9 octaves so 5 is about
         //the center.
-        octave_counter = 5 - NUM_OCTAVES / 2;
+        octave_counter = 4 - NUM_OCTAVES / 2;
         
         xPos = 0;       
         for (Key key1 : whiteKeys){
@@ -70,7 +70,7 @@ public class Keyboard extends ScrollPane {
         key_counter = 0;
         
         //Set pitches around midrange
-        octave_counter = 5 - NUM_OCTAVES / 2;
+        octave_counter = 4 - NUM_OCTAVES / 2;
         
         xPos = 0;
         for (Key key2 : blackKeys){
@@ -110,7 +110,7 @@ public class Keyboard extends ScrollPane {
         
         private Key(){
             //sends pitch/octave out
-            this.setOnMouseClicked(e -> System.out.println(octave + pitch));
+            this.setOnMouseClicked(e -> System.out.println(pitch + octave));
         }
 
         private void setPitch(String pitch) {
