@@ -1,14 +1,10 @@
 package umusic;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.BorderPane;
 import javax.sound.midi.Sequence;
 import org.jfugue.midi.MidiDictionary;
 import org.jfugue.player.Player;
-import umusic.gui.TrackRecordController;
 import umusic.uMusicTrack.TrackNumber;
 
 /**
@@ -171,6 +167,10 @@ public class uMusicSongController {
         return this.trackList;
     }
 
+    public uMusicPercussionTrack getPercussionTrack() {
+        return percussionTrack;
+    }
+    
     //percussion tracks
     public void addPercussionTrack(String trackName) {
         percussionTrack = new uMusicPercussionTrack(trackName);
@@ -180,17 +180,17 @@ public class uMusicSongController {
         percussionTrack = null;
     }
 
-    public void addRhythmToTrack(uMusicRhythm rhythm) {
-        percussionTrack.addNextRhythm(rhythm);
-    }
-
-    public void editRhythm(int arrayIndex, uMusicRhythm rhythm) {
-        percussionTrack.editRhythm(arrayIndex, rhythm);
-    }
-
-    public void deleteLastRhythm() {
-        percussionTrack.deleteLastRhythm();
-    }
+//    public void addRhythmToTrack(uMusicRhythm rhythm) {
+//        percussionTrack.addNextRhythm(rhythm);
+//    }
+//
+//    public void editRhythm(int arrayIndex, uMusicRhythm rhythm) {
+//        percussionTrack.editRhythm(arrayIndex, rhythm);
+//    }
+//
+//    public void deleteLastRhythm() {
+//        percussionTrack.deleteLastRhythm();
+//    }
 
     public int setPercussionTrackVolume(int volume) {
         int v;
@@ -201,12 +201,13 @@ public class uMusicSongController {
             v = (volume * masterVolume) / 125;
         }
 
-        return percussionTrack.setVolume(v);
+        percussionTrack.setVolume(v);
+        return v;
     }
 
-    public ArrayList<uMusicRhythm> getTrackRhythms() {
-        return percussionTrack.getTrackRhythms();
-    }
+//    public ArrayList<uMusicRhythm> getTrackRhythms() {
+//        return percussionTrack.getTrackRhythms();
+//    }
 
     public ArrayList<String> getSupportedTempos() {
         return (ArrayList<String>) tempoList.clone();
@@ -224,7 +225,7 @@ public class uMusicSongController {
         }
 
         if (percussionTrack != null) {
-            song += percussionTrack.buildTrackString();
+            song += percussionTrack.toStaccatoString();
         }
 
         System.out.println(song);

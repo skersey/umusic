@@ -5,13 +5,17 @@
  */
 package umusic.gui;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import umusic.uMusicAppData;
 import umusic.uMusicTrack.TrackNumber;
 
 /**
  *
  * @author bruce.sailer
  */
-abstract class TrackEditorController {
+abstract class TrackEditorController implements Initializable{
 
     private TrackNumber trackNumber;
     private TrackRecordController trackRecord;
@@ -31,6 +35,11 @@ abstract class TrackEditorController {
     public TrackRecordController getTrackRecord() {
         return this.trackRecord;
     }
-    
+
+    @FXML
+    private void closeEditorAction(ActionEvent event) {
+        uMusicAppData.getInstance().showSongEditor();
+    }
+
     public abstract TrackEditorController refreshEditor();
 }

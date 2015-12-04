@@ -1,84 +1,95 @@
 package umusic;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  *
  * @author bkersey
  */
 public class uMusicRhythm {
-	private int duration = 4; //1,2,4,8,16 where 2=1/2, 4=1/4, 8=1/8, 16=1/16
-	private String rhythmName;
-	private String rhythmString;
-	private String[] layer = new String[PercussionInstrument.INSTRUMENT_MAX.ordinal()];
-	private final String[] instrumentNames = {"BASS_DRUM", "ACOUSTIC_SNARE", "CLOSED_HI_HAT", "OPEN_HI_HAT", "CRASH_CYMBAL_1"};
 
-	public enum PercussionInstrument {BASS, SNARE, CLOSED_HI_HAT, OPEN_HI_HAT, CYMBAL, INSTRUMENT_MAX};
-	
-	public uMusicRhythm (String name) {
-		this.rhythmName = name;
-		for (int i = 0; i < PercussionInstrument.INSTRUMENT_MAX.ordinal(); i++) 
-			layer[i] = null;
-	}
-	
-	public uMusicRhythm (uMusicRhythm copy) {
-		this.duration = copy.duration;
-		this.rhythmName = copy.rhythmName;
-		this.rhythmString = copy.rhythmString;
-		this.layer = copy.layer;
-	}
+    private int baseBeatDuration = 4; //1,2,4,8,16 where 2=1/2, 4=1/4, 8=1/8, 16=1/16
+    private String rhythmName;
+    private final Map<Instrument, String> layerMap = new ConcurrentHashMap<>();
 
-	public void setRhythmLayer(PercussionInstrument instrument, String rhythm) {
-		this.layer[instrument.ordinal()] = rhythm;
-	}
-	
-	public void setRhythmDuration(int duration) {
-		this.duration = duration;
-	}
+    public enum Instrument {
+        BASS("BASS_DRUM"), SNARE("ACOUSTIC_SNARE"), CLOSED_HI_HAT("CLOSED_HI_HAT"), OPEN_HI_HAT("OPEN_HI_HAT"), CYMBAL("CRASH_CYMBAL_1");
+        private String midiName;
 
-	private void buildRhythmString() {
-		rhythmString = " ";
+        private Instrument(String midiName) {
+            this.midiName = midiName;
+        }
 
-		for (int curLayer = 0; curLayer < PercussionInstrument.INSTRUMENT_MAX.ordinal(); curLayer++) {
-			if (layer[curLayer] == null)
-				continue;
-			
-			rhythmString  += " L" + (curLayer+1);
-			
-			char[] r = layer[curLayer].toCharArray();
+        public String getMidiName() {
+            return midiName;
+        }
+    };
 
-			for (int j = 0; j < r.length; j++) {
-				rhythmString += " ";
-				
-				if (r[j] == '.') {
-					rhythmString += "R"; 
-				} else {
-					rhythmString += "[" + instrumentNames[curLayer] + "]"; 
-				}
-		
-				switch (duration) {
-					case 1:
-						rhythmString += "w"; 
-			 			 break;
-					case 2:
-						rhythmString += "h"; 
-			    			break;
-					case 4:
-						rhythmString += "q"; 
-			    			break;
-					case 8:
-						rhythmString += "i"; 
-			    			break;
-					case 16:
-						rhythmString += "s"; 
-			    			break;
-				}
-			}
-		}
-	}
-	
-	@Override
-	public String toString() {
-	    	buildRhythmString();
-		return rhythmString;
-	}
+    public uMusicRhythm(String rhythmName) {
+        this.rhythmName = rhythmName;
+    }
+
+    public uMusicRhythm(String rhythmName, int baseBeatDuration) {
+        this(rhythmName);
+        this.baseBeatDuration = baseBeatDuration;
+    }
+
+    public String getRhythmName() {
+        return rhythmName;
+    }
+
+    public void setRhythmName(String rhythmName) {
+        this.rhythmName = rhythmName;
+    }
+
+    public String toStaccatoString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" ");
+        int currLayer = 1;
+        char beatChar = getBaseBeatChar();
+        for (Map.Entry<Instrument, String> entrySet : layerMap.entrySet()) {
+            String layerString = entrySet.getValue();
+            Instrument instrument = entrySet.getKey();
+            sb.append(" L").append(currLayer++);
+            for (int i = 0; i < layerString.length(); i++) {
+                if (layerString.charAt(i) == '.') {
+                    sb.append(" R");
+                } else {
+                    sb.append(" [").append(instrument.getMidiName()).append("]");
+                }
+                sb.append(beatChar);
+            }
+        }
+
+        return sb.toString();
+    }
+
+    private char getBaseBeatChar() {
+        switch (baseBeatDuration) {
+            case 1:
+                return 'w';
+            case 2:
+                return 'h';
+            case 4:
+                return 'q';
+            case 8:
+                return 'i';
+            case 16:
+                return 's';
+            default:
+                throw new IllegalArgumentException("Invalid base beat duration: " + baseBeatDuration);
+        }
+    }
+
+    public void setRhythmLayer(Instrument instrument, String rhythm) {
+        layerMap.put(instrument, rhythm);
+    }
+
+
+    @Override
+    public String toString() {
+        return toStaccatoString();
+    }
 
 }

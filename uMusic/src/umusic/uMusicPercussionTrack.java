@@ -1,7 +1,7 @@
 package umusic;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.List;
 
 /**
  *
@@ -9,50 +9,55 @@ import java.util.Iterator;
  */
 public class uMusicPercussionTrack {
 
-	private int volume = 100;
-	private String trackString;
-	private final String trackName;
-	private final ArrayList <uMusicRhythm> rhythms = new ArrayList<>();
-	
-	public uMusicPercussionTrack (String name) {
-		this.trackName = name;
-	}
+    private int volume = 100;
+    private String trackName;
+    private final RhythmBank rhythmBank = new RhythmBank();
+    private final List<Integer> trackSequence = new ArrayList<>();
+    private final Integer trackNumber = 9;
 
-	public int setVolume (int volume) {
-		if (volume > 125 || volume < 0)
-			return -1;
+    public uMusicPercussionTrack(String name) {
+        this.trackName = name;
+    }
 
-		this.volume = volume;
-		return 0;
-	}
+    public uMusicPercussionTrack(String name, int volume) {
+        this(name);
+        this.volume = volume;
+    }
 
-	public int addNextRhythm (uMusicRhythm r) {
-		rhythms.add(r);
-		return 0;
-	}
+    public void setVolume(int volume) {
+        if (volume > 125 || volume < 0) {
+            throw new IllegalArgumentException();
+        }
 
-	public void editRhythm (int arrayIndex, uMusicRhythm r) {
-		rhythms.set(arrayIndex, r);
-	}
-	
-	public void deleteLastRhythm () {
-		rhythms.remove(rhythms.size()-1);
-	}
+        this.volume = volume;
 
-	public ArrayList<uMusicRhythm> getTrackRhythms() {
-		return (ArrayList<uMusicRhythm>)rhythms.clone();
-	}
+    }
 
-	public String buildTrackString () {
-		trackString  = " V9";
-		trackString += " :CON(7," + volume + ")";
+    public RhythmBank getRhythmBank() {
+        return rhythmBank;
+    }
 
-		Iterator <uMusicRhythm> iter = rhythms.iterator();
-		while (iter.hasNext()) {
-			uMusicRhythm next = iter.next();
-			trackString+=next.toString();
-		}
+    public List<Integer> getTrackSequence() {
+        return trackSequence;
+    }
 
-		return trackString;
-	}
+    public String getTrackName() {
+        return trackName;
+    }
+
+    public void setTrackName(String trackName) {
+        this.trackName = trackName;
+    }
+
+    public String toStaccatoString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" V").append(trackNumber);
+        sb.append(" :CON(7," + volume + ")");
+        for (Integer rhythmKey : trackSequence) {
+            sb.append(rhythmBank.get(rhythmKey).toStaccatoString());
+        }
+
+        return sb.toString();
+    }
+
 }

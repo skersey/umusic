@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="uMusicMainContainer" minHeight="200.0" minWidth="900.0" prefHeight="200" prefWidth="900" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
     <children>
-        <BorderPane fx:id="mainLayout" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <BorderPane fx:id="mainLayout" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" style="-fx-border-color: green;" >
             <top> 
                 <fx:include source="MainControls.fxml" />
             </top>

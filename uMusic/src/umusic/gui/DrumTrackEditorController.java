@@ -22,7 +22,7 @@ import javafx.scene.control.TextInputDialog;
  *
  * @author bruce.sailer
  */
-public class DrumTrackEditorController implements Initializable {
+public class DrumTrackEditorController extends TrackEditorController {
 
     @FXML
     ScrollPane dteRhythmEditor;
@@ -50,6 +50,12 @@ public class DrumTrackEditorController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+
+    @Override
+    public TrackEditorController refreshEditor() {
+            return this;
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
