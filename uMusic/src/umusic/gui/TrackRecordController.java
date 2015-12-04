@@ -83,6 +83,8 @@ public class TrackRecordController implements Initializable {
         Node editor = null;
         FXMLLoader loader = null;
         TrackEditorController controller = null;
+        uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int)trVolume.getValue());
+        uMusicAppData.getInstance().getSongController().setInstrument(getTrackNumber(), trInstrument.getSelectionModel().getSelectedItem().toString());
         switch (type.toLowerCase()) {
             case "melody":
                 loader = new FXMLLoader(getClass().getResource("MelodyTrackEditor.fxml"));

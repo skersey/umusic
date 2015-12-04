@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToolBar;
 import javafx.stage.Stage;
@@ -52,9 +53,14 @@ public class SongControlsController implements Initializable {
 
     @FXML
     Button playButton;
+    
+    @FXML
+    Slider masterVolume;
 
     @FXML
     void playSong() {
+        //System.out.println(masterVolume.getValue());
+        //uMusicAppData.getInstance().getSongController().setMasterVolume((int)masterVolume.getValue());
         uMusicAppData.getInstance().playSong();
     }
 
