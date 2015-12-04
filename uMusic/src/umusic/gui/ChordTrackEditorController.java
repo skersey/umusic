@@ -170,7 +170,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
     private List<Node> renderTrackDisplay() {
         List<Node> trackRender = new ArrayList<Node>();
         MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic();
-        trackRender.add(new ImageView(new Image("umusic/gui/img/melody/staff/standard.png")));
+        trackRender.add(new ImageView(new Image("umusic/gui/img/staff/standard.png")));
         StackPane ts = new StackPane();
         Label tsLabel = new Label();
 	tsLabel.setText(" ");

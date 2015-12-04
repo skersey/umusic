@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.MelodyTrackEditorController" AnchorPane.rightAnchor="0.0" >
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.MelodyTrackEditorController" AnchorPane.rightAnchor="0.0">
     <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" >
         <HBox alignment="CENTER_RIGHT">
             <Button text="Back" onAction="#backButtonAction"/>
@@ -110,6 +110,6 @@
                 <Button text="Play Note" onAction="#playNote"/>
             </HBox>
         </ScrollPane>
-        
+            <HBox fx:id="sheetMusicKeyboard" />
     </VBox>
 </AnchorPane>

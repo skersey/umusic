@@ -25,7 +25,7 @@ import umusic.uMusicTrack.TrackNumber;
  * @author bruce.sailer
  */
 public class uMusicAppData {
-
+    
     private static final String ID_SONG_EDITOR = "songEditorNode";
     private static uMusicAppData instance = null;
 

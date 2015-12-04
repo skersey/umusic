@@ -46,6 +46,9 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     
     @FXML
     HBox sheetMusicPane;
+    
+    @FXML
+    HBox sheetMusicKeyboard;
 
     @FXML
     ChoiceBox mteNote;
@@ -121,13 +124,18 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
     @FXML
     private void addNote(ActionEvent event) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        TrackNumber tn = getTrackNumber();
+        //StringBuilder sb = new StringBuilder();
+        //TrackNumber tn = getTrackNumber();
         uMusicNote note = getNote();
         uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
         uMusicAppData.getInstance().getPlayerController().playLiveNote(note, 100);
         uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
         refreshEditor();
+    }
+    
+    private uMusicNote editNote(){
+        uMusicNote note = getNote();
+        return note;
     }
 
     @Override
@@ -136,13 +144,16 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
         sheetMusicScroll.setHvalue(1.0); 
+        sheetMusicKeyboard.getChildren().clear();
+        Keyboard key;
+        sheetMusicKeyboard.getChildren().add(key = new Keyboard()); 
         return this;
     }
 
     private List<Node> renderTrackDisplay() {
         List<Node> trackRender = new ArrayList<Node>();
         MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic();
-        trackRender.add(new ImageView(new Image("umusic/gui/img/melody/staff/standard.png")));
+        trackRender.add(new ImageView(new Image("umusic/gui/img/staff/standard.png")));
         trackRender.add(graphic.displayTimeSignature());
         ArrayList<uMusicNote> trackNotes = uMusicAppData.getInstance().getSongController().getTrackNotes(getTrackNumber());
         int noteIndex = 0;
@@ -172,7 +183,10 @@ public class MelodyTrackEditorController extends TrackEditorController implement
                         editNote.setOnAction(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
-                                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                                NoteLabelData data = (NoteLabelData) noteLabel.getUserData();
+                                uMusicAppData.getInstance().getSongController().editNote(getTrackNumber(), data.noteIndex, editNote());
+                                refreshEditor();
+                                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
                             }
                         });
                         contextMenu.getItems().addAll(removeNote, editNote);
