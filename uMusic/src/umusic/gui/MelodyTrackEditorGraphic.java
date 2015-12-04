@@ -23,6 +23,7 @@ public class MelodyTrackEditorGraphic {
         StackPane stack = new StackPane();
         GridPane grid = new GridPane();
         Image image;
+        Image image2;
         ImageView iv;
         
     public MelodyTrackEditorGraphic(){
