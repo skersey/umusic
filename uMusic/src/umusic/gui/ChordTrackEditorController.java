@@ -31,6 +31,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
 import umusic.uMusicAppData;
 import umusic.uMusicNote;
 import umusic.uMusicNote.Inversion;
@@ -161,6 +163,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
         sheetMusicPane.setStyle("-fx-background-color: rgba(0, 100, 100, 0.5); -fx-background-radius: 0;");
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
+        sheetMusicScroll.setHvalue(1.0); 
         return this;
     }
 
@@ -216,6 +219,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
             gp = graphic.parseNote(noteLabel.getText());
             
             if (gp.getChildren().size() > 1){
+		noteLabel.setFont(Font.font(8));
                 noteLabel.setText(note.getChordString());
             }
             noteLabel.setContentDisplay(ContentDisplay.BOTTOM);
@@ -241,6 +245,8 @@ public class ChordTrackEditorController extends TrackEditorController implements
 	uMusicChord c = uMusicChord.NONE;
 	mteChord.getItems().setAll(java.util.Arrays.asList(c.values()));
         mteChord.getSelectionModel().select(7);
+	sheetMusicScroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+	sheetMusicScroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
     }
 
     private class NoteLabelData {

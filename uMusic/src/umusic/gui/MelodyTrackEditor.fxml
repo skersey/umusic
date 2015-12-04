@@ -12,13 +12,16 @@
         <HBox alignment="CENTER_RIGHT">
             <Button text="Back" onAction="#backButtonAction"/>
         </HBox>
-        <HBox>
-            <VBox>
-                <ScrollPane fx:id="sheetMusicScroll" minWidth="400" minHeight="150" fitToHeight="true">   
-                        <HBox fx:id="sheetMusicPane" fillHeight="true" minWidth="400"/>
+        <HBox alignment="CENTER_RIGHT" >
+            <VBox fillWidth="true" HBox.hgrow="ALWAYS" >
+        <!--<HBox>
+            <VBox> -->
+                <ScrollPane fx:id="sheetMusicScroll" minWidth="450" minHeight="150" fitToHeight="true">   
+                 <!--       <HBox fx:id="sheetMusicPane" fillHeight="true" minWidth="400"/> -->
+                        <HBox fx:id="sheetMusicPane" alignment="BOTTOM_LEFT"/>         
                 </ScrollPane>
             </VBox>
-            <VBox minWidth="150">
+            <VBox minWidth="250">
                 <fx:define>
                     <ToggleGroup fx:id="durationGroup"/>
                 </fx:define>

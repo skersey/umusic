@@ -31,8 +31,8 @@ public class UMusic extends Application {
             Scene scene = new Scene(root);
             uMusicAppData.getInstance().setRootScene(scene);
             stage.setScene(scene);
-            stage.setMinHeight(400);
-            stage.setMinWidth(825);
+            stage.setMinHeight(800);
+            stage.setMinWidth(1105);
             stage.setHeight(400);
             stage.setWidth(825);
             this.stage = stage; //need to be able to access the stage djm 11/29/15

@@ -135,6 +135,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         sheetMusicPane.setStyle("-fx-background-color: rgba(0, 100, 100, 0.5); -fx-background-radius: 0;");
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
+        sheetMusicScroll.setHvalue(1.0); 
         return this;
     }
 
@@ -203,6 +204,8 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     public void initialize(URL url, ResourceBundle rb) {
         mteNote.getSelectionModel().select(3);
         mteOctave.getSelectionModel().select(4);
+	sheetMusicScroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+	sheetMusicScroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
     }
 
     private class NoteLabelData {
