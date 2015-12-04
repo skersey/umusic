@@ -46,6 +46,9 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     
     @FXML
     HBox sheetMusicPane;
+    
+    @FXML
+    HBox sheetMusicKeyboard;
 
     @FXML
     ChoiceBox mteNote;
@@ -135,13 +138,16 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         sheetMusicPane.setStyle("-fx-background-color: rgba(0, 100, 100, 0.5); -fx-background-radius: 0;");
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
+        Keyboard key;
+ 
+        sheetMusicKeyboard.getChildren().add(key = new Keyboard());
         return this;
     }
 
     private List<Node> renderTrackDisplay() {
         List<Node> trackRender = new ArrayList<Node>();
         MelodyTrackEditorGraphic graphic = new MelodyTrackEditorGraphic();
-        trackRender.add(new ImageView(new Image("umusic/gui/img/melody/staff/standard.png")));
+        trackRender.add(new ImageView(new Image("umusic/gui/img/staff/standard.png")));
         trackRender.add(graphic.displayTimeSignature());
         ArrayList<uMusicNote> trackNotes = uMusicAppData.getInstance().getSongController().getTrackNotes(getTrackNumber());
         int noteIndex = 0;

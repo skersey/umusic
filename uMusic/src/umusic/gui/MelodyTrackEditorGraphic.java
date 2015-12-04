@@ -31,7 +31,7 @@ public class MelodyTrackEditorGraphic {
     }
     
     public StackPane displayTimeSignature(){
-        String file = "umusic/gui/img/melody/timeSignature/";
+        String file = "umusic/gui/img/timeSignature/";
         int TimeSigNum = uMusicAppData.getInstance().getSongController().getTimeSignatureNumerator();
         int TimeSigDen = uMusicAppData.getInstance().getSongController().getTimeSignatureDenominator();
         
@@ -63,7 +63,7 @@ public class MelodyTrackEditorGraphic {
     }
     public GridPane parseNote(String note){
         String[] noteArray = note.split("");
-        String file = "umusic/gui/img/melody/";
+        String file = "umusic/gui/img/";
         if(noteArray.length == 3){
             switch(noteArray[2]){
                 
@@ -119,10 +119,10 @@ public class MelodyTrackEditorGraphic {
                     noteArray[3].equalsIgnoreCase("7")){
                 switch(noteArray[2]){
                     case "b": 
-                        createGraphicGridNote("umusic/gui/img/melody/flat/" + noteArray[1] + noteArray[3]);
+                        createGraphicGridNote("umusic/gui/img/flat/" + noteArray[1] + noteArray[3]);
                         break;
                     case "#":
-                        createGraphicGridNote("umusic/gui/img/melody/sharp/" + noteArray[1] + noteArray[3]);
+                        createGraphicGridNote("umusic/gui/img/sharp/" + noteArray[1] + noteArray[3]);
                         break;
                 }
                 switch (noteArray[4]){
@@ -145,7 +145,7 @@ public class MelodyTrackEditorGraphic {
                     file = file + noteArray[1] + noteArray [3];
                     createGraphicGridNote(file);
                 } else {
-                    createGraphicGridNote("umusic/gui/img/melody/dot/" + noteArray[1] + noteArray[2]);
+                    createGraphicGridNote("umusic/gui/img/dot/" + noteArray[1] + noteArray[2]);
                     switch (noteArray[3]){
                         case "w": file = file + "wholeNote/"; createStaff(5); break;
                         case "h": file = file + "halfNote/";  createStaff(4);break;
@@ -176,10 +176,10 @@ public class MelodyTrackEditorGraphic {
                     noteArray[3].equalsIgnoreCase("7")){
                 switch(noteArray[2]){
                     case "b": 
-                        createGraphicGridNote("umusic/gui/img/melody/flat/" + noteArray[1] + noteArray[3]);
+                        createGraphicGridNote("umusic/gui/img/flat/" + noteArray[1] + noteArray[3]);
                         break;
                     case "#":
-                        createGraphicGridNote("umusic/gui/img/melody/sharp/" + noteArray[1] + noteArray[3]);
+                        createGraphicGridNote("umusic/gui/img/sharp/" + noteArray[1] + noteArray[3]);
                         break;
                 }
                 switch (noteArray[4]){
@@ -191,7 +191,7 @@ public class MelodyTrackEditorGraphic {
                 }
 
                 file = file + noteArray[1] + noteArray [3];
-                createGraphicGridNote("umusic/gui/img/melody/dot/" + noteArray[1] + noteArray[3]);
+                createGraphicGridNote("umusic/gui/img/dot/" + noteArray[1] + noteArray[3]);
                 createGraphicGridNote(file);
             } 
         }   
@@ -226,19 +226,19 @@ public class MelodyTrackEditorGraphic {
         
         switch(staff){
             case(1): 
-                createGraphicGridStaff("umusic/gui/img/melody/staff/s");
+                createGraphicGridStaff("umusic/gui/img/staff/s");
                 break;
             case(2): 
-                createGraphicGridStaff("umusic/gui/img/melody/staff/i");
+                createGraphicGridStaff("umusic/gui/img/staff/i");
                 break;
             case(3): 
-                createGraphicGridStaff("umusic/gui/img/melody/staff/q");
+                createGraphicGridStaff("umusic/gui/img/staff/q");
                 break;
             case(4): 
-                createGraphicGridStaff("umusic/gui/img/melody/staff/h");
+                createGraphicGridStaff("umusic/gui/img/staff/h");
                 break;
             case(5): 
-                createGraphicGridStaff("umusic/gui/img/melody/staff/w");
+                createGraphicGridStaff("umusic/gui/img/staff/w");
                 break;
         }
     }
