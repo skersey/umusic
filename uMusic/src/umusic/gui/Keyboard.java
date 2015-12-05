@@ -28,7 +28,7 @@ public class Keyboard extends ScrollPane {
     
     private Key[] keys; //array of all keys - haven't implemented - maybe unnecessary
     private int key_counter; //keeps track of current key
-    private int xPos; //X axis position of next key
+    private double xPos; //X axis position of next key
     private int octave_counter; //keeps track of current octave
     private boolean isMelody = true;
     private MelodyTrackEditorController mtec;
@@ -49,11 +49,11 @@ public class Keyboard extends ScrollPane {
         //create black and white keys. +1 white key at end of keyboard so the
         //kbd does not terminate with a black key. there are 7 white keys and 5
         //black keys per octave.
-        WhiteKey[] whiteKeys = new WhiteKey[NUM_OCTAVES * 7 + 1];
+        WhiteKey[] whiteKeys = new WhiteKey[NUM_OCTAVES * 7];
         BlackKey[] blackKeys = new BlackKey[NUM_OCTAVES * 5];
         
         //load pitches to white keys
-        String[] pitches1 = {"A","B","C","D","E","F","G"};
+        String[] pitches1 = {"C","D","E","F","G","A","B"};
         Group background = new Group();
         key_counter = 0;
         
@@ -79,7 +79,7 @@ public class Keyboard extends ScrollPane {
         }
         
         //load pitches to black keys
-        String[] pitches2 = {"A#","C#","D#","F#","G#"};
+        String[] pitches2 = {"C#","D#","F#","G#","A#"};
         Group foreground = new Group();
         key_counter = 0;
         
@@ -88,7 +88,6 @@ public class Keyboard extends ScrollPane {
         
         xPos = 0;
         for (Key key2 : blackKeys){
-            System.out.println(xPos);
             key2 = new BlackKey();
             key2.setPitch(pitches2[key_counter]);
             key2.setOctave(octave_counter);
@@ -98,7 +97,7 @@ public class Keyboard extends ScrollPane {
             //add black keys to Keyboard
             foreground.getChildren().add(key2);
             key2.setTranslateX(xPos);
-            if ((key_counter == 1) || (key_counter == 3))
+            if ((key_counter == 2) || (key_counter == 5))
                     xPos += WHITEWIDTH;
             xPos += WHITEWIDTH;
             if (key_counter >= pitches2.length) {
@@ -111,12 +110,15 @@ public class Keyboard extends ScrollPane {
         foreground.setTranslateY((BLACKHEIGHT - WHITEHEIGHT)/2);
         StackPane keyboardPane = new StackPane();
         keyboardPane.getChildren().addAll(background, foreground);
+        //keyboardPane.setMinHeight(WHITEHEIGHT);
         
         //Add the keyboard to the root scrollpane
         this.setContent(keyboardPane);
         this.setVbarPolicy(ScrollBarPolicy.NEVER);
         this.setHbarPolicy(ScrollBarPolicy.ALWAYS);
-        this.setMinHeight(WHITEHEIGHT);
+        
+        //Set scrollpane height to whitekey height + scrollbar height
+        this.setMinHeight(WHITEHEIGHT + 20);
     }
     
     private class Key extends ImageView {
