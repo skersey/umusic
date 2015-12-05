@@ -235,7 +235,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
     }
 
     
-    public void callback(String pitch, int octave) {
+    public void addNoteCallback(String pitch, int octave) {
 	uMusicNote note = getNoteFromKeyboard(pitch, octave);
         uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
         uMusicAppData.getInstance().getPlayerController().playLiveNote(note, 100);

@@ -127,9 +127,9 @@ public class Keyboard extends ScrollPane {
             //sends pitch/octave out
             //this.setOnMouseClicked(e -> System.out.println(pitch + octave));
 	    if (isMelody == true)
-            	this.setOnMouseClicked(e -> mtec.callback(pitch, octave));
+            	this.setOnMouseClicked(e -> mtec.addNoteCallback(pitch, octave));
 	    else 
-            	this.setOnMouseClicked(e -> ctec.callback(pitch, octave));
+            	this.setOnMouseClicked(e -> ctec.addNoteCallback(pitch, octave));
         }
 
         private void setPitch(String pitch) {
