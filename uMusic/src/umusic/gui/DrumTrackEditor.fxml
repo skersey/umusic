@@ -7,25 +7,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.DrumTrackEditorController" AnchorPane.rightAnchor="0.0" style="-fx-border-color: blue;" AnchorPane.bottomAnchor="0.0" >
-    <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" style="-fx-border-color: red;" >
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.DrumTrackEditorController" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" >
+    <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
          <HBox alignment="CENTER_RIGHT">
             <Button text="Back" onAction="#backButtonAction"/>
         </HBox>
-        <HBox VBox.vgrow="ALWAYS" style="-fx-border-color: green;"  >
-            <ScrollPane fx:id="dteSequencePane" minWidth="400" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"  style="-fx-border-color: red;" >                
-                <Label text="Sequence Editor"/>
+        <HBox VBox.vgrow="ALWAYS">
+            <ScrollPane fx:id="dteSequencePane" minWidth="400" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">                
+                <HBox fx:id="dteSequenceList"/>
             </ScrollPane>
-            <VBox prefWidth="150" fx:id="dteBeatBank" alignment="TOP_RIGHT"  HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" style="-fx-border-color: black;" >
+            <VBox prefWidth="200" maxWidth="200" fx:id="dteBeatBank" alignment="TOP_CENTER">
                 <Label text = "Beat Bank"/>
-<!--                <Button fx:id="newBeatButton" text="New Beat" onAction="#addRhythm"/>
-                <ScrollPane >
-                    <Label text="Beat Bank!"/>
-                </ScrollPane>-->
+                <Button fx:id="newBeatButton" text="New Beat" onAction="#addRhythm"/>
+                <ScrollPane>
+                    <VBox fx:id="beatBankButtons"/>                    
+                </ScrollPane>
             </VBox>
         </HBox>
-        <ScrollPane fx:id="dteRhythmEditor" VBox.vgrow="ALWAYS" style="-fx-border-color: red;" >
-            <Label text="Rhtyhm Beat Editor"/>
+        <ScrollPane fx:id="dteRhythmEditor" VBox.vgrow="ALWAYS">
         </ScrollPane>
         
     </VBox>

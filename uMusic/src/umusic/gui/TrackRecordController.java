@@ -111,7 +111,10 @@ public class TrackRecordController implements Initializable {
                 controller.setTrackRecord(this);
                 break;
             case "drum":
-                editor = FXMLLoader.load(getClass().getResource("DrumTrackEditor.fxml"));
+                loader = new FXMLLoader(getClass().getResource("DrumTrackEditor.fxml"));
+                editor = loader.load();
+                controller = (DrumTrackEditorController) loader.getController();
+                controller.setTrackRecord(this);
                 break;
             default:
                 System.out.println("Unknown track type: " + type);

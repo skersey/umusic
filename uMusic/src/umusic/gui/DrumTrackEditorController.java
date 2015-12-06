@@ -7,15 +7,28 @@ package umusic.gui;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import umusic.RhythmBank;
+import umusic.uMusicAppData;
+import umusic.uMusicRhythm;
+import umusic.uMusicRhythm.Instrument;
 
 /**
  * FXML Controller class
@@ -25,7 +38,13 @@ import javafx.scene.control.TextInputDialog;
 public class DrumTrackEditorController extends TrackEditorController {
 
     @FXML
+    HBox dteSequenceList;
+    
+    @FXML
     ScrollPane dteRhythmEditor;
+
+    @FXML
+    VBox beatBankButtons;
 
     @FXML
     private void addRhythm(ActionEvent event) throws IOException {
@@ -35,13 +54,13 @@ public class DrumTrackEditorController extends TrackEditorController {
         Optional<String> result = dialog.showAndWait();
         String beatName = null;
         if (result.isPresent()) {
-            
             beatName = result.get();
         }
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("BeatEditor.fxml"));
-        Node editor = loader.load();
-        BeatEditorController controller = (BeatEditorController) loader.getController();
-        dteRhythmEditor.setContent(editor);
+        int defaultBaseBeat = uMusicAppData.getInstance().getSongController().getTimeSignatureDenominator() * 4;
+        uMusicRhythm rhythm = new uMusicRhythm(beatName, defaultBaseBeat);
+
+        Integer rhythmId = uMusicAppData.getInstance().getSongController().getPercussionTrack().getRhythmBank().add(rhythm);
+        addBeatControls(rhythmId, rhythm);
     }
 
     /**
@@ -49,13 +68,115 @@ public class DrumTrackEditorController extends TrackEditorController {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    }
+
+    @FXML
+    private void backButtonAction(ActionEvent event) {
+        uMusicAppData.getInstance().showSongEditor();
     }
 
     @Override
     public TrackEditorController refreshEditor() {
-            return this;
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        drawRhthms();
+        return this;
+    }
+
+    private void addBeatControls(Integer rhythmId, uMusicRhythm beatRhythm) {
+        VBox beatControls = new VBox();
+        Label buttonLabel = new Label(beatRhythm.getRhythmName());
+        HBox buttonBox = new HBox();
+        final Button editButton = new Button("Edit");
+        final Button addButton = new Button("Add");
+        final Button deleteButton = new Button("Delete");
+        deleteButton.setOnAction(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                uMusicAppData.getInstance().getSongController().getPercussionTrack().getRhythmBank().remove(rhythmId);
+                ((VBox) beatControls.getParent()).getChildren().remove(beatControls);
+            }
+        });
+        addButton.setOnAction(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                uMusicAppData.getInstance().getSongController().getPercussionTrack().getTrackSequence().add(rhythmId);
+                dteSequenceList.getChildren().add(new Button(beatRhythm.getRhythmName()));
+            }
+        });
+        editButton.setOnAction(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                dteRhythmEditor.setContent(buildRhthmEditor(rhythmId));
+            }
+
+            private Node buildRhthmEditor(Integer rhythmId) {
+                uMusicRhythm rhythm = uMusicAppData.getInstance().getSongController().getPercussionTrack().getRhythmBank().get(rhythmId);
+                GridPane rhythmEditor = new GridPane();
+                int numerator = uMusicAppData.getInstance().getSongController().getTimeSignatureNumerator();
+                int denominator = uMusicAppData.getInstance().getSongController().getTimeSignatureDenominator();
+                int baseBeatDuration = uMusicAppData.getInstance().getSongController().getPercussionTrack().getRhythmBank().get(rhythmId).getBaseBeatDuration();
+                int numBeats = baseBeatDuration / denominator;
+                int totalBeats = numBeats * numerator;
+                String rhythmName = uMusicAppData.getInstance().getSongController().getPercussionTrack().getTrackName();
+                Button saveButton = new Button("Save");
+                saveButton.setOnAction(new EventHandler() {
+                    @Override
+                    public void handle(Event event) {
+                        for (Instrument instrument : Instrument.values()) {
+                            StringBuilder sb = new StringBuilder();
+                            for (int n = 0; n < totalBeats; n++) {
+                                CheckBox cb = (CheckBox) uMusicAppData.getInstance().getMainLayout().lookup("#" + getBeatId(instrument, n));
+                                sb.append(cb.isSelected() ? "y" : ".");
+                            }
+                            System.out.println(instrument.toString() + " " + sb.toString());
+                            rhythm.setRhythmLayer(instrument, sb.toString());
+                        }
+                    }
+                });
+                rhythmEditor.add(saveButton, 1, 0);
+                rhythmEditor.add(new Label(rhythmName), 0, 0);
+                int rowNum = 0;
+                
+                for (Instrument instrument : Instrument.values()) {
+                    String rhythmString = rhythm.getRhythmLayer(instrument);
+                    rowNum++;
+                    int colNum = 0;
+                    int beatNum = 0;
+                    rhythmEditor.add(new Label(instrument.toString()), colNum, rowNum);
+                    for (int n = 0; n < numerator; n++) {
+                        for (int i = 0; i < numBeats; i++) {
+                            colNum++;
+                            CheckBox cb = new CheckBox();
+                            if (rhythmString != null && rhythmString.charAt(i) == 'y') {
+                                cb.setSelected(true);
+                            }
+                            cb.setId(getBeatId(instrument, beatNum++));
+
+                            rhythmEditor.add(cb, colNum, rowNum);
+                        }
+                        rhythmEditor.add(new Label("|"), ++colNum, rowNum);
+                    }
+                }
+                return rhythmEditor;
+            }
+
+        });
+        buttonBox.getChildren().addAll(editButton, addButton, deleteButton);
+        beatControls.getChildren().addAll(buttonLabel, buttonBox);
+        beatBankButtons.getChildren().add(beatControls);
+
+    }
+
+    private String getBeatId(Instrument instrument, int i) {
+        return instrument.toString() + "_" + Integer.toString(i);
+    }
+
+    private void drawRhthms() {
+        RhythmBank rhythmBank = uMusicAppData.getInstance().getSongController().getPercussionTrack().getRhythmBank();
+        for (Map.Entry<Integer, uMusicRhythm> rhythmSet : rhythmBank.entrySet()) {
+            Integer key = rhythmSet.getKey();
+            uMusicRhythm rhythm = rhythmSet.getValue();
+            addBeatControls(key, rhythm);
+        }
     }
 
 }
