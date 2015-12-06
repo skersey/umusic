@@ -104,7 +104,23 @@ public class SongControlsController implements Initializable {
         this.tempo.getSelectionModel().select(index);
     }
 
-    public void setMasterVolumeListener(){
+    public void setListeners(){
+        timeSignature.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            public void changed(ObservableValue<? extends Number> ov, 
+                Number old_val, Number new_val) {
+                timeSignature.getSelectionModel().select(timeSignature.getSelectionModel().getSelectedIndex());
+                uMusicAppData.getInstance().getSongController().setTimeSignature(timeSignature.getSelectionModel().getSelectedItem().toString());
+            }
+        });
+        
+        tempo.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            public void changed(ObservableValue<? extends Number> ov, 
+                Number old_val, Number new_val) {
+                tempo.getSelectionModel().select(tempo.getSelectionModel().getSelectedIndex());
+                uMusicAppData.getInstance().getSongController().setTempo(tempo.getSelectionModel().getSelectedItem().toString());
+            }
+        });
+        
         masterVolume.valueProperty().addListener(new ChangeListener<Number>() {
             public void changed(ObservableValue<? extends Number> ov,
                 Number old_val, Number new_val) {

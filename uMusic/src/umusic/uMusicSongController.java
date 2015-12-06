@@ -88,6 +88,12 @@ public class uMusicSongController {
         this.timeSignatureDenominator = denominator;
     }
 
+    public void setTimeSignature(String signature){
+        String[] signatureArray = signature.split("/");
+        this.timeSignatureNumerator = Integer.parseInt(signatureArray[0]);
+        this.timeSignatureDenominator = Integer.parseInt(signatureArray[1]);
+        
+    }
     public int setTempo(String t) {
         if (tempoList.contains(t) == false) {
             System.out.println("The tempo name is not valid: " + t);
