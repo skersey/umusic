@@ -144,9 +144,6 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
         sheetMusicScroll.setHvalue(1.0); 
-        sheetMusicKeyboard.getChildren().clear();
-        Keyboard key;
-        sheetMusicKeyboard.getChildren().add(key = new Keyboard(this)); 
         return this;
     }
 
@@ -277,6 +274,8 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         mteOctave.getSelectionModel().select(4);
 	sheetMusicScroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 	sheetMusicScroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        Keyboard key;
+        sheetMusicKeyboard.getChildren().add(key = new Keyboard(this)); 
     }
 
     private class NoteLabelData {

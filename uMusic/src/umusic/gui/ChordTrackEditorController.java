@@ -167,9 +167,6 @@ public class ChordTrackEditorController extends TrackEditorController implements
         sheetMusicPane.getChildren().clear();
         sheetMusicPane.getChildren().addAll(renderTrackDisplay());
         sheetMusicScroll.setHvalue(1.0); 
-	sheetMusicKeyboard.getChildren().clear();
-        Keyboard key;
-        sheetMusicKeyboard.getChildren().add(key = new Keyboard(this));
         return this;
     }
 
@@ -323,6 +320,8 @@ public class ChordTrackEditorController extends TrackEditorController implements
         mteChord.getSelectionModel().select(7);
 	sheetMusicScroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 	sheetMusicScroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        Keyboard key;
+        sheetMusicKeyboard.getChildren().add(key = new Keyboard(this));
     }
 
     private class NoteLabelData {
