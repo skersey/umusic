@@ -171,6 +171,10 @@ public class uMusicSongController {
         return trackList[trackNumber.ordinal()].setVolume(v);
     }
 
+    public int getTrackVolume(TrackNumber trackNumber) {
+        return trackList[trackNumber.ordinal()].getVolume();
+    }
+    
     public int setInstrument(TrackNumber trackNumber, String i) {
         return trackList[trackNumber.ordinal()].setInstrument(i);
     }

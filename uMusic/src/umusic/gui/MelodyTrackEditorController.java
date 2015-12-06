@@ -128,7 +128,8 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         //TrackNumber tn = getTrackNumber();
         uMusicNote note = getNote();
         uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
-        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, 100);
+	int volume = uMusicAppData.getInstance().getSongController().getTrackVolume(getTrackNumber());
+        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, volume);
         uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
         refreshEditor();
     }
@@ -205,7 +206,8 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     public void addNoteCallback(String pitch, int octave) {
 	uMusicNote note = getNoteFromKeyboard(pitch, octave);
         uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
-        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, 100);
+	int volume = uMusicAppData.getInstance().getSongController().getTrackVolume(getTrackNumber());
+        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, volume);
         uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
         refreshEditor();
     }
