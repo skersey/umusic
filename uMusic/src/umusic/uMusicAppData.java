@@ -81,6 +81,7 @@ public class uMusicAppData {
         trController.setTrackName(track.getTrackName());
         trController.setType(track.getType());
         trController.setInstrument(track.getInstrument());
+        trController.setTrackListener();
 
         // add the track record to the song editor
         songEditorNode.getChildren().add(trackRecord);

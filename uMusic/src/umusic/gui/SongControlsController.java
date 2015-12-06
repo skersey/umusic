@@ -8,6 +8,8 @@ package umusic.gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -59,8 +61,6 @@ public class SongControlsController implements Initializable {
 
     @FXML
     void playSong() {
-        //System.out.println(masterVolume.getValue());
-        //uMusicAppData.getInstance().getSongController().setMasterVolume((int)masterVolume.getValue());
         uMusicAppData.getInstance().playSong();
     }
 
@@ -104,6 +104,15 @@ public class SongControlsController implements Initializable {
         this.tempo.getSelectionModel().select(index);
     }
 
+    public void setMasterVolumeListener(){
+        masterVolume.valueProperty().addListener(new ChangeListener<Number>() {
+            public void changed(ObservableValue<? extends Number> ov,
+                Number old_val, Number new_val) {
+                    uMusicAppData.getInstance().getSongController().setMasterVolume((int)masterVolume.getValue());
+            }
+        });
+
+    }
     public void disableControls() {
         Node[] controls = {title, timeSignature, tempo, addTrackButton, stopButton, pauseButton, playButton};
         for (Node node : controls) {

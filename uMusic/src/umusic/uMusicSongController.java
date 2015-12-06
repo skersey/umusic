@@ -14,6 +14,7 @@ import umusic.uMusicTrack.TrackNumber;
 public class uMusicSongController {
 
     private int masterVolume = 125;
+    private int trackVolume = 125;
     private int timeSignatureNumerator = 4;
     private int timeSignatureDenominator = 4;
     private String tempo = "Allegro";
@@ -70,9 +71,18 @@ public class uMusicSongController {
         }
 
         this.masterVolume = volume;
+        setAllTrackVolume();
         return 0;
     }
 
+    public void setAllTrackVolume(){
+
+        for(int i = 0; i < trackList.length; i++){
+            if(trackList[i] != null){
+                setTrackVolume(trackList[i].getTrackNumber(), trackVolume);
+            }
+        }
+    }
     public void setTimeSignature(int numerator, int denominator) {
         this.timeSignatureNumerator = numerator;
         this.timeSignatureDenominator = denominator;
@@ -145,13 +155,13 @@ public class uMusicSongController {
 
     public int setTrackVolume(TrackNumber trackNumber, int volume) {
         int v;
-
+        trackVolume = volume;
         if (volume == 0 || masterVolume == 0) {
             v = 0;
         } else {
             v = (volume * masterVolume) / 125;
         }
-
+        System.out.println(v);
         return trackList[trackNumber.ordinal()].setVolume(v);
     }
 

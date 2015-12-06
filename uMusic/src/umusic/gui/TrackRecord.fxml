@@ -31,7 +31,7 @@
             <VBox>
                 <children>
                     <Label text="Track Volume" />
-                    <Slider max="100" min="0" maxWidth="100" fx:id="trVolume" showTickMarks="true" showTickLabels="true" majorTickUnit="25.0f" blockIncrement="5.0f" value="100"/>                 
+                    <Slider max="125" min="0" maxWidth="100" fx:id="trVolume" showTickMarks="true" showTickLabels="true" majorTickUnit="25.0f" blockIncrement="5.0f" value="125"/>                 
                 </children>
             </VBox>
             <Button text="Edit" fx:id="trEditButton" onAction="#editTrack"/>

@@ -52,6 +52,7 @@ public class CreateSongController implements Initializable {
             scController.setTitle(titleStr);
             scController.setTimeSignature(timeSignature.getSelectionModel().getSelectedIndex());
             scController.setTempo(tempo.getSelectionModel().getSelectedIndex());
+            scController.setMasterVolumeListener();
             scController.enableControls();
             uMusicAppData.getInstance().initSongEditor().showSongEditor();
 

@@ -8,12 +8,13 @@ package umusic.gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -21,11 +22,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import umusic.uMusicAppData;
-import umusic.uMusicNote.uMusicChord;
 import umusic.uMusicTrack.TrackNumber;
 
 /**
@@ -72,6 +70,22 @@ public class TrackRecordController implements Initializable {
     public void setInstrument(String index) {
         trInstrument.getSelectionModel().select(index);
     }
+    
+    public void setTrackListener(){
+        trVolume.valueProperty().addListener(new ChangeListener<Number>() {
+            public void changed(ObservableValue<? extends Number> ov,
+                Number old_val, Number new_val) {
+                    uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int)trVolume.getValue());
+            }
+        });
+        trInstrument.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            public void changed(ObservableValue<? extends Number> ov, 
+                Number old_val, Number new_val) {
+                trInstrument.getSelectionModel().select(trInstrument.getSelectionModel().getSelectedIndex());
+                uMusicAppData.getInstance().getSongController().setInstrument(getTrackNumber(), trInstrument.getSelectionModel().getSelectedItem().toString());      
+            }
+        });
+    }
 
     public String getInstrument() {
         return trInstrument.getSelectionModel().getSelectedItem().toString();
@@ -83,8 +97,6 @@ public class TrackRecordController implements Initializable {
         Node editor = null;
         FXMLLoader loader = null;
         TrackEditorController controller = null;
-        uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int)trVolume.getValue());
-        uMusicAppData.getInstance().getSongController().setInstrument(getTrackNumber(), trInstrument.getSelectionModel().getSelectedItem().toString());
         switch (type.toLowerCase()) {
             case "melody":
                 loader = new FXMLLoader(getClass().getResource("MelodyTrackEditor.fxml"));
