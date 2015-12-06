@@ -180,6 +180,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
         if (!mteRest.isSelected()) {
             note = pitch;
         }
+        String noteArray[] = note.split("");
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
 	chord = chord.getChordFromString(mteChord.getSelectionModel().getSelectedItem().toString());
         String durationStr = selectedDuration.getText();
@@ -206,9 +207,15 @@ public class ChordTrackEditorController extends TrackEditorController implements
         switch (sharpFlatStr) {
             case "sharp":
                 sf = SharpFlat.SHARP;
+                if (!mteRest.isSelected()) {
+                    note = noteArray[0];
+                }
                 break;
             case "flat":
                 sf = SharpFlat.FLAT;
+                if (!mteRest.isSelected()) {
+                    sf = SharpFlat.NONE;
+                }
                 break;
             default:
                 sf = SharpFlat.NONE;

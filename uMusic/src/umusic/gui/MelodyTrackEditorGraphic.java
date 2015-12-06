@@ -56,8 +56,6 @@ public class MelodyTrackEditorGraphic {
                 file = file + "5"; 
                 break;
         }
-
-        System.out.println(file);
         createGraphicStack(file);
         return stack;
     }
@@ -199,7 +197,6 @@ public class MelodyTrackEditorGraphic {
         return grid;
     }
     public void createGraphicGridNote(String file){
-        System.out.println(file);
         image = new Image(file + ".png");
         iv = new ImageView();
         iv.setImage(image);
@@ -207,7 +204,6 @@ public class MelodyTrackEditorGraphic {
     }
     
     public void createGraphicGridStaff(String file){
-        System.out.println(file);
         image = new Image(file + ".png");
         iv = new ImageView();
         iv.setImage(image);
@@ -215,7 +211,6 @@ public class MelodyTrackEditorGraphic {
     }
     
     public void createGraphicStack(String file){
-        System.out.println(file);
         image = new Image(file + ".png");
         iv = new ImageView();
         iv.setImage(image);

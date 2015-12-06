@@ -155,7 +155,8 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
         if (!mteRest.isSelected()) {
             note = pitch;
-        }
+        } 
+        String noteArray[] = note.split("");
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
         String durationStr = selectedDuration.getText();
         switch (durationStr) {
@@ -181,9 +182,15 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         switch (sharpFlatStr) {
             case "sharp":
                 sf = SharpFlat.SHARP;
+                if (!mteRest.isSelected()) {
+                    note = noteArray[0];
+                }
                 break;
             case "flat":
                 sf = SharpFlat.FLAT;
+                if (!mteRest.isSelected()) {
+                    sf = SharpFlat.NONE;
+                }
                 break;
             default:
                 sf = SharpFlat.NONE;
