@@ -33,6 +33,10 @@ public class uMusicPercussionTrack {
 
     }
 
+    public void removeRhythm(Integer rhythmId) {
+        this.rhythmBank.remove(rhythmId);
+        this.trackSequence.removeIf(elem->elem==rhythmId);
+    }
     public RhythmBank getRhythmBank() {
         return rhythmBank;
     }

@@ -35,6 +35,9 @@ public class uMusicRhythm {
         this.baseBeatDuration = baseBeatDuration;
     }
 
+    public int getBaseBeatDuration() {
+        return this.baseBeatDuration;
+    }
     public String getRhythmName() {
         return rhythmName;
     }
@@ -82,6 +85,10 @@ public class uMusicRhythm {
         }
     }
 
+    public String getRhythmLayer(Instrument instrument)  {
+        return layerMap.get(instrument);
+    }
+            
     public void setRhythmLayer(Instrument instrument, String rhythm) {
         layerMap.put(instrument, rhythm);
     }

@@ -25,7 +25,7 @@ import umusic.uMusicTrack.TrackNumber;
  * @author bruce.sailer
  */
 public class uMusicAppData {
-    
+
     private static final String ID_SONG_EDITOR = "songEditorNode";
     private static uMusicAppData instance = null;
 
@@ -86,10 +86,13 @@ public class uMusicAppData {
         songEditorNode.getChildren().add(trackRecord);
     }
 
-    public void addTrack( String type, String trackName,String instrument) throws IOException {
+    public void addTrack(String type, String trackName, String instrument) throws IOException {
         if (songController != null) {
-            uMusicTrack.TrackNumber trackNumber = songController.addTrack(type, trackName, instrument);
-            songController.setInstrument(trackNumber, instrument);
+            uMusicTrack.TrackNumber trackNumber = uMusicTrack.TrackNumber.TRACKMAX;
+            if ("drum".equalsIgnoreCase(type)) {
+                songController.addPercussionTrack(trackName);
+            }
+            trackNumber = songController.addTrack(type, trackName, instrument);
             addTrackToSongEditor(songController.getTrack(trackNumber));
         }
     }
