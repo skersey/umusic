@@ -117,7 +117,6 @@ public class uMusicAppData {
     }
 
     public void playSong() {
-        playerController.addSong(songController);
         playerController.startSong();
     }
 
@@ -164,6 +163,7 @@ public class uMusicAppData {
 
     public void setSongController(uMusicSongController sc) throws IOException {
         this.songController = sc;
+        playerController.addSong(sc);
 
         SongControlsController scController = uMusicAppData.getInstance().getSongControlsController();
         scController.setTitle(songController.getName());

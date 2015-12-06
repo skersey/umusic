@@ -17,6 +17,7 @@ import umusic.uMusicTrack.TrackNumber;
 public class uMusicPlayerController {
     private RealtimePlayer realTime;
     private ManagedPlayer mp;
+    private uMusicSongController sc = null;
     private Sequence sequence;
     
     public  uMusicPlayerController() {
@@ -47,7 +48,7 @@ public class uMusicPlayerController {
 
     public void addSong(uMusicSongController song) {
 	   mp = new ManagedPlayer();
-           sequence = song.getSongSequence();
+	   this.sc = song;
     }
 
     public void addTrack(TrackNumber trackNumber, uMusicSongController song) {
@@ -58,8 +59,10 @@ public class uMusicPlayerController {
     public void startSong() {
 	    if (mp.isPaused()) {
 		    mp.resume();
+		    return;
 	    }
 
+           sequence = sc.getSongSequence();
 	    try {
 		    mp.start(sequence);
 	    } catch (InvalidMidiDataException ex) {
