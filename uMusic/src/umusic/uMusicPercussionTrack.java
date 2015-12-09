@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class uMusicPercussionTrack {
 
-    private int volume = 100;
+    private int volume = 125;
     private String trackName;
     private final RhythmBank rhythmBank = new RhythmBank();
     private final List<Integer> trackSequence = new ArrayList<>();

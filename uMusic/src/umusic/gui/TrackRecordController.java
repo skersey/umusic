@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -49,6 +50,9 @@ public class TrackRecordController implements Initializable {
     @FXML
     Slider trVolume;
 
+    @FXML
+    CheckBox trMute;
+            
     @FXML
     Button trEditButton;
 
@@ -90,7 +94,24 @@ public class TrackRecordController implements Initializable {
     public String getInstrument() {
         return trInstrument.getSelectionModel().getSelectedItem().toString();
     }
-
+    @FXML
+    private void muteTrack(ActionEvent event) throws IOException{
+        final int MUTE = 0;
+        
+        if(trType.getText().equalsIgnoreCase("drum")){
+            if(trMute.isSelected()){
+                uMusicAppData.getInstance().getSongController().setPercussionTrackVolume(MUTE);
+            } else {
+                uMusicAppData.getInstance().getSongController().setPercussionTrackVolume((int)trVolume.getValue());
+            }
+        } else {
+            if(trMute.isSelected()){
+                uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), MUTE);
+            } else {
+                uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int)trVolume.getValue());
+            }
+        } 
+    }
     @FXML
     private void editTrack(ActionEvent event) throws IOException {
         String type = trType.getText();

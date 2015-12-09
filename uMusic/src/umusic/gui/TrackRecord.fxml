@@ -12,6 +12,14 @@
         <HBox spacing="20" alignment="CENTER">
             <VBox>
                 <children>
+                    <Label text="Mute" />
+                    <VBox alignment="CENTER"> 
+                        <CheckBox fx:id="trMute" onAction="#muteTrack"/>
+                    </VBox>
+                </children>
+            </VBox>
+            <VBox>
+                <children>
                     <Label text="Track Name" />
                     <TextField editable="false" text="Track Name Value" fx:id="trName" onAction="#editTrack"/>
                 </children>
