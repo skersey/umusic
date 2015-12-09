@@ -265,6 +265,19 @@ public class uMusicSongController {
         return new Player().getSequence(song);
     }
 
+    public Sequence getPercussionTrackSequence() {
+        String song = "";
+        song += " TIME:" + timeSignatureNumerator + "/" + timeSignatureDenominator;
+        song += " T" + MidiDictionary.TEMPO_STRING_TO_INT.get(tempo.toUpperCase());
+
+        if (percussionTrack != null) {
+            song += percussionTrack.toStaccatoString();
+        }
+
+        System.out.println(song);
+        return new Player().getSequence(song);
+    }
+    
     public int getTimeSignatureNumerator() {
         return timeSignatureNumerator;
     }

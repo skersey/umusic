@@ -152,6 +152,8 @@ public class uMusicNote {
 	@Override
 	public String toString() {
 	    	buildNoteString();
+		chordLessString = "";
+		chordString = "";
 		return noteString;
 	}
 

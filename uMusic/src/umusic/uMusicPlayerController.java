@@ -56,6 +56,11 @@ public class uMusicPlayerController {
            sequence = song.getTrackSequence(trackNumber);
     }
     
+    public void addPercussionTrack(uMusicSongController song) {
+   	   mp = new ManagedPlayer();
+           sequence = song.getPercussionTrackSequence();
+    }
+    
     public void startSong() {
 	    if (mp.isPaused()) {
 		    mp.resume();

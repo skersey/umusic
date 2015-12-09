@@ -14,7 +14,6 @@ public class uMusicTrack {
     private int volume = 100;
     private String instrument = "Piano";
     private String trackName;
-    private String trackString;
     private TrackNumber trackNumber;
     private final ArrayList<uMusicNote> notes = new ArrayList<>();
     public ArrayList<String> InstrumentList = new ArrayList<>(Arrays.asList(
@@ -107,6 +106,7 @@ public class uMusicTrack {
     }
 
     public String buildTrackString() {
+        String trackString;
         trackString = " V" + trackNumber.ordinal();
         trackString += " :CON(7," + volume + ")";
         trackString += " I" + MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get(instrument.toUpperCase());
