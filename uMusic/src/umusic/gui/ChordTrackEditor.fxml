@@ -82,9 +82,8 @@
                     <CheckBox text="rest" fx:id="mteRest"/>
                 </HBox>
                 <HBox spacing="5">
-                    <RadioButton text="flat" toggleGroup="$sharpFlatGroup"/>
-                    <RadioButton selected="true" text="none" toggleGroup="$sharpFlatGroup"/>
-                    <RadioButton text="sharp" toggleGroup="$sharpFlatGroup"/>
+                    <RadioButton selected="true" text="sharp" toggleGroup="$sharpFlatGroup"/>
+                    <RadioButton text="flat" toggleGroup="$sharpFlatGroup"/>               
                 </HBox>
             </VBox>
             <VBox minWidth="150" >
