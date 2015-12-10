@@ -65,13 +65,14 @@ public class uMusicNote {
 		this.dotted = dotted;
 	}
 	
-	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord c, Inversion i) {
+	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord c, Inversion i, boolean dotted) {
 		this.note = note;	
 		this.duration = dur; 
 		this.octave = octave;
 		this.sharpFlat = sf;
 		this.chord = c;
 		this.inversion = i;
+		this.dotted = dotted;
 	}
 	
 	public uMusicNote (uMusicNote copy) {
@@ -145,8 +146,10 @@ public class uMusicNote {
 			    break;
 		}
 
-		if (dotted)
+		if (dotted) {
 			noteString += "."; 
+			chordLessString += "."; 
+		}
 	}
 	
 	@Override

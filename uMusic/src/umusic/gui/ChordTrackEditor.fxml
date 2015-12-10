@@ -73,6 +73,14 @@
                     </ImageView>
                     <RadioButton  text="sixteenth" toggleGroup="$durationGroup"/>
                 </HBox>
+		<HBox>
+                    <ImageView fitHeight="15" fitWidth="15"  >
+                        <image>
+                            <Image url="@img/mod-dotted.png"/>
+                        </image>
+                    </ImageView>
+                    <CheckBox text="dotted" fx:id="mteDotted"/>
+                </HBox>
                 <HBox>
                     <ImageView fitHeight="15" fitWidth="15"  >
                         <image>

@@ -148,72 +148,72 @@ public class UMusic extends Application {
         sc.setInstrument(tn, "Piano");
         sc.setTrackVolume(tn, 60);
 
-        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.AUGMENTED, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DIMINISHED, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 2, 5, SharpFlat.NONE, uMusicChord.DIMINISHED7, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT9, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DOMINANT11, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT13, Inversion.NONE));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.AUGMENTED, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DIMINISHED, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 2, 5, SharpFlat.NONE, uMusicChord.DIMINISHED7, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT9, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DOMINANT11, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT13, Inversion.NONE, false));
 
-        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MINOR, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR6, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR6, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MAJOR7, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR7, Inversion.SINGLE));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR, Inversion.SINGLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MINOR, Inversion.SINGLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR6, Inversion.SINGLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR6, Inversion.SINGLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MAJOR7, Inversion.SINGLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR7, Inversion.SINGLE, false));
 
-        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR9, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.MINOR9, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR13, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MINOR13, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED2, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED4, Inversion.DOUBLE));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR9, Inversion.DOUBLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.MINOR9, Inversion.DOUBLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR13, Inversion.DOUBLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MINOR13, Inversion.DOUBLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED2, Inversion.DOUBLE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED4, Inversion.DOUBLE, false));
 
-        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.SHARP, uMusicChord.AUGMENTED, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.SHARP, uMusicChord.DIMINISHED, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 2, 5, SharpFlat.SHARP, uMusicChord.DIMINISHED7, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.SHARP, uMusicChord.DOMINANT9, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.DOMINANT11, Inversion.NONE));
-        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.DOMINANT13, Inversion.NONE));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.SHARP, uMusicChord.AUGMENTED, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.SHARP, uMusicChord.DIMINISHED, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 2, 5, SharpFlat.SHARP, uMusicChord.DIMINISHED7, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.SHARP, uMusicChord.DOMINANT9, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 4, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.DOMINANT11, Inversion.NONE, false));
+        sc.addNoteToTrack(tn, new uMusicNote("c", 8, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.DOMINANT13, Inversion.NONE, false));
 
-        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.MAJOR, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.MINOR, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 2, 5, SharpFlat.FLAT, uMusicChord.MAJOR6, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.FLAT, uMusicChord.MINOR6, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.FLAT, uMusicChord.MAJOR7, Inversion.SINGLE));
-        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.FLAT, uMusicChord.MINOR7, Inversion.SINGLE));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.MAJOR, Inversion.SINGLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.DOUBLE_SHARP, uMusicChord.MINOR, Inversion.SINGLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 2, 5, SharpFlat.FLAT, uMusicChord.MAJOR6, Inversion.SINGLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.FLAT, uMusicChord.MINOR6, Inversion.SINGLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 4, 5, SharpFlat.FLAT, uMusicChord.MAJOR7, Inversion.SINGLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("b", 8, 5, SharpFlat.FLAT, uMusicChord.MINOR7, Inversion.SINGLE, true));
 
-        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.FLAT, uMusicChord.MAJOR9, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.FLAT, uMusicChord.MINOR9, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 2, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR13, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR13, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.SUSPENDED2, Inversion.DOUBLE));
-        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.SUSPENDED4, Inversion.DOUBLE));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.FLAT, uMusicChord.MAJOR9, Inversion.DOUBLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.FLAT, uMusicChord.MINOR9, Inversion.DOUBLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 2, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MAJOR13, Inversion.DOUBLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 8, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.MINOR13, Inversion.DOUBLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.SUSPENDED2, Inversion.DOUBLE, true));
+        sc.addNoteToTrack(tn, new uMusicNote("g", 4, 5, SharpFlat.DOUBLE_FLAT, uMusicChord.SUSPENDED4, Inversion.DOUBLE, true));
     }
 
     public static void playChordsLive(uMusicPlayerController pc) {
         pc.setLiveInstrument("Piano");
 
-        pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.AUGMENTED, Inversion.NONE), 100);
-        pc.playLiveNote(new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DIMINISHED, Inversion.NONE), 100);
-        pc.playLiveNote(new uMusicNote("c", 2, 5, SharpFlat.NONE, uMusicChord.DIMINISHED7, Inversion.NONE), 100);
-        pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT9, Inversion.NONE), 100);
-        pc.playLiveNote(new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DOMINANT11, Inversion.NONE), 100);
-        pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT13, Inversion.NONE), 100);
+        pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.AUGMENTED, Inversion.NONE, true), 100);
+        pc.playLiveNote(new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DIMINISHED, Inversion.NONE, true), 100);
+        pc.playLiveNote(new uMusicNote("c", 2, 5, SharpFlat.NONE, uMusicChord.DIMINISHED7, Inversion.NONE, true), 100);
+        pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT9, Inversion.NONE, true), 100);
+        pc.playLiveNote(new uMusicNote("c", 4, 5, SharpFlat.NONE, uMusicChord.DOMINANT11, Inversion.NONE, false), 100);
+        pc.playLiveNote(new uMusicNote("c", 8, 5, SharpFlat.NONE, uMusicChord.DOMINANT13, Inversion.NONE, false), 100);
 
-        pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR, Inversion.SINGLE), 100);
-        pc.playLiveNote(new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MINOR, Inversion.SINGLE), 100);
-        pc.playLiveNote(new uMusicNote("b", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR6, Inversion.SINGLE), 100);
-        pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR6, Inversion.SINGLE), 100);
-        pc.playLiveNote(new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MAJOR7, Inversion.SINGLE), 100);
-        pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR7, Inversion.SINGLE), 100);
+        pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR, Inversion.SINGLE, false), 100);
+        pc.playLiveNote(new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MINOR, Inversion.SINGLE, false), 100);
+        pc.playLiveNote(new uMusicNote("b", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR6, Inversion.SINGLE, false), 100);
+        pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR6, Inversion.SINGLE, false), 100);
+        pc.playLiveNote(new uMusicNote("b", 4, 5, SharpFlat.NONE, uMusicChord.MAJOR7, Inversion.SINGLE, false), 100);
+        pc.playLiveNote(new uMusicNote("b", 8, 5, SharpFlat.NONE, uMusicChord.MINOR7, Inversion.SINGLE, false), 100);
 
-        pc.playLiveNote(new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR9, Inversion.DOUBLE), 100);
-        pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.MINOR9, Inversion.DOUBLE), 100);
-        pc.playLiveNote(new uMusicNote("g", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR13, Inversion.DOUBLE), 100);
-        pc.playLiveNote(new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MINOR13, Inversion.DOUBLE), 100);
-        pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED2, Inversion.DOUBLE), 100);
-        pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED4, Inversion.DOUBLE), 100);
+        pc.playLiveNote(new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MAJOR9, Inversion.DOUBLE, false), 100);
+        pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.MINOR9, Inversion.DOUBLE, false), 100);
+        pc.playLiveNote(new uMusicNote("g", 2, 5, SharpFlat.NONE, uMusicChord.MAJOR13, Inversion.DOUBLE, false), 100);
+        pc.playLiveNote(new uMusicNote("g", 8, 5, SharpFlat.NONE, uMusicChord.MINOR13, Inversion.DOUBLE, false), 100);
+        pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED2, Inversion.DOUBLE, false), 100);
+        pc.playLiveNote(new uMusicNote("g", 4, 5, SharpFlat.NONE, uMusicChord.SUSPENDED4, Inversion.DOUBLE, false), 100);
 
     }
 

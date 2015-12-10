@@ -76,6 +76,9 @@ public class ChordTrackEditorController extends TrackEditorController implements
 
     @FXML
     CheckBox mteRest;
+    
+    @FXML
+    CheckBox mteDotted;
 
     private uMusicNote getNote() {
         String note = "R";
@@ -141,7 +144,8 @@ public class ChordTrackEditorController extends TrackEditorController implements
                 break;
         }
 
-	return new uMusicNote (note, duration, octave, sf, chord, inv);
+        dotted = mteDotted.isSelected();
+	return new uMusicNote (note, duration, octave, sf, chord, inv, dotted);
     }
 
     @FXML
@@ -177,6 +181,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
         SharpFlat sf = SharpFlat.NONE;
 	uMusicChord chord = uMusicChord.MAJOR; 
 	Inversion inv = Inversion.NONE;
+        boolean dotted = false;
 
         if (!mteRest.isSelected()) {
             note = pitch;
@@ -244,7 +249,8 @@ public class ChordTrackEditorController extends TrackEditorController implements
                 break;
         }
 	
-	return new uMusicNote (note, duration, octave, sf, chord, inv);
+        dotted = mteDotted.isSelected();
+	return new uMusicNote (note, duration, octave, sf, chord, inv, dotted);
     }
 
     
