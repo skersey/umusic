@@ -203,25 +203,33 @@ public class ChordTrackEditorController extends TrackEditorController implements
                 break;
         }
 
-        RadioButton selectedSharpFlat = (RadioButton) sharpFlatGroup.getSelectedToggle();
-        String sharpFlatStr = selectedSharpFlat.getText();
-        switch (sharpFlatStr) {
-            case "sharp":
-                sf = SharpFlat.SHARP;
-                if (!mteRest.isSelected()) {
-                    note = noteArray[0];
-                }
-                break;
-            case "flat":
-                sf = SharpFlat.FLAT;
-                if (!mteRest.isSelected()) {
+        if (note.matches("[A-G]#")){ //if a black keyboard key was pressed           
+            //get sharp/flat radio group status and adjust note accordingly
+            RadioButton selectedSharpFlat = (RadioButton) sharpFlatGroup.getSelectedToggle();
+            String sharpFlatStr = selectedSharpFlat.getText();
+            switch (sharpFlatStr) {
+                case "sharp":
+                    if (!mteRest.isSelected()) {
+                        sf = SharpFlat.SHARP;
+                        note = note.substring(0,1);
+                    }
+                    break;
+                case "flat":
+                    if (!mteRest.isSelected()) {
+                        sf = SharpFlat.FLAT;
+                        //Adjust pitch up if flat e.g. G# = Ab
+                        char noteChar = note.charAt(0);
+                        if (noteChar == 'G') 
+                            note = "A";
+                        else note = Character.toString((char)((int)noteChar + 1));
+                    }
+                    break;
+                default:
                     sf = SharpFlat.NONE;
-                }
-                break;
-            default:
-                sf = SharpFlat.NONE;
-                break;
+                    break;
+            }
         }
+        
 	RadioButton selectedInversion = (RadioButton) inversionGroup.getSelectedToggle();
         String invStr = selectedInversion.getText();
 	switch (invStr) {
