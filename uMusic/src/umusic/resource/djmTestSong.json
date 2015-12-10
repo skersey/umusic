@@ -1,5 +1,6 @@
 {
   "masterVolume": 125,
+  "trackVolume": 125,
   "timeSignatureNumerator": 4,
   "timeSignatureDenominator": 4,
   "tempo": "Allegro",
@@ -9,7 +10,6 @@
       "volume": 100,
       "instrument": "Piano",
       "trackName": "Track Name Value",
-      "trackString": " V0 :CON(7,100) I0 G5s Eb5s C5s B4i G4i Rs B4s D5s G5s Rs G5s Eb5s C5s Ab5i F5i Rs Ab4s C5s F5s Rs G5s Eb5s B4s C5i Ab3i Rs C5s Eb5s Ab5s Rs Ab5s F5s D5s B4i G4i Rs B4s D5s G5s Rs Ab5s F5s Bb4s G5i Eb5i Rs G4s Bb4s Eb5s Rs F5s D5s G4s Eb5i C5i Rs Eb4s G4s C5s Rs Ab4s F4s D4s Eb4s D4s Eb4s C4s Rs C4s Eb4s G4s B3s D4s F4s B3s C4i Ri C4s Eb4s G4s C5s C5s Eb5s G5s C6s Rq G4s B4s D5s G5s Eb4s C5s G5s C6s Rq F4s Ab4s C5s F5s G4s Eb5s G5s B5s Rq Ab4s C5s Eb5s Ab5s F4s D5s Ab5s C6s Rq G4s B4s D5s G5s D4s D5s F5s Bb5s Rq Eb4s G4s C5s Eb5s B3s G4s D5s F5s Rq C4s Eb4s G4s C5s F3s D4s Ab4s F5s Rq G4s C5s Eb5s G5s G3s D5s F5s B5s Rq C5s Eb5s G5s. C6q Rq",
       "trackNumber": "TRACK0",
       "notes": [
         {
@@ -21,7 +21,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -32,7 +33,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -43,7 +45,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -54,7 +57,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B4i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -65,7 +69,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -76,7 +81,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -87,7 +93,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -98,7 +105,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -109,7 +117,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -120,7 +129,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -131,7 +141,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -142,7 +153,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -153,7 +165,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -164,7 +177,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab5i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -175,7 +189,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -186,7 +201,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -197,7 +213,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -208,7 +225,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -219,7 +237,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -230,7 +249,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -241,7 +261,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -252,7 +273,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -263,7 +285,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -274,7 +297,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -285,7 +309,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab3i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -296,7 +321,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -307,7 +333,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -318,7 +345,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -329,7 +357,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -340,7 +369,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -351,7 +381,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -362,7 +393,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -373,7 +405,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -384,7 +417,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B4i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -395,7 +429,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -406,7 +441,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -417,7 +453,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -428,7 +465,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -439,7 +477,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -450,7 +489,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -461,7 +501,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -472,7 +513,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -483,7 +525,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " Bb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -494,7 +537,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -505,7 +549,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -516,7 +561,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -527,7 +573,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -538,7 +585,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " Bb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -549,7 +597,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -560,7 +609,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -571,7 +621,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -582,7 +633,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -593,7 +645,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -604,7 +657,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -615,7 +669,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -626,7 +681,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -637,7 +693,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -648,7 +705,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -659,7 +717,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -670,7 +729,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -681,7 +741,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -692,7 +753,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -703,7 +765,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -714,7 +777,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -725,7 +789,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -736,7 +801,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -747,7 +813,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -758,7 +825,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -769,7 +837,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -780,7 +849,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -791,7 +861,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -802,7 +873,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -813,7 +885,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -824,7 +897,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -835,7 +909,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -846,7 +921,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4i",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -857,7 +933,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -868,7 +945,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -879,7 +957,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -890,7 +969,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -901,7 +981,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -912,7 +993,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -923,7 +1005,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -934,7 +1017,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -945,7 +1029,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C6s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -956,7 +1041,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -967,7 +1053,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -978,7 +1065,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -989,7 +1077,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1000,7 +1089,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1011,7 +1101,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1022,7 +1113,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1033,7 +1125,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1044,7 +1137,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C6s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1055,7 +1149,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1066,7 +1161,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1077,7 +1173,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1088,7 +1185,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1099,7 +1197,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1110,7 +1209,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1121,7 +1221,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1132,7 +1233,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1143,7 +1245,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1154,7 +1257,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1165,7 +1269,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1176,7 +1281,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1187,7 +1293,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1198,7 +1305,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1209,7 +1317,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1220,7 +1329,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1231,7 +1341,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1242,7 +1353,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C6s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1253,7 +1365,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1264,7 +1377,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1275,7 +1389,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1286,7 +1401,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1297,7 +1413,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1308,7 +1425,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1319,7 +1437,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1330,7 +1449,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1341,7 +1461,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " Bb5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1352,7 +1473,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1363,7 +1485,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1374,7 +1497,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1385,7 +1509,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1396,7 +1521,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1407,7 +1533,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1418,7 +1545,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1429,7 +1557,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1440,7 +1569,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1451,7 +1581,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1462,7 +1593,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1473,7 +1605,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1484,7 +1617,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1495,7 +1629,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1506,7 +1641,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1517,7 +1653,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1528,7 +1665,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1539,7 +1677,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1550,7 +1689,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1561,7 +1701,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1572,7 +1713,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1583,7 +1725,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1594,7 +1737,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1605,7 +1749,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1616,7 +1761,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1627,7 +1773,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1638,7 +1785,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1649,7 +1797,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1660,7 +1809,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C5s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1671,7 +1821,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb5s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1682,7 +1833,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G5s.",
-          "chordLessString": "nullsssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1693,7 +1845,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C6q",
-          "chordLessString": "nullqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 4,
@@ -1704,7 +1857,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         }
       ],
       "InstrumentList": [
@@ -1725,7 +1879,6 @@
       "volume": 100,
       "instrument": "Piano",
       "trackName": "Track Name Value 2",
-      "trackString": " V1 :CON(7,100) I0 Rq G3s B3s D4s G4s Rs Ri Eb3s G3s C4s Eb4s Rs F3s Ab3s C4s F4s Rs Ri G3s B3s Eb4s G4s Rs Ab3s C4s Eb4s Ab4s Rs Ri F3s Ab3s D4s F4s Rs G3s B3s D4s G4s Rs Ri D3s F3s Bb3s D4s Rs Eb3s G3s Bb3s Eb4s Rs Ri B2s D3s G3s B3s Rs C3s Eb3s G3s C4s Rs Ri F2s C3s D3s F3s Rs G2s C3s Eb3s G3s Rs Ri G2s B2s D3s G3s C2s C3s Eb3s G3s Rh G2s G3s B3s D4s Rh F2s F3s Ab3s C4s Rh Ab2s Ab3s C4s Eb4s Rh G2s G3s B3s D4s Rh Eb2s Eb3s G3s C4s Rh C2s C3s Eb3s G3s Rh G2s G3s C4s Eb4s Rh C3s C4s Eb4s G4s Rh",
       "trackNumber": "TRACK1",
       "notes": [
         {
@@ -1737,7 +1890,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rq",
-          "chordLessString": "nullqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1748,7 +1902,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1759,7 +1914,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1770,7 +1926,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1781,7 +1938,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1792,7 +1950,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -1803,7 +1962,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1814,7 +1974,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1825,7 +1986,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1836,7 +1998,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1847,7 +2010,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1858,7 +2022,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1869,7 +2034,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1880,7 +2046,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1891,7 +2058,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1902,7 +2070,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1913,7 +2082,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -1924,7 +2094,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1935,7 +2106,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1946,7 +2118,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1957,7 +2130,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1968,7 +2142,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1979,7 +2154,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -1990,7 +2166,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2001,7 +2178,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2012,7 +2190,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2023,7 +2202,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2034,7 +2214,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -2045,7 +2226,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2056,7 +2238,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2067,7 +2250,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2078,7 +2262,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2089,7 +2274,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2100,7 +2286,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2111,7 +2298,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2122,7 +2310,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2133,7 +2322,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2144,7 +2334,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2155,7 +2346,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -2166,7 +2358,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2177,7 +2370,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2188,7 +2382,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2199,7 +2394,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " Bb3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2210,7 +2406,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2221,7 +2418,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2232,7 +2430,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2243,7 +2442,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2254,7 +2454,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " Bb3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2265,7 +2466,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2276,7 +2478,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -2287,7 +2490,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2298,7 +2502,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B2s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2309,7 +2514,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2320,7 +2526,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2331,7 +2538,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2342,7 +2550,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2353,7 +2562,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2364,7 +2574,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2375,7 +2586,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2386,7 +2598,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2397,7 +2610,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -2408,7 +2622,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2419,7 +2634,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F2s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2430,7 +2646,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2441,7 +2658,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2452,7 +2670,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2463,7 +2682,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2474,7 +2694,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G2s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2485,7 +2706,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2496,7 +2718,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2507,7 +2730,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2518,7 +2742,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rs",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 8,
@@ -2529,7 +2754,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Ri",
-          "chordLessString": "nulliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2540,7 +2766,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G2s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2551,7 +2778,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B2s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2562,7 +2790,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2573,7 +2802,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2584,7 +2814,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C2s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2595,7 +2826,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2606,7 +2838,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2617,7 +2850,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -2628,7 +2862,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2639,7 +2874,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G2s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2650,7 +2886,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2661,7 +2898,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2672,7 +2910,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -2683,7 +2922,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2694,7 +2934,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F2s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2705,7 +2946,8 @@
           "inversion": "NONE",
           "note": "F",
           "noteString": " F3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2716,7 +2958,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2727,7 +2970,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -2738,7 +2982,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2749,7 +2994,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab2s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2760,7 +3006,8 @@
           "inversion": "NONE",
           "note": "A",
           "noteString": " Ab3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2771,7 +3018,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2782,7 +3030,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -2793,7 +3042,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2804,7 +3054,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G2s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2815,7 +3066,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2826,7 +3078,8 @@
           "inversion": "NONE",
           "note": "B",
           "noteString": " B3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2837,7 +3090,8 @@
           "inversion": "NONE",
           "note": "D",
           "noteString": " D4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -2848,7 +3102,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2859,7 +3114,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb2s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2870,7 +3126,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2881,7 +3138,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2892,7 +3150,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -2903,7 +3162,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2914,7 +3174,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C2s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2925,7 +3186,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2936,7 +3198,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb3s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2947,7 +3210,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -2958,7 +3222,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2969,7 +3234,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G2s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2980,7 +3246,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -2991,7 +3258,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -3002,7 +3270,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -3013,7 +3282,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -3024,7 +3294,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C3s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -3035,7 +3306,8 @@
           "inversion": "NONE",
           "note": "C",
           "noteString": " C4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -3046,7 +3318,8 @@
           "inversion": "NONE",
           "note": "E",
           "noteString": " Eb4s",
-          "chordLessString": "nullsssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 16,
@@ -3057,7 +3330,8 @@
           "inversion": "NONE",
           "note": "G",
           "noteString": " G4s",
-          "chordLessString": "nullssssssssssssssssssssssssssssssss"
+          "chordString": "",
+          "chordLessString": ""
         },
         {
           "duration": 2,
@@ -3068,7 +3342,8 @@
           "inversion": "NONE",
           "note": "R",
           "noteString": " Rh",
-          "chordLessString": "nullhhhhhhhhhhhhhhh"
+          "chordString": "",
+          "chordLessString": ""
         }
       ],
       "InstrumentList": [
