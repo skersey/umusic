@@ -30,6 +30,8 @@ import umusic.RhythmBank;
 import umusic.uMusicAppData;
 import umusic.uMusicRhythm;
 import umusic.uMusicRhythm.Instrument;
+import umusic.uMusicTrack;
+import umusic.uMusicTrack.TrackNumber;
 
 /**
  * FXML Controller class
@@ -78,17 +80,17 @@ public class DrumTrackEditorController extends TrackEditorController {
 
     @FXML
     void playTrack() {
-        uMusicAppData.getInstance().getPlayerController().startTrack(getTrackNumber());
+        uMusicAppData.getInstance().getPlayerController().startTrack(TrackNumber.TRACKMAX);
     }
 
     @FXML
     void pauseTrack(ActionEvent event) {
-        uMusicAppData.getInstance().getPlayerController().pauseTrack(getTrackNumber());
+        uMusicAppData.getInstance().getPlayerController().pauseTrack(TrackNumber.TRACKMAX);
     }
 
     @FXML
     void stopTrack(ActionEvent event) {
-        uMusicAppData.getInstance().getPlayerController().finishTrack(getTrackNumber());
+        uMusicAppData.getInstance().getPlayerController().finishTrack(TrackNumber.TRACKMAX);
     }
 
     @Override
