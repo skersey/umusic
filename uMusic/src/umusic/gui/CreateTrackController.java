@@ -8,6 +8,8 @@ package umusic.gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -68,6 +70,17 @@ public class CreateTrackController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         this.ctInstrument.getSelectionModel().select(2);
         this.ctType.getSelectionModel().select(0);
+        ctType.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue ov,
+                    Number value, Number new_value) {
+                if (new_value.equals(2)) {
+                    ctInstrument.setDisable(true);
+                } else {
+                    ctInstrument.setDisable(false);
+                }
+            }
+        });
     }
 
 }

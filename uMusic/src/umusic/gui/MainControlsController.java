@@ -100,14 +100,16 @@ public class MainControlsController implements Initializable {
                 new FileChooser.ExtensionFilter("Song Files", "*.json"));
         fileChooser.setInitialDirectory(uMusicAppData.getInstance().getLastFileDir());
         File file = fileChooser.showOpenDialog(umusic.UMusic.stage);
-        uMusicAppData.getInstance().setLastFile(file);
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        String json = new String(Files.readAllBytes(file.toPath()));
+        if (file != null) {
+            uMusicAppData.getInstance().setLastFile(file);
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        uMusicSongController sc = gson.fromJson(json, uMusicSongController.class);
-        uMusicAppData.getInstance().setSongController(sc);
+            String json = new String(Files.readAllBytes(file.toPath()));
 
+            uMusicSongController sc = gson.fromJson(json, uMusicSongController.class);
+            uMusicAppData.getInstance().setSongController(sc);
+        }
     }
 
     @FXML
