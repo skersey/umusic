@@ -76,13 +76,13 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     CheckBox mteDotted;
     
     @FXML
-    Button stopBuuton;
+    Button stopButton;
     
     @FXML
-    Button pauseBuuton;
+    Button pauseButton;
     
     @FXML
-    Button playBuuton;
+    Button playButton;
 
 /*    private uMusicNote getNote() {
         String note = "R";
