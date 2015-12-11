@@ -19,6 +19,8 @@ public class uMusicPlayerController {
     private ManagedPlayer mp;
     private uMusicSongController sc = null;
     private Sequence sequence;
+    private boolean trackPlaying;
+    private TrackNumber trackNumber;
     
     public  uMusicPlayerController() {
 	    try {
@@ -62,7 +64,13 @@ public class uMusicPlayerController {
     }
     
     public void startSong() {
-	    if (mp.isPaused()) {
+            if(trackPlaying){
+                    trackPlaying = false;
+                    mp.finish();
+                    
+                    System.out.print(mp.isFinished() + "+" +  mp.isPaused());
+            }
+	    if (mp.isPaused() && !mp.isFinished()) {
 		    mp.resume();
 		    return;
 	    }
@@ -84,5 +92,37 @@ public class uMusicPlayerController {
 
     public void finishSong() {
 	    mp.finish();
+            trackPlaying = false;
     }	
+    
+        public void startTrack(TrackNumber trackNumber){
+        if (mp.isPaused() && trackPlaying && this.trackNumber.toString().equalsIgnoreCase(trackNumber.toString())) {
+		    mp.resume();
+		    return;
+	    }
+        
+           trackPlaying = true;
+           this.trackNumber = trackNumber;
+           sequence = sc.getTrackSequence(trackNumber);
+	    try {
+		    mp.start(sequence);
+	    } catch (InvalidMidiDataException ex) {
+		    Logger.getLogger(uMusicPlayerController.class.getName()).log(Level.SEVERE, null, ex);
+	    } catch (MidiUnavailableException ex) {
+		    Logger.getLogger(uMusicPlayerController.class.getName()).log(Level.SEVERE, null, ex);
+	    }
+    }
+        
+    public void pauseTrack(TrackNumber trackNumber){
+        if (mp.isPlaying() && this.trackNumber.toString().equalsIgnoreCase(trackNumber.toString())){
+	    mp.pause();
+        }
+    }
+    
+    public void finishTrack(TrackNumber trackNumber){
+        if (this.trackNumber.toString().equalsIgnoreCase(trackNumber.toString())){
+            mp.finish();
+            trackPlaying = false;
+        }
+    }
 }
