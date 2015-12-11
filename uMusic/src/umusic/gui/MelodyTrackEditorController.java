@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ContextMenu;
@@ -73,6 +74,15 @@ public class MelodyTrackEditorController extends TrackEditorController implement
 
     @FXML
     CheckBox mteDotted;
+    
+    @FXML
+    Button stopBuuton;
+    
+    @FXML
+    Button pauseBuuton;
+    
+    @FXML
+    Button playBuuton;
 
 /*    private uMusicNote getNote() {
         String note = "R";
@@ -122,6 +132,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         return new uMusicNote(note, duration, octave, sf, dotted);
     }
 
+    
     @FXML
     private void playNote(ActionEvent event) throws IOException {
         uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
@@ -145,6 +156,21 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         return note;
     }
 */
+    @FXML
+    void playTrack() {
+        uMusicAppData.getInstance().getPlayerController().startTrack(getTrackNumber());
+    }
+
+    @FXML
+    void pauseTrack(ActionEvent event) {
+        uMusicAppData.getInstance().getPlayerController().pauseTrack(getTrackNumber());
+    }
+
+    @FXML
+    void stopTrack(ActionEvent event) {
+        uMusicAppData.getInstance().getPlayerController().finishTrack(getTrackNumber());
+    }
+    
     @Override
     public MelodyTrackEditorController refreshEditor() {
         sheetMusicPane.setStyle("-fx-background-color: rgba(0, 100, 100, 0.5); -fx-background-radius: 0;");

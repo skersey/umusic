@@ -14,10 +14,7 @@
         </HBox>
         <HBox alignment="CENTER_RIGHT" >
             <VBox fillWidth="true" HBox.hgrow="ALWAYS" >
-        <!--<HBox>
-            <VBox> -->
                 <ScrollPane fx:id="sheetMusicScroll" minWidth="450" minHeight="150" fitToHeight="true">   
-                 <!--       <HBox fx:id="sheetMusicPane" fillHeight="true" minWidth="400"/> -->
                         <HBox fx:id="sheetMusicPane" alignment="BOTTOM_LEFT"/>         
                 </ScrollPane>
             </VBox>
@@ -28,6 +25,16 @@
                 <fx:define>
                     <ToggleGroup fx:id="sharpFlatGroup"/>
                 </fx:define>
+                <HBox>
+                    <Label contentDisplay="CENTER" text="Play Track"/>
+                </HBox>
+                <HBox spacing="20">
+                    <children>
+                        <Button contentDisplay="CENTER" text="o" fx:id="stopButton" onAction="#stopTrack"/>
+                        <Button text="||" fx:id="pauseButton" onAction="#pauseTrack"/>
+                        <Button text="&gt;" fx:id="playButton" onAction="#playTrack"/>
+                    </children>
+                </HBox>
                 <Label text="Note Duration"/>
                 <HBox>
                     <ImageView fitHeight="15" fitWidth="15"  >

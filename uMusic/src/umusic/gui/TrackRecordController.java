@@ -55,6 +55,17 @@ public class TrackRecordController implements Initializable {
             
     @FXML
     Button trEditButton;
+    
+    @FXML
+    Button trStopButton;
+    
+    @FXML
+    Button trPauseButton;
+        
+    @FXML
+    Button trPlayButton;
+            
+            
 
     @FXML
     Button trRemoveButton;
@@ -152,6 +163,21 @@ public class TrackRecordController implements Initializable {
         }
     }
 
+    @FXML
+    void playTrack() {
+        uMusicAppData.getInstance().getPlayerController().startTrack(getTrackNumber());
+    }
+
+    @FXML
+    void pauseTrack(ActionEvent event) {
+        uMusicAppData.getInstance().getPlayerController().pauseTrack(getTrackNumber());
+    }
+
+    @FXML
+    void stopTrack(ActionEvent event) {
+        uMusicAppData.getInstance().getPlayerController().finishTrack(getTrackNumber());
+    }
+    
     @FXML
     private void removeTrack(ActionEvent event) throws IOException {
         uMusicAppData.getInstance().getSongController().deleteTrack(trackNumber);

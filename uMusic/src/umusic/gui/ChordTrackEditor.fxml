@@ -19,6 +19,16 @@
                 </ScrollPane>
             </VBox>
             <VBox minWidth="200" >
+                <HBox>
+                    <Label contentDisplay="CENTER" text="Play Track"/>
+                </HBox>
+                <HBox spacing="20">
+                    <children>
+                        <Button contentDisplay="CENTER" text="o" fx:id="stopButton" onAction="#stopTrack"/>
+                        <Button text="||" fx:id="pauseButton" onAction="#pauseTrack"/>
+                        <Button text="&gt;" fx:id="playButton" onAction="#playTrack"/>
+                    </children>
+                </HBox>
 		<Label text="Note Duration"/>
 	        <fx:define>
                     <ToggleGroup fx:id="durationGroup"/>

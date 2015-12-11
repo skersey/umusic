@@ -42,8 +42,19 @@
                     <Slider max="125" min="0" maxWidth="100" fx:id="trVolume" showTickMarks="true" showTickLabels="true" majorTickUnit="25.0f" blockIncrement="5.0f" value="125"/>                 
                 </children>
             </VBox>
-            <Button text="Edit" fx:id="trEditButton" onAction="#editTrack"/>
-            <Button text="X" fx:id="trRemoveButton" onAction="#removeTrack"/>
+            <HBox spacing="20" alignment="CENTER" >
+                <Button text="Edit" fx:id="trEditButton" onAction="#editTrack"/>
+                <Button text="X" fx:id="trRemoveButton" onAction="#removeTrack"/>
+                <Label minWidth="50"/> 
+            </HBox>
+            <VBox> 
+                <Label text="Stop    Pause     Play"/> 
+                <HBox spacing="20" alignment="CENTER" >
+                    <Button contentDisplay="CENTER" text="o" fx:id="trStopButton" onAction="#stopTrack"/>
+                    <Button text="||" fx:id="trPauseButton" onAction="#pauseTrack"/>
+                    <Button text="&gt;" fx:id="trPlayButton" onAction="#playTrack"/>
+                </HBox>
+            </VBox>
         </HBox> 
     </center>
     
