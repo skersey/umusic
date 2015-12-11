@@ -81,8 +81,8 @@ public class ChordTrackEditorController extends TrackEditorController implements
     @FXML
     ToggleGroup inversionGroup;
 
-    @FXML
-    CheckBox mteRest;
+//    @FXML
+//    CheckBox mteRest;
     
     @FXML
     CheckBox mteDotted;
@@ -185,6 +185,40 @@ public class ChordTrackEditorController extends TrackEditorController implements
     } */
 
     @FXML
+    private void addRestAction(ActionEvent event) throws IOException {
+	String note = "R";
+        int duration = 0;
+        boolean dotted = false;
+	uMusicChord chord = uMusicChord.MAJOR; 
+
+        RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
+        String durationStr = selectedDuration.getText();
+	chord = chord.getChordFromString(mteChord.getSelectionModel().getSelectedItem().toString());
+        switch (durationStr) {
+            case ("whole"):
+                duration = 1;
+                break;
+            case ("half"):
+                duration = 2;
+                break;
+            case ("quarter"):
+                duration = 4;
+                break;
+            case ("eighth"):
+                duration = 8;
+                break;
+            case ("sixteenth"):
+                duration = 16;
+                break;
+        }
+
+        dotted = mteDotted.isSelected();
+        uMusicNote n = new uMusicNote (note, duration, 5, SharpFlat.NONE, chord, Inversion.NONE, dotted);
+        uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), n);
+        refreshEditor();
+    }
+
+    @FXML
     void playTrack() {
         uMusicAppData.getInstance().getPlayerController().startTrack(getTrackNumber());
     }
@@ -209,16 +243,16 @@ public class ChordTrackEditorController extends TrackEditorController implements
     }
 
     private uMusicNote getNoteFromKeyboard(String pitch, int octave) {
-        String note = "R";
+        String note = pitch;
         int duration = 0;
         SharpFlat sf = SharpFlat.NONE;
 	uMusicChord chord = uMusicChord.MAJOR; 
 	Inversion inv = Inversion.NONE;
         boolean dotted = false;
 
-        if (!mteRest.isSelected()) {
-            note = pitch;
-        }
+//        if (!mteRest.isSelected()) {
+//            note = pitch;
+//        }
         String noteArray[] = note.split("");
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
 	chord = chord.getChordFromString(mteChord.getSelectionModel().getSelectedItem().toString());
@@ -247,20 +281,20 @@ public class ChordTrackEditorController extends TrackEditorController implements
             String sharpFlatStr = selectedSharpFlat.getText();
             switch (sharpFlatStr) {
                 case "sharp":
-                    if (!mteRest.isSelected()) {
+//                    if (!mteRest.isSelected()) {
                         sf = SharpFlat.SHARP;
                         note = note.substring(0,1);
-                    }
+//                    }
                     break;
                 case "flat":
-                    if (!mteRest.isSelected()) {
+//                    if (!mteRest.isSelected()) {
                         sf = SharpFlat.FLAT;
                         //Adjust pitch up if flat e.g. G# = Ab
                         char noteChar = note.charAt(0);
                         if (noteChar == 'G') 
                             note = "A";
                         else note = Character.toString((char)((int)noteChar + 1));
-                    }
+//                    }
                     break;
                 default:
                     sf = SharpFlat.NONE;
