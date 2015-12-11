@@ -69,8 +69,8 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     @FXML
     ToggleGroup sharpFlatGroup;
 
-    @FXML
-    CheckBox mteRest;
+//    @FXML
+//    CheckBox mteRest;
 
     @FXML
     CheckBox mteDotted;
@@ -156,6 +156,39 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         return note;
     }
 */
+
+       @FXML
+    private void addRestAction(ActionEvent event) throws IOException {
+	String note = "R";
+        int duration = 0;
+        boolean dotted = false;
+
+        RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
+        String durationStr = selectedDuration.getText();
+        switch (durationStr) {
+            case ("whole"):
+                duration = 1;
+                break;
+            case ("half"):
+                duration = 2;
+                break;
+            case ("quarter"):
+                duration = 4;
+                break;
+            case ("eighth"):
+                duration = 8;
+                break;
+            case ("sixteenth"):
+                duration = 16;
+                break;
+        }
+
+        dotted = mteDotted.isSelected();
+        uMusicNote n = new uMusicNote(note, duration, 5, SharpFlat.NONE, dotted);
+        uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), n);
+        refreshEditor();
+    }
+    
     @FXML
     void playTrack() {
         uMusicAppData.getInstance().getPlayerController().startTrack(getTrackNumber());
@@ -181,14 +214,14 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     }
 
     private uMusicNote getNoteFromKeyboard(String pitch, int octave) {
-        String note = "R";
+        String note = pitch;
         int duration = 0;
         SharpFlat sf = SharpFlat.NONE;
         boolean dotted = false;
 
-        if (!mteRest.isSelected()) {
-            note = pitch;
-        } 
+//        if (!mteRest.isSelected()) {
+//            note = pitch;
+//        } 
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
         String durationStr = selectedDuration.getText();
         switch (durationStr) {
@@ -215,20 +248,20 @@ public class MelodyTrackEditorController extends TrackEditorController implement
             String sharpFlatStr = selectedSharpFlat.getText();
             switch (sharpFlatStr) {
                 case "sharp":
-                    if (!mteRest.isSelected()) {
+//                    if (!mteRest.isSelected()) {
                         sf = SharpFlat.SHARP;
                         note = note.substring(0,1);
-                    }
+//                    }
                     break;
                 case "flat":
-                    if (!mteRest.isSelected()) {
+//                    if (!mteRest.isSelected()) {
                         sf = SharpFlat.FLAT;
                         //Adjust pitch up if flat e.g. G# = Ab
                         char noteChar = note.charAt(0);
                         if (noteChar == 'G') 
                             note = "A";
                         else note = Character.toString((char)((int)noteChar + 1));
-                    }
+//                    }
                     break;
                 default:
                     sf = SharpFlat.NONE;

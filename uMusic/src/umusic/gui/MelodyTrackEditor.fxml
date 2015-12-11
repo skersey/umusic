@@ -93,18 +93,12 @@
     
                 </HBox>
                 <HBox>
-                    <ImageView fitHeight="15" fitWidth="15"  >
-                        <image>
-                            <Image url="@img/mod-rest.png"/>
-                        </image>
-                    </ImageView>
-                    <CheckBox text="rest" fx:id="mteRest"/>
-                </HBox>
-                <HBox>
                     <RadioButton selected="true" text="sharp" toggleGroup="$sharpFlatGroup"/>
                     <RadioButton text="flat" toggleGroup="$sharpFlatGroup"/>
                 </HBox>
-    
+   		<HBox>
+            	    <Button text="Add Rest" onAction="#addRestAction"/>
+        	</HBox> 
             </VBox>
         </HBox>
             <HBox fx:id="sheetMusicKeyboard" />
