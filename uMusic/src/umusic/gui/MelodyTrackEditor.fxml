@@ -100,15 +100,6 @@
     
             </VBox>
         </HBox>
-        <ScrollPane>
-            <HBox spacing="10">
-                <Label text="Enter Note Value here"/>
-                <fx:include fx:id="mteNote" source="choicebox/Notes.fxml"/>
-                <fx:include fx:id="mteOctave" source="choicebox/Octave.fxml"/>    
-                <Button text="Add" onAction="#addNote"/>
-                <Button text="Play Note" onAction="#playNote"/>
-            </HBox>
-        </ScrollPane>
             <HBox fx:id="sheetMusicKeyboard" />
     </VBox>
 </AnchorPane>

@@ -7,18 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="chordEditorContainer" fx:controller="umusic.gui.ChordTrackEditorController" AnchorPane.rightAnchor="0.0" >
-    <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" fillWidth="true" >
-        <HBox alignment="CENTER_RIGHT">
-            <Button text="Back" onAction="#backButtonAction"/>
-        </HBox>
-        <HBox alignment="CENTER_RIGHT" >
-            <VBox fillWidth="true" HBox.hgrow="ALWAYS" >
-		<ScrollPane fx:id="sheetMusicScroll" minWidth="450" minHeight="180" fitToHeight="true">   
-                        <HBox fx:id="sheetMusicPane" alignment="BOTTOM_LEFT"/>         
-                </ScrollPane>
-            </VBox>
-            <VBox minWidth="200" >
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="editMelodyWindow"  prefHeight="250.0" prefWidth="250.0" fx:controller="umusic.gui.EditMelodyController">
+    <HBox AnchorPane.topAnchor="5.0" AnchorPane.leftAnchor="85.0">
+	    <VBox minWidth="200" >
 		<Label text="Note Duration"/>
 	        <fx:define>
                     <ToggleGroup fx:id="durationGroup"/>
@@ -91,22 +82,22 @@
                 </HBox>
                 <HBox spacing="5">
                     <RadioButton selected="true" text="sharp" toggleGroup="$sharpFlatGroup"/>
-                    <RadioButton text="flat" toggleGroup="$sharpFlatGroup"/>               
+                    <RadioButton text="flat" toggleGroup="$sharpFlatGroup"/>
                 </HBox>
             </VBox>
-            <VBox minWidth="150" >
-                <Label text="Inversions"/>
-                <fx:define>
-                    <ToggleGroup fx:id="inversionGroup" />
-                </fx:define>
-                <RadioButton selected="true" text="0" toggleGroup="$inversionGroup"/>
-                <RadioButton                 text="1" toggleGroup="$inversionGroup"/>
-                <RadioButton                 text="2" toggleGroup="$inversionGroup"/>
-                <Label text=""/>
-                <Label text="Chords"/>
-                <fx:include fx:id="mteChord" source="choicebox/Chords.fxml"/>
+        </HBox>
+	<HBox AnchorPane.topAnchor="175.0" AnchorPane.leftAnchor="85.0" spacing="20">
+            <VBox>
+                <Label text="Note"/>
+		<fx:include fx:id="mteNote" source="choicebox/Notes.fxml"/>		
+            </VBox>
+            <VBox>
+                <Label text="Octave"/>
+                <fx:include fx:id="mteOctave" source="choicebox/Octave.fxml"/>    
             </VBox>
         </HBox>
-            <HBox fx:id="sheetMusicKeyboard" />
-    </VBox>
+	<HBox AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="75.0" spacing="20">
+            <Button text="Cancel" fx:id="closeButton" onAction="#closeButtonAction"/>
+            <Button text="Edit Note" fx:id="editNote" onAction="#editNoteAction"/>
+        </HBox>
 </AnchorPane>

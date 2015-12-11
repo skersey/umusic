@@ -133,7 +133,7 @@ public class MelodyTrackEditorGraphic {
 
                 file = file + noteArray[1] + noteArray [3];
                 createGraphicGridNote(file);
-            }
+            } 
             
          if (noteArray[2].equalsIgnoreCase("1") | noteArray[2].equalsIgnoreCase("2") |
                     noteArray[2].equalsIgnoreCase("3") | noteArray[2].equalsIgnoreCase("4") |

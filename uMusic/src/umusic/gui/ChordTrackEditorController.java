@@ -10,11 +10,16 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ContentDisplay;
@@ -33,6 +38,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
+import javafx.stage.Stage;
 import umusic.uMusicAppData;
 import umusic.uMusicNote;
 import umusic.uMusicNote.Inversion;
@@ -56,14 +62,14 @@ public class ChordTrackEditorController extends TrackEditorController implements
     @FXML
     HBox sheetMusicKeyboard;
     
-    @FXML
-    ChoiceBox mteNote;
+//    @FXML
+//    ChoiceBox mteNote;
 
     @FXML
     ChoiceBox mteChord;
 
-    @FXML
-    ChoiceBox mteOctave;
+//    @FXML
+//    ChoiceBox mteOctave;
 
     @FXML
     ToggleGroup durationGroup;
@@ -79,7 +85,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
     
     @FXML
     CheckBox mteDotted;
-
+/*
     private uMusicNote getNote() {
         String note = "R";
         int duration = 0;
@@ -164,7 +170,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
         uMusicAppData.getInstance().getPlayerController().playLiveNote(note, volume);
         uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
         refreshEditor();
-    }
+    } */
 
     @Override
     public ChordTrackEditorController refreshEditor() {
@@ -303,7 +309,23 @@ public class ChordTrackEditorController extends TrackEditorController implements
                         editNote.setOnAction(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
-                                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                                NoteLabelData data = (NoteLabelData) noteLabel.getUserData();
+				try {
+            				Parent root;
+
+            				FXMLLoader loader;
+	    				loader = new FXMLLoader(getClass().getResource("EditChord.fxml"));
+            				root = loader.load();
+	    				EditChordController edit = loader.getController();
+	    				edit.setNoteData(data.noteIndex, data.trackNumber);
+            				Stage stage = new Stage();
+            				stage.setTitle("Edit Chord");
+            				stage.setScene(new Scene(root, 300, 350));
+            				stage.showAndWait();
+                                	refreshEditor();
+        			} catch (IOException ex) {
+            				Logger.getLogger(MainControlsController.class.getName()).log(Level.SEVERE, null, ex);
+        			}
                             }
                         });
                         contextMenu.getItems().addAll(removeNote, editNote);
@@ -335,8 +357,8 @@ public class ChordTrackEditorController extends TrackEditorController implements
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        mteNote.getSelectionModel().select(3);
-        mteOctave.getSelectionModel().select(4);
+//        mteNote.getSelectionModel().select(3);
+//        mteOctave.getSelectionModel().select(4);
 
 	uMusicChord c = uMusicChord.NONE;
 	mteChord.getItems().setAll(java.util.Arrays.asList(c.values()));
