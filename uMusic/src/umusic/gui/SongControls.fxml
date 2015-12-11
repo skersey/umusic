@@ -43,7 +43,7 @@
                         <VBox>
                             <children>
                                 <Label text="Master Volume" />
-                                <Slider max="125" min="0" maxWidth="100" fx:id="masterVolume" showTickMarks="true" showTickLabels="true" majorTickUnit="25.0f" blockIncrement="5.0f" value="125"/> 
+                                <Slider max="125" min="0" maxWidth="100" fx:id="masterVolume" showTickMarks="true" showTickLabels="true" majorTickUnit="25.0f" blockIncrement="5.0f" value="125"  /> 
                             </children>
                         </VBox> 
                     </children>

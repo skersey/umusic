@@ -52,18 +52,20 @@ public class TrackRecordController implements Initializable {
 
     @FXML
     CheckBox trMute;
-
+            
     @FXML
     Button trEditButton;
-
+    
     @FXML
     Button trStopButton;
-
+    
     @FXML
     Button trPauseButton;
-
+        
     @FXML
     Button trPlayButton;
+            
+            
 
     @FXML
     Button trRemoveButton;
@@ -83,19 +85,19 @@ public class TrackRecordController implements Initializable {
     public void setInstrument(String index) {
         trInstrument.getSelectionModel().select(index);
     }
-
-    public void setTrackListener() {
+    
+    public void setTrackListener(){
         trVolume.valueProperty().addListener(new ChangeListener<Number>() {
             public void changed(ObservableValue<? extends Number> ov,
-                    Number old_val, Number new_val) {
-                uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int) trVolume.getValue());
+                Number old_val, Number new_val) {
+                    uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int)trVolume.getValue());
             }
         });
         trInstrument.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-            public void changed(ObservableValue<? extends Number> ov,
-                    Number old_val, Number new_val) {
+            public void changed(ObservableValue<? extends Number> ov, 
+                Number old_val, Number new_val) {
                 trInstrument.getSelectionModel().select(trInstrument.getSelectionModel().getSelectedIndex());
-                uMusicAppData.getInstance().getSongController().setInstrument(getTrackNumber(), trInstrument.getSelectionModel().getSelectedItem().toString());
+                uMusicAppData.getInstance().getSongController().setInstrument(getTrackNumber(), trInstrument.getSelectionModel().getSelectedItem().toString());      
             }
         });
     }
@@ -103,24 +105,24 @@ public class TrackRecordController implements Initializable {
     public String getInstrument() {
         return trInstrument.getSelectionModel().getSelectedItem().toString();
     }
-
     @FXML
-    private void muteTrack(ActionEvent event) throws IOException {
+    private void muteTrack(ActionEvent event) throws IOException{
         final int MUTE = 0;
-
-        if (trType.getText().equalsIgnoreCase("drum")) {
-            if (trMute.isSelected()) {
+        
+        if(trType.getText().equalsIgnoreCase("drum")){
+            if(trMute.isSelected()){
                 uMusicAppData.getInstance().getSongController().setPercussionTrackVolume(MUTE);
             } else {
-                uMusicAppData.getInstance().getSongController().setPercussionTrackVolume((int) trVolume.getValue());
+                uMusicAppData.getInstance().getSongController().setPercussionTrackVolume((int)trVolume.getValue());
             }
-        } else if (trMute.isSelected()) {
-            uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), MUTE);
         } else {
-            uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int) trVolume.getValue());
-        }
+            if(trMute.isSelected()){
+                uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), MUTE);
+            } else {
+                uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int)trVolume.getValue());
+            }
+        } 
     }
-
     @FXML
     private void editTrack(ActionEvent event) throws IOException {
         String type = trType.getText();
@@ -163,34 +165,19 @@ public class TrackRecordController implements Initializable {
 
     @FXML
     void playTrack() {
-        String type = trType.getText();
-        if ("drum".equalsIgnoreCase(type)) {
-            uMusicAppData.getInstance().getPlayerController().startTrack(TrackNumber.TRACKMAX);
-        } else {
-            uMusicAppData.getInstance().getPlayerController().startTrack(getTrackNumber());
-        }
+        uMusicAppData.getInstance().getPlayerController().startTrack(getTrackNumber());
     }
 
     @FXML
     void pauseTrack(ActionEvent event) {
-        String type = trType.getText();
-        if ("drum".equalsIgnoreCase(type)) {
-            uMusicAppData.getInstance().getPlayerController().pauseTrack(TrackNumber.TRACKMAX);
-        } else {
-            uMusicAppData.getInstance().getPlayerController().pauseTrack(getTrackNumber());
-        }
+        uMusicAppData.getInstance().getPlayerController().pauseTrack(getTrackNumber());
     }
 
     @FXML
     void stopTrack(ActionEvent event) {
-        String type = trType.getText();
-        if ("drum".equalsIgnoreCase(type)) {
-            uMusicAppData.getInstance().getPlayerController().finishTrack(TrackNumber.TRACKMAX);
-        } else {
-            uMusicAppData.getInstance().getPlayerController().finishTrack(getTrackNumber());
-        }
+        uMusicAppData.getInstance().getPlayerController().finishTrack(getTrackNumber());
     }
-
+    
     @FXML
     private void removeTrack(ActionEvent event) throws IOException {
         uMusicAppData.getInstance().getSongController().deleteTrack(trackNumber);
@@ -207,18 +194,5 @@ public class TrackRecordController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-    }
-
-    public void setVolume(double volume) {
-        trVolume.setValue(volume);
-    }
-
-    public double getVolume() {
-        return trVolume.getValue();
-    }
-
-    public void disableInstrument() {
-
-        trInstrument.setDisable(true);
     }
 }

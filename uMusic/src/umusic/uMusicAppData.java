@@ -75,17 +75,11 @@ public class uMusicAppData {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("gui/TrackRecord.fxml"));
         BorderPane trackRecord = (BorderPane) loader.load();
         TrackRecordController trController = loader.getController();
-        trController.setVolume(track.getVolume());
+
         trController.setTrackNumber(track.getTrackNumber());
         trController.setTrackName(track.getTrackName());
         trController.setType(track.getType());
-
-        
-        if (track.getType().equalsIgnoreCase("drum")) {
-            trController.disableInstrument();
-        } else {
-            trController.setInstrument(track.getInstrument());
-        }
+        trController.setInstrument(track.getInstrument());
         trController.setTrackListener();
 
         // add the track record to the song editor
@@ -174,7 +168,6 @@ public class uMusicAppData {
         scController.setTitle(songController.getName());
         scController.setTimeSignature(songController.getTimeSignatureString());
         scController.setTempo(songController.getTempo());
-        scController.setMasterVolume(songController.getMasterVolume());
         scController.enableControls();
 
         initSongEditor();

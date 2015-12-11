@@ -9,10 +9,7 @@
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="melodyEditorContainer" fx:controller="umusic.gui.DrumTrackEditorController" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" >
     <VBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
-        <HBox alignment="CENTER_RIGHT" spacing="20">
-            <Button contentDisplay="CENTER" text="o" fx:id="stopButton" onAction="#stopTrack"/>
-            <Button text="||" fx:id="pauseButton" onAction="#pauseTrack"/>
-            <Button text="&gt;" fx:id="playButton" onAction="#playTrack"/>
+         <HBox alignment="CENTER_RIGHT">
             <Button text="Back" onAction="#backButtonAction"/>
         </HBox>
         <HBox VBox.vgrow="ALWAYS">

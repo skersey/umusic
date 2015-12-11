@@ -104,10 +104,6 @@ public class SongControlsController implements Initializable {
         this.tempo.getSelectionModel().select(index);
     }
 
-    public void setMasterVolume(double volume) {
-        this.masterVolume.setValue(volume);
-    }
-    
     public void setListeners(){
         timeSignature.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             public void changed(ObservableValue<? extends Number> ov, 
@@ -134,14 +130,14 @@ public class SongControlsController implements Initializable {
 
     }
     public void disableControls() {
-        Node[] controls = {title, timeSignature, tempo, addTrackButton, stopButton, pauseButton, playButton, masterVolume};
+        Node[] controls = {title, timeSignature, tempo, addTrackButton, stopButton, pauseButton, playButton};
         for (Node node : controls) {
             node.setDisable(true);
         }
     }
 
     public void enableControls() {
-        Node[] controls = {title, timeSignature, tempo, addTrackButton, stopButton, pauseButton, playButton, masterVolume};
+        Node[] controls = {title, timeSignature, tempo, addTrackButton, stopButton, pauseButton, playButton};
         for (Node node : controls) {
             node.setDisable(false);
         }

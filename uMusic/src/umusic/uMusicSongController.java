@@ -187,9 +187,6 @@ public class uMusicSongController {
         return this.trackList;
     }
 
-    public int getMasterVolume() {
-        return masterVolume;
-    }
     public uMusicPercussionTrack getPercussionTrack() {
         return percussionTrack;
     }
