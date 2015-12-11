@@ -58,6 +58,10 @@ public class CreateSongController implements Initializable {
 
             Stage stage = (Stage) createSongContainer.getScene().getWindow();
             stage.close();
+            if (uMusicAppData.getInstance().getLastFile() != null) {
+                uMusicAppData.getInstance().setLastFile(uMusicAppData.getInstance().getLastFileDir());
+            }
+            
         }
 
     }

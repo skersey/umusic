@@ -28,7 +28,6 @@ public class uMusicAppData {
 
     private static final String ID_SONG_EDITOR = "songEditorNode";
     private static uMusicAppData instance = null;
-
     private uMusicSongController songController = null;
     private final uMusicPlayerController playerController = new uMusicPlayerController();
     private Scene rootScene;
@@ -188,13 +187,24 @@ public class uMusicAppData {
         this.lastFile = file;
     }
 
+    public String getLastFileName() {
+        if (lastFile != null && lastFile.isFile()) {
+            return lastFile.getName();
+        }
+        return null;
+    }
+
     public File getLastFile() {
-        return this.lastFile;
+        return lastFile;
     }
 
     public File getLastFileDir() {
-        if (this.lastFile != null) {
-            return this.lastFile.getParentFile();
+        if (lastFile != null) {
+            if (lastFile.isDirectory()) {
+                return lastFile;
+            } else {
+                return lastFile.getParentFile();
+            }
         } else {
             return null;
         }
