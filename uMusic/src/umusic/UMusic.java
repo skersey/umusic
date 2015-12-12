@@ -476,12 +476,6 @@ public class UMusic extends Application {
         }
     }
 
-    public static void test5(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
-        uMusicNote note = new uMusicNote("c", 4, 5, SharpFlat.NONE, false);
-
-        System.out.println("jfugue: " + note.toString() + " lilypond: " + note.toLilyPond());
-    }
-
     //Test the percussion track
     public static void test6(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
         String line;
@@ -512,7 +506,7 @@ public class UMusic extends Application {
     }
 
     //Test all of the chords
-    public static void test7(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
+    public static void test5(uMusicSongController sc, uMusicPlayerController pc, Scanner input) {
         String line;
         sc.setTempo("Allegro");
         sc.setTimeSignature(4, 4);
@@ -633,9 +627,6 @@ public class UMusic extends Application {
                 case "6":
                     test6(sc, pc, input);
                     break;
-                case "7":
-                    test7(sc, pc, input);
-                    break;
                 case "gui":
                     launch(args);
                     break;
@@ -646,9 +637,8 @@ public class UMusic extends Application {
                     System.out.println("Test 3 : Combined test 1 and test 2.  As notes are played live, the");
                     System.out.println("         the notes are stored in a single track of a song.");
                     System.out.println("Test 4 : Play Twinkle, Twinkle, Little Star");
-                    System.out.println("Test 5 : Test the LiliPond Parser code");
+                    System.out.println("Test 5 : Test the Chord Track");
                     System.out.println("Test 6 : Test the Percussion Track");
-                    System.out.println("Test 7 : Test the Chord Track");
                     break;
                 case "quit":
                     runloop = false;

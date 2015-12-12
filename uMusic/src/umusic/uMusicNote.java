@@ -1,6 +1,5 @@
 package umusic;
 
-import org.jfugue.integration.LilyPondParserListener;
 import org.jfugue.pattern.Pattern;
 import org.staccato.StaccatoParser;
 
@@ -21,7 +20,6 @@ public class uMusicNote {
 	private String chordLessString;
 
 	private StaccatoParser parser = null;
-	private LilyPondParserListener listener = null;
 	private Pattern pattern = null;
 	
 	public enum SharpFlat {NONE, SHARP, DOUBLE_SHARP, FLAT, DOUBLE_FLAT} 
@@ -173,14 +171,4 @@ public class uMusicNote {
 		return chordLessString;
 	}
 
-	public String toLilyPond() {
-		parser = new StaccatoParser();
-		listener = new LilyPondParserListener();
-		parser.addParserListener(listener);
-
-		pattern = new Pattern();
-		pattern = new Pattern(this.toString());
-		parser.parse(pattern);
-		return listener.getLyString();
-	}
 }
