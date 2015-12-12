@@ -176,6 +176,7 @@ public class uMusicAppData {
         scController.setTempo(songController.getTempo());
         scController.setMasterVolume(songController.getMasterVolume());
         scController.enableControls();
+        scController.setListeners();
 
         initSongEditor();
         showSongEditor();
