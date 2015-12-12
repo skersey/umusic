@@ -398,9 +398,14 @@ public class ChordTrackEditorController extends TrackEditorController implements
             gp = graphic.parseNote(noteLabel.getText());
             
             if (gp.getChildren().size() > 1){
-		noteLabel.setFont(Font.font(8));
-                noteLabel.setText(note.getChordString());
+                if (noteLabel.getText().contains("R")){
+                    noteLabel.setText(" ");
+            } else{
+                noteLabel.setFont(Font.font(8));
+                noteLabel.setText(note.getChordString()); 
+                }
             }
+            
             noteLabel.setContentDisplay(ContentDisplay.BOTTOM);
             noteLabel.setGraphic(gp);
             trackRender.add(noteLabel);

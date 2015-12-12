@@ -24,10 +24,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
-import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import umusic.uMusicAppData;
-import umusic.uMusicFileController;
 import umusic.uMusicSongController;
 
 /**
@@ -114,14 +112,29 @@ public class MainControlsController implements Initializable {
 
     @FXML
     private void addTrack(ActionEvent event) throws IOException {
-        Parent root;
-        root = FXMLLoader.load(getClass().getResource("CreateTrack.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Create New Track");
-        stage.setScene(new Scene(root, 450, 450));
-//        Window owner = songControlsContainer.getScene().getWindow();
-//        stage.initOwner(owner);
-        stage.show();
+        if(uMusicAppData.getInstance().getSongController() != null){
+            Parent root;
+            root = FXMLLoader.load(getClass().getResource("CreateTrack.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Create New Track");
+            stage.setScene(new Scene(root, 450, 450));
+    //        Window owner = songControlsContainer.getScene().getWindow();
+    //        stage.initOwner(owner);
+            stage.show();
+        } else{
+            try {
+            	Parent root;
+            	FXMLLoader loader;
+	    	loader = new FXMLLoader(getClass().getResource("EditTrackError.fxml"));
+                root = loader.load();
+            	Stage stage = new Stage();
+                stage.setTitle("Edit Track Error");
+            	stage.setScene(new Scene(root, 300, 50));
+            	stage.showAndWait();
+            } catch (IOException ex) {
+            	Logger.getLogger(MainControlsController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     @FXML
