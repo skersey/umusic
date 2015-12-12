@@ -7,8 +7,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="editChordWindow"  prefHeight="250.0" prefWidth="250.0" fx:controller="umusic.gui.EditChordController">
-    <HBox AnchorPane.topAnchor="5.0" AnchorPane.leftAnchor="25.0">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="editChordWindow"  prefHeight="250.0" prefWidth="250.0" fx:controller="umusic.gui.EditChordController" spacing="20">
+    <HBox >
 	    <VBox minWidth="200" >
 		<Label text="Note Duration"/>
 	        <fx:define>
@@ -97,7 +97,7 @@
                 <Label text=""/>
             </VBox>
         </HBox>
-	<HBox AnchorPane.topAnchor="175.0" AnchorPane.leftAnchor="15.0" spacing="20">
+	<HBox alignment="BOTTOM_CENTER" spacing="20">
             <VBox>
                 <Label text="Note"/>
 		<fx:include fx:id="mteNote" source="choicebox/Notes.fxml"/>		
@@ -111,8 +111,8 @@
                 <fx:include fx:id="mteChord" source="choicebox/Chords.fxml"/>
             </VBox>
         </HBox>
-	<HBox AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="75.0" spacing="20">
+	<HBox alignment="BOTTOM_CENTER" spacing="20" minHeight="60">
             <Button text="Cancel" fx:id="closeButton" onAction="#closeButtonAction"/>
             <Button text="Edit Note" fx:id="editNote" onAction="#editNoteAction"/>
         </HBox>
-</AnchorPane>
+</VBox>

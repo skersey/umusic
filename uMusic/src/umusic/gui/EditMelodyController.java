@@ -16,6 +16,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import umusic.uMusicAppData;
 import umusic.uMusicNote;
@@ -30,7 +31,7 @@ import umusic.uMusicTrack.TrackNumber;
 public class EditMelodyController implements Initializable {
 
     @FXML
-    AnchorPane editMelodyWindow;
+    VBox editMelodyWindow;
 
     @FXML
     ChoiceBox mteNote;
