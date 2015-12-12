@@ -208,18 +208,6 @@ public class uMusicSongController {
         percussionTrack = null;
     }
 
-//    public void addRhythmToTrack(uMusicRhythm rhythm) {
-//        percussionTrack.addNextRhythm(rhythm);
-//    }
-//
-//    public void editRhythm(int arrayIndex, uMusicRhythm rhythm) {
-//        percussionTrack.editRhythm(arrayIndex, rhythm);
-//    }
-//
-//    public void deleteLastRhythm() {
-//        percussionTrack.deleteLastRhythm();
-//    }
-
     public int setPercussionTrackVolume(int volume) {
         int v;
         percussionVolume = volume;
@@ -231,10 +219,6 @@ public class uMusicSongController {
         percussionTrack.setVolume(v);
         return v;
     }
-
-//    public ArrayList<uMusicRhythm> getTrackRhythms() {
-//        return percussionTrack.getTrackRhythms();
-//    }
 
     public ArrayList<String> getSupportedTempos() {
         return (ArrayList<String>) tempoList.clone();

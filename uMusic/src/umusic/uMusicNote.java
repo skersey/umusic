@@ -4,8 +4,9 @@ import org.jfugue.pattern.Pattern;
 import org.staccato.StaccatoParser;
 
 /**
- *
  * @author bkersey
+ * 
+ * This class contains all of the information necessary to define a note or chord.  
  */
 public class uMusicNote {
 	private int duration = 4; //1,2,4,8, 16 where 2=1/2, 4=1/4, 8=1/8, 16=1/16
@@ -37,10 +38,18 @@ public class uMusicNote {
         		this.jfugue = jfugue;
     		}
 
+		/**
+		 * @return String This returns a representation of the chord
+		 * that jfugue accepts
+		*/
 		public String toJfugueString() {
 			return this.jfugue;
 		}
 
+		/**
+		 * @param value
+		 * @return uMusicChord Returns the uMusicChord for the String provided 
+		*/
 		public uMusicChord getChordFromString(String value) {
     			uMusicChord c = null;
     			uMusicChord chords[] = values();
@@ -55,6 +64,14 @@ public class uMusicNote {
 		}
 	}
 	
+	/**
+	 * Constructor for melody notes 
+	 * @param note This is the note
+	 * @param dur This is the duration for the note   
+	 * @param octave This is the octave for the note
+	 * @param sf Defines if the note is Sharp or Flat
+	 * @param dotted Defines if the note is dotted
+	*/
 	public uMusicNote (String note, int dur, int octave, SharpFlat sf, boolean dotted) {
 		this.note = note;	
 		this.duration = dur; 
@@ -63,16 +80,29 @@ public class uMusicNote {
 		this.dotted = dotted;
 	}
 	
-	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord c, Inversion i, boolean dotted) {
+	/**
+	 *  Constructor for chords 
+	 * @param note This is the base note for the chord
+	 * @param dur This is the duration for the chord notes   
+	 * @param octave This is the octave for the chord notes
+	 * @param sf Defines if the chord notes are Sharp or Flat
+	 * @param chord The uMusicChord for this chord 
+	 * @param inv Defines if the chord has one or two inversions
+	 * @param dotted Defines if the chord notes are dotted
+	*/
+	public uMusicNote (String note, int dur, int octave, SharpFlat sf, uMusicChord chord, Inversion inv, boolean dotted) {
 		this.note = note;	
 		this.duration = dur; 
 		this.octave = octave;
 		this.sharpFlat = sf;
-		this.chord = c;
-		this.inversion = i;
+		this.chord = chord;
+		this.inversion = inv;
 		this.dotted = dotted;
 	}
 	
+	/**
+	*    Constructor to copy a uMusicNote  
+	*/
 	public uMusicNote (uMusicNote copy) {
 		this.note = copy.note;	
 		this.duration = copy.duration; 
@@ -83,6 +113,9 @@ public class uMusicNote {
 		this.dotted = copy.dotted;
 	}
 	
+	/**
+	*    Build a string in jfugue format that represents this note/chord  
+	*/
 	private void buildNoteString() {
 		noteString = " " + note.toUpperCase();
 		
@@ -153,6 +186,10 @@ public class uMusicNote {
 		}
 	}
 	
+	/**
+	* @return String  Returns a string that contains the jfugue formatted representation
+	* of this note/chord
+	*/
 	@Override
 	public String toString() {
 	    	buildNoteString();
@@ -161,11 +198,17 @@ public class uMusicNote {
 		return noteString;
 	}
 
+	/**
+	* @return String  Returns a string that only contains the chord specific information
+	*/
 	public String getChordString() {
 	    	buildNoteString();
 		return chordString;
 	}
 
+	/**
+	* @return String  Returns a string that omits the chord specific information
+	*/
 	public String getChordLessString() {
 	    	buildNoteString();
 		return chordLessString;
