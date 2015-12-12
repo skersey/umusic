@@ -13,9 +13,9 @@ import umusic.uMusicTrack.TrackNumber;
  */
 public class uMusicSongController {
 
-    private int masterVolume = 125;
-    private int trackVolume = 125;
-    private int percussionVolume = 125;
+    private int masterVolume = 100;
+    private int trackVolume = 100;
+    private int percussionVolume = 100;
     private int timeSignatureNumerator = 4;
     private int timeSignatureDenominator = 4;
     private String tempo = "Allegro";
@@ -173,7 +173,6 @@ public class uMusicSongController {
         } else {
             v = (volume * masterVolume) / 125;
         }
-        System.out.println(v);
         return trackList[trackNumber.ordinal()].setVolume(v);
     }
 
