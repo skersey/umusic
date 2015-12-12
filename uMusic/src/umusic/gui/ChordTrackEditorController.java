@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package umusic.gui;
 
 import java.io.IOException;
@@ -63,14 +58,8 @@ public class ChordTrackEditorController extends TrackEditorController implements
     @FXML
     HBox sheetMusicKeyboard;
     
-//    @FXML
-//    ChoiceBox mteNote;
-
     @FXML
     ChoiceBox mteChord;
-
-//    @FXML
-//    ChoiceBox mteOctave;
 
     @FXML
     ToggleGroup durationGroup;
@@ -81,9 +70,6 @@ public class ChordTrackEditorController extends TrackEditorController implements
     @FXML
     ToggleGroup inversionGroup;
 
-//    @FXML
-//    CheckBox mteRest;
-    
     @FXML
     CheckBox mteDotted;
 
@@ -95,94 +81,6 @@ public class ChordTrackEditorController extends TrackEditorController implements
     
     @FXML
     Button playBuuton;
-
-	/*
-    private uMusicNote getNote() {
-        String note = "R";
-        int duration = 0;
-        int octave = 1;
-        SharpFlat sf = SharpFlat.NONE;
-	Inversion inv = Inversion.NONE;
-	uMusicChord chord = uMusicChord.MAJOR; 
-        boolean dotted = false;
-
-        if (!mteRest.isSelected()) {
-            note = mteNote.getSelectionModel().getSelectedItem().toString();
-        }
-
-	chord = chord.getChordFromString(mteChord.getSelectionModel().getSelectedItem().toString());
-	
-        RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
-        String durationStr = selectedDuration.getText();
-        switch (durationStr) {
-            case ("whole"):
-                duration = 1;
-                break;
-            case ("half"):
-                duration = 2;
-                break;
-            case ("quarter"):
-                duration = 4;
-                break;
-            case ("eighth"):
-                duration = 8;
-                break;
-            case ("sixteenth"):
-                duration = 16;
-                break;
-        }
-
-        RadioButton selectedSharpFlat = (RadioButton) sharpFlatGroup.getSelectedToggle();
-        String sharpFlatStr = selectedSharpFlat.getText();
-        switch (sharpFlatStr) {
-            case "sharp":
-                sf = SharpFlat.SHARP;
-                break;
-            case "flat":
-                sf = SharpFlat.FLAT;
-                break;
-            default:
-                sf = SharpFlat.NONE;
-                break;
-        }
-        octave = Integer.valueOf(mteOctave.getSelectionModel().getSelectedItem().toString());
-
-        RadioButton selectedInversion = (RadioButton) inversionGroup.getSelectedToggle();
-        String invStr = selectedInversion.getText();
-	switch (invStr) {
-            case "1":
-                inv = Inversion.SINGLE;
-                break;
-            case "2":
-                inv = Inversion.DOUBLE;
-                break;
-            default:
-                inv = Inversion.NONE;
-                break;
-        }
-
-        dotted = mteDotted.isSelected();
-	return new uMusicNote (note, duration, octave, sf, chord, inv, dotted);
-    }
-
-    
-    @FXML
-    private void playNote(ActionEvent event) throws IOException {
-        uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
-        uMusicAppData.getInstance().getPlayerController().playLiveNote(getNote(), 100);
-    }
-
-    @FXML
-    private void addNote(ActionEvent event) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        TrackNumber tn = getTrackNumber();
-        uMusicNote note = getNote();
-        uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
-	int volume = uMusicAppData.getInstance().getSongController().getTrackVolume(getTrackNumber());
-        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, volume);
-        uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
-        refreshEditor();
-    } */
 
     @FXML
     private void addRestAction(ActionEvent event) throws IOException {
@@ -250,9 +148,6 @@ public class ChordTrackEditorController extends TrackEditorController implements
 	Inversion inv = Inversion.NONE;
         boolean dotted = false;
 
-//        if (!mteRest.isSelected()) {
-//            note = pitch;
-//        }
         String noteArray[] = note.split("");
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
 	chord = chord.getChordFromString(mteChord.getSelectionModel().getSelectedItem().toString());
@@ -281,20 +176,16 @@ public class ChordTrackEditorController extends TrackEditorController implements
             String sharpFlatStr = selectedSharpFlat.getText();
             switch (sharpFlatStr) {
                 case "sharp":
-//                    if (!mteRest.isSelected()) {
-                        sf = SharpFlat.SHARP;
-                        note = note.substring(0,1);
-//                    }
+                    sf = SharpFlat.SHARP;
+                    note = note.substring(0,1);
                     break;
                 case "flat":
-//                    if (!mteRest.isSelected()) {
-                        sf = SharpFlat.FLAT;
-                        //Adjust pitch up if flat e.g. G# = Ab
-                        char noteChar = note.charAt(0);
-                        if (noteChar == 'G') 
-                            note = "A";
-                        else note = Character.toString((char)((int)noteChar + 1));
-//                    }
+                    sf = SharpFlat.FLAT;
+                    //Adjust pitch up if flat e.g. G# = Ab
+                    char noteChar = note.charAt(0);
+                    if (noteChar == 'G') 
+                        note = "A";
+                    else note = Character.toString((char)((int)noteChar + 1));
                     break;
                 default:
                     sf = SharpFlat.NONE;
@@ -423,9 +314,6 @@ public class ChordTrackEditorController extends TrackEditorController implements
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//        mteNote.getSelectionModel().select(3);
-//        mteOctave.getSelectionModel().select(4);
-
 	uMusicChord c = uMusicChord.NONE;
 	mteChord.getItems().setAll(java.util.Arrays.asList(c.values()));
         mteChord.getSelectionModel().select(7);

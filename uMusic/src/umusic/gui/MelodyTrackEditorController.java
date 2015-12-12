@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package umusic.gui;
 
 import java.io.IOException;
@@ -57,20 +52,11 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     @FXML
     HBox sheetMusicKeyboard;
 
-//    @FXML
-//    ChoiceBox mteNote;
-
-//    @FXML
-//    ChoiceBox mteOctave;
-
     @FXML
     ToggleGroup durationGroup;
 
     @FXML
     ToggleGroup sharpFlatGroup;
-
-//    @FXML
-//    CheckBox mteRest;
 
     @FXML
     CheckBox mteDotted;
@@ -84,80 +70,7 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     @FXML
     Button playButton;
 
-/*    private uMusicNote getNote() {
-        String note = "R";
-        int duration = 0;
-        int octave = 1;
-        SharpFlat sf = SharpFlat.NONE;
-        boolean dotted = false;
-
-        if (!mteRest.isSelected()) {
-            note = mteNote.getSelectionModel().getSelectedItem().toString();
-        }
-        RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
-        String durationStr = selectedDuration.getText();
-        switch (durationStr) {
-            case ("whole"):
-                duration = 1;
-                break;
-            case ("half"):
-                duration = 2;
-                break;
-            case ("quarter"):
-                duration = 4;
-                break;
-            case ("eighth"):
-                duration = 8;
-                break;
-            case ("sixteenth"):
-                duration = 16;
-                break;
-        }
-
-        RadioButton selectedSharpFlat = (RadioButton) sharpFlatGroup.getSelectedToggle();
-        String sharpFlatStr = selectedSharpFlat.getText();
-        switch (sharpFlatStr) {
-            case "sharp":
-                sf = SharpFlat.SHARP;
-                break;
-            case "flat":
-                sf = SharpFlat.FLAT;
-                break;
-            default:
-                sf = SharpFlat.NONE;
-                break;
-        }
-        octave = Integer.valueOf(mteOctave.getSelectionModel().getSelectedItem().toString());
-        dotted = mteDotted.isSelected();
-        return new uMusicNote(note, duration, octave, sf, dotted);
-    }
-
-    
     @FXML
-    private void playNote(ActionEvent event) throws IOException {
-        uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
-        uMusicAppData.getInstance().getPlayerController().playLiveNote(getNote(), 100);
-    }
-
-    @FXML
-    private void addNote(ActionEvent event) throws IOException {
-        //StringBuilder sb = new StringBuilder();
-        //TrackNumber tn = getTrackNumber();
-        uMusicNote note = getNote();
-        uMusicAppData.getInstance().getPlayerController().setLiveInstrument(getTrackRecord().getInstrument().toUpperCase());
-	int volume = uMusicAppData.getInstance().getSongController().getTrackVolume(getTrackNumber());
-        uMusicAppData.getInstance().getPlayerController().playLiveNote(note, volume);
-        uMusicAppData.getInstance().getSongController().addNoteToTrack(getTrackNumber(), note);
-        refreshEditor();
-    }
-    
-    private uMusicNote editNote(){
-        uMusicNote note = getNote();
-        return note;
-    }
-*/
-
-       @FXML
     private void addRestAction(ActionEvent event) throws IOException {
 	String note = "R";
         int duration = 0;
@@ -219,9 +132,6 @@ public class MelodyTrackEditorController extends TrackEditorController implement
         SharpFlat sf = SharpFlat.NONE;
         boolean dotted = false;
 
-//        if (!mteRest.isSelected()) {
-//            note = pitch;
-//        } 
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
         String durationStr = selectedDuration.getText();
         switch (durationStr) {
@@ -248,20 +158,16 @@ public class MelodyTrackEditorController extends TrackEditorController implement
             String sharpFlatStr = selectedSharpFlat.getText();
             switch (sharpFlatStr) {
                 case "sharp":
-//                    if (!mteRest.isSelected()) {
-                        sf = SharpFlat.SHARP;
-                        note = note.substring(0,1);
-//                    }
+                    sf = SharpFlat.SHARP;
+                    note = note.substring(0,1);
                     break;
                 case "flat":
-//                    if (!mteRest.isSelected()) {
-                        sf = SharpFlat.FLAT;
-                        //Adjust pitch up if flat e.g. G# = Ab
-                        char noteChar = note.charAt(0);
-                        if (noteChar == 'G') 
-                            note = "A";
-                        else note = Character.toString((char)((int)noteChar + 1));
-//                    }
+                    sf = SharpFlat.FLAT;
+                    //Adjust pitch up if flat e.g. G# = Ab
+                    char noteChar = note.charAt(0);
+                    if (noteChar == 'G') 
+                        note = "A";
+                    else note = Character.toString((char)((int)noteChar + 1));
                     break;
                 default:
                     sf = SharpFlat.NONE;
@@ -361,8 +267,6 @@ public class MelodyTrackEditorController extends TrackEditorController implement
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-  //      mteNote.getSelectionModel().select(3);
- //       mteOctave.getSelectionModel().select(4);
 	sheetMusicScroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 	sheetMusicScroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         Keyboard key;
@@ -370,7 +274,6 @@ public class MelodyTrackEditorController extends TrackEditorController implement
     }
 
     private class NoteLabelData {
-
         TrackNumber trackNumber;
         TrackRecordController trackRecord;
         int noteIndex;
