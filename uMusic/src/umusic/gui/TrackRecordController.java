@@ -96,6 +96,9 @@ public class TrackRecordController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Number> ov,
                     Number old_val, Number new_val) {
+                if (trType.getText().equalsIgnoreCase("drum")) {
+                     uMusicAppData.getInstance().getSongController().setPercussionTrackVolume((int) trVolume.getValue());
+                }
                 uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int) trVolume.getValue());
             }
         });

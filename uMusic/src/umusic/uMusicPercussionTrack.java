@@ -30,7 +30,6 @@ public class uMusicPercussionTrack {
         }
 
         this.volume = volume;
-
     }
 
     public void removeRhythm(Integer rhythmId) {
