@@ -108,16 +108,19 @@ public class uMusicNote {
 
 		if (chord != uMusicChord.NONE) {
 			chordLessString = noteString;
-			noteString += chord.toJfugueString();
+			if (note.toUpperCase().equals("R") == false)
+				noteString += chord.toJfugueString();
 			chordString = chord.toJfugueString();
 
 			switch(inversion) {
 				case SINGLE:	
-					noteString += "^";
+					if (note.toUpperCase().equals("R") == false)
+						noteString += "^";
 					chordString += "^";
 					break;
 				case DOUBLE:	
-					noteString += "^^";
+					if (note.toUpperCase().equals("R") == false)
+						noteString += "^^";
 					chordString += "^^";
 					break;
 			}
