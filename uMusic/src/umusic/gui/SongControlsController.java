@@ -109,7 +109,16 @@ public class SongControlsController implements Initializable {
     }
     
     public void setListeners(){
+        title.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov,
+                    String old_val, String new_val) {
+                uMusicAppData.getInstance().getSongController().setName(title.getText());
+            }
+        });
+                
         timeSignature.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
             public void changed(ObservableValue<? extends Number> ov, 
                 Number old_val, Number new_val) {
                 timeSignature.getSelectionModel().select(timeSignature.getSelectionModel().getSelectedIndex());
@@ -118,6 +127,7 @@ public class SongControlsController implements Initializable {
         });
         
         tempo.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
             public void changed(ObservableValue<? extends Number> ov, 
                 Number old_val, Number new_val) {
                 tempo.getSelectionModel().select(tempo.getSelectionModel().getSelectedIndex());
@@ -126,6 +136,7 @@ public class SongControlsController implements Initializable {
         });
         
         masterVolume.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
             public void changed(ObservableValue<? extends Number> ov,
                 Number old_val, Number new_val) {
                     uMusicAppData.getInstance().getSongController().setMasterVolume((int)masterVolume.getValue());

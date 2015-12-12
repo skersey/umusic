@@ -41,6 +41,9 @@ public class uMusicTrack {
         this.trackName = name;
     }
 
+    public void setName(String trackName){
+        this.trackName = trackName;
+    }
     public int setVolume(int volume) {
         if (volume > 125 || volume < 0) {
             return -1;

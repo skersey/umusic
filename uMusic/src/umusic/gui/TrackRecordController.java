@@ -85,13 +85,22 @@ public class TrackRecordController implements Initializable {
     }
 
     public void setTrackListener() {
+        trName.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov,
+                    String old_val, String new_val) {
+                uMusicAppData.getInstance().getSongController().setTrackName(getTrackNumber(), trName.getText());
+            }
+        });
         trVolume.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
             public void changed(ObservableValue<? extends Number> ov,
                     Number old_val, Number new_val) {
                 uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int) trVolume.getValue());
             }
         });
         trInstrument.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
             public void changed(ObservableValue<? extends Number> ov,
                     Number old_val, Number new_val) {
                 trInstrument.getSelectionModel().select(trInstrument.getSelectionModel().getSelectedIndex());

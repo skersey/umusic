@@ -21,7 +21,7 @@
             <VBox>
                 <children>
                     <Label text="Track Name" />
-                    <TextField editable="false" text="Track Name Value" fx:id="trName" onAction="#editTrack"/>
+                    <TextField editable="true" text="Track Name Value" fx:id="trName" onAction="#editTrack"/>
                 </children>
             </VBox>
             <VBox>

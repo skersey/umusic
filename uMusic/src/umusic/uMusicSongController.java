@@ -159,6 +159,10 @@ public class uMusicSongController {
         trackList[trackNumber.ordinal()].deleteLastNote();
     }
 
+    public void setTrackName(TrackNumber trackNumber, String trackName){
+        trackList[trackNumber.ordinal()].setName(trackName);
+    }
+    
     public int setTrackVolume(TrackNumber trackNumber, int volume) {
         int v;
         trackVolume = volume;
