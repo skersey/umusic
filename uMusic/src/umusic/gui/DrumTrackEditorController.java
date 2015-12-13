@@ -126,9 +126,8 @@ public class DrumTrackEditorController extends TrackEditorController {
 
         final Button editButton = new Button("Edit");
         final Button addButton = new Button("Add");
-        final Button playButton = new Button(">");
-        final Button pauseButton = new Button("||");
-        final Button stopButton = new Button("o");
+        final Button playButton = new Button("Play");
+
         playButton.setOnAction(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -147,21 +146,11 @@ public class DrumTrackEditorController extends TrackEditorController {
             public void handle(Event event) {
                 dteRhythmEditor.setContent(buildRhthmEditor(rhythmId, beatRhythm));
             }
-
-            private Node buildControls() {
-                HBox controls = new HBox();
-
-                Button playButton = new Button(">");
-                Button pauseButton = new Button("||");
-                Button stopButton = new Button("o");
-                return controls;
-            }
         });
 
         HBox buttonBox = new HBox();
         HBox playBox = new HBox();
-        buttonBox.getChildren().addAll(editButton, addButton);
-        playBox.getChildren().addAll(stopButton, pauseButton, playButton);
+        buttonBox.getChildren().addAll(editButton, addButton, playButton);
         beatControls.getChildren().addAll(buttonLabel, buttonBox, playBox);
         beatBankButtons.getChildren().add(beatControls);
 

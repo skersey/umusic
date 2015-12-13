@@ -97,7 +97,7 @@ public class TrackRecordController implements Initializable {
             public void changed(ObservableValue<? extends Number> ov,
                     Number old_val, Number new_val) {
                 if (trType.getText().equalsIgnoreCase("drum")) {
-                     uMusicAppData.getInstance().getSongController().setPercussionTrackVolume((int) trVolume.getValue());
+                    uMusicAppData.getInstance().getSongController().setPercussionTrackVolume((int) trVolume.getValue());
                 }
                 uMusicAppData.getInstance().getSongController().setTrackVolume(getTrackNumber(), (int) trVolume.getValue());
             }
@@ -205,7 +205,11 @@ public class TrackRecordController implements Initializable {
 
     @FXML
     private void removeTrack(ActionEvent event) throws IOException {
-        uMusicAppData.getInstance().getSongController().deleteTrack(trackNumber);
+        if ("Drum".equalsIgnoreCase(this.trType.getText())) {
+            uMusicAppData.getInstance().getSongController().deletePercussionTrack();
+        } else {
+            uMusicAppData.getInstance().getSongController().deleteTrack(trackNumber);
+        }
         uMusicAppData.getInstance().getSongEditor().getChildren().remove(trContainer);
     }
 
@@ -217,7 +221,6 @@ public class TrackRecordController implements Initializable {
         return this.trackNumber;
     }
 
-    
     public void setVolume(double volume) {
         trVolume.setValue(volume);
     }
@@ -230,7 +233,7 @@ public class TrackRecordController implements Initializable {
 
         trInstrument.setDisable(true);
     }
-    
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
