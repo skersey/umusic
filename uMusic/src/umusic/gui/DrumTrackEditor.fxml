@@ -19,7 +19,7 @@
             <ScrollPane fx:id="dteSequencePane" minWidth="400" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">                
                 <HBox fx:id="dteSequenceList"/>
             </ScrollPane>
-            <VBox prefWidth="200" maxWidth="200" fx:id="dteBeatBank" alignment="TOP_CENTER">
+            <VBox prefWidth="200" maxWidth="200" minWidth="200" fx:id="dteBeatBank" alignment="TOP_CENTER">
                 <Label text = "Beat Bank"/>
                 <Button fx:id="newBeatButton" text="New Beat" onAction="#addRhythm"/>
                 <ScrollPane>
