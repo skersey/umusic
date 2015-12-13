@@ -1,10 +1,11 @@
 {
   "masterVolume": 125,
   "trackVolume": 125,
+  "percussionVolume": 100,
   "timeSignatureNumerator": 4,
   "timeSignatureDenominator": 4,
-  "tempo": "Allegro",
-  "name": "Song Title Value",
+  "tempo": "Allegretto",
+  "name": "Passacaglia - Bach",
   "trackList": [
     {
       "volume": 100,
