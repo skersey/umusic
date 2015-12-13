@@ -139,23 +139,23 @@ public class uMusicNote {
 		if (chord != uMusicChord.MELODY) {
 			chordLessString = noteString;
 			if (note.toUpperCase().equals("R") == false){
-                                if(!chord.toJfugueString().contains("none")){
-                                    	noteString += chord.toJfugueString();
-                                        chordString = chord.toJfugueString();
-                                }
+                            if(!chord.toJfugueString().contains("none")){
+                                noteString += chord.toJfugueString();
+                                chordString = chord.toJfugueString();
 
                                 switch(inversion) {
-                                        case SINGLE:	
-                                                if (note.toUpperCase().equals("R") == false)
-                                                        noteString += "^";
-                                                chordString += "^";
-                                                break;
-                                        case DOUBLE:	
-                                                if (note.toUpperCase().equals("R") == false)
-                                                        noteString += "^^";
-                                                chordString += "^^";
-                                                break;
+                                    case SINGLE:	
+                                            if (note.toUpperCase().equals("R") == false)
+                                                    noteString += "^";
+                                            chordString += "^";
+                                            break;
+                                    case DOUBLE:	
+                                            if (note.toUpperCase().equals("R") == false)
+                                                    noteString += "^^";
+                                            chordString += "^^";
+                                            break;
                                 }
+                            }
                         }
 		} 
                 

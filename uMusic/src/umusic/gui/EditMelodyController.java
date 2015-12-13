@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package umusic.gui;
 
 import java.io.IOException;
@@ -56,6 +51,10 @@ public class EditMelodyController implements Initializable {
     int noteIndex;
     TrackNumber trackNumber;
     
+    /**
+     * 
+     * @return Returns a uMusicNote populated with the data from the edit melody menu
+     */
     private uMusicNote getNote() {
 	           String note = "R";
         int duration = 0;
@@ -104,6 +103,12 @@ public class EditMelodyController implements Initializable {
         return new uMusicNote(note, duration, octave, sf, dotted);
     }
 
+    /**
+     *	This event fires when a note on the sheet music is right-clicked and 'edit'
+     *  is selected.  
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void editNoteAction(ActionEvent event) throws IOException {
         StringBuilder sb = new StringBuilder();
@@ -114,11 +119,21 @@ public class EditMelodyController implements Initializable {
         stage.close();
     }
 
+    /**
+     * 
+     * @param noteIndex The index into the list of notes
+     * @param trackNumber The track number that this note should be added to
+     */
     public void setNoteData (int noteIndex, TrackNumber trackNumber) {
 	this.noteIndex = noteIndex;
 	this.trackNumber = trackNumber; 
     }
 
+    /**
+     * This event fires when the 'cancel' button is clicked on the edit melody window
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     public void closeButtonAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) editMelodyWindow.getScene().getWindow();
