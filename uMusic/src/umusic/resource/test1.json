@@ -1,15 +1,15 @@
 {
   "masterVolume": 125,
-  "trackVolume": 59,
-  "percussionVolume": 125,
+  "trackVolume": 91,
+  "percussionVolume": 114,
   "timeSignatureNumerator": 4,
   "timeSignatureDenominator": 4,
   "tempo": "Adagietto",
   "name": "Dead \u0026 Bloated",
   "trackList": [
     {
-      "volume": 125,
-      "instrument": "Acoustic_Bass",
+      "volume": 91,
+      "instrument": "Alto_Sax",
       "trackName": "Vocal",
       "trackNumber": "TRACK0",
       "notes": [
@@ -353,8 +353,8 @@
       "trackType": "Melody"
     },
     {
-      "volume": 59,
-      "instrument": "Piano",
+      "volume": 125,
+      "instrument": "Guitar",
       "trackName": "Rhythm",
       "trackNumber": "TRACK1",
       "notes": [
@@ -854,7 +854,7 @@
       "trackType": "Chord"
     },
     {
-      "volume": 125,
+      "volume": 114,
       "instrument": "Piano",
       "trackName": "Drums",
       "trackNumber": "TRACK2",
@@ -880,7 +880,7 @@
     null
   ],
   "percussionTrack": {
-    "volume": 125,
+    "volume": 114,
     "trackName": "Drums",
     "rhythmBank": {
       "0": {
