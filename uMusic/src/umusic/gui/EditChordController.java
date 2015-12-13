@@ -155,8 +155,7 @@ public class EditChordController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
         	mteNote.getSelectionModel().select(3);
         	mteOctave.getSelectionModel().select(4);
-		uMusicChord c = uMusicChord.NONE;
-		mteChord.getItems().setAll(java.util.Arrays.asList(c.values()));
+		uMusicChord c = uMusicChord.MELODY;
         	mteChord.getSelectionModel().select(7);
 	}
 }

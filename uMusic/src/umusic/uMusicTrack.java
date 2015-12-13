@@ -175,7 +175,7 @@ public class uMusicTrack {
         Iterator<uMusicNote> iter = notes.iterator();
         while (iter.hasNext()) {
             uMusicNote next = iter.next();
-            trackString += next.toString();
+                trackString += next.toString();  
         }
 
         return trackString;

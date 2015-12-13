@@ -13,7 +13,7 @@ public class uMusicNote {
 	private int octave = 5;   //range is 0-10
 	private boolean dotted = false;
 	private SharpFlat sharpFlat = SharpFlat.NONE;
-	private uMusicChord chord = uMusicChord.NONE;
+	private uMusicChord chord = uMusicChord.MELODY;
 	private Inversion inversion = Inversion.NONE;
 	private String note = "A";
 	private String noteString;
@@ -28,7 +28,7 @@ public class uMusicNote {
 		MAJOR("maj"), MINOR("min"), MAJOR6("maj6"), MINOR6("min6"),
 		MAJOR7("maj7"), MINOR7("min7"), MAJOR9("maj9"), MINOR9("min9"), 
 		MAJOR13("maj13"), MINOR13("min13"), SUSPENDED2("sus2"), 
-		SUSPENDED4("sus4"), NONE ("none"); 
+		SUSPENDED4("sus4"), NONE ("none"), MELODY ("melody"); 
 
 		private final String jfugue;
     		uMusicChord(final String jfugue) {
@@ -134,25 +134,29 @@ public class uMusicNote {
 		if (note.toUpperCase().equals("R") == false) 
 			noteString += octave;
 
-		if (chord != uMusicChord.NONE) {
+		if (chord != uMusicChord.MELODY) {
 			chordLessString = noteString;
-			if (note.toUpperCase().equals("R") == false)
-				noteString += chord.toJfugueString();
-			chordString = chord.toJfugueString();
+			if (note.toUpperCase().equals("R") == false){
+                                if(!chord.toJfugueString().contains("none")){
+                                    	noteString += chord.toJfugueString();
+                                        chordString = chord.toJfugueString();
+                                }
 
-			switch(inversion) {
-				case SINGLE:	
-					if (note.toUpperCase().equals("R") == false)
-						noteString += "^";
-					chordString += "^";
-					break;
-				case DOUBLE:	
-					if (note.toUpperCase().equals("R") == false)
-						noteString += "^^";
-					chordString += "^^";
-					break;
-			}
-		}
+                                switch(inversion) {
+                                        case SINGLE:	
+                                                if (note.toUpperCase().equals("R") == false)
+                                                        noteString += "^";
+                                                chordString += "^";
+                                                break;
+                                        case DOUBLE:	
+                                                if (note.toUpperCase().equals("R") == false)
+                                                        noteString += "^^";
+                                                chordString += "^^";
+                                                break;
+                                }
+                        }
+		} 
+                
 
 		switch (duration) {
 			case 1:
@@ -180,7 +184,7 @@ public class uMusicNote {
 		if (dotted) {
 			noteString += "."; 
 			chordLessString += "."; 
-		}
+		}            
 	}
 	
 	/**

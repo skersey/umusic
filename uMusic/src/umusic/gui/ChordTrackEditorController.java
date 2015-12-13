@@ -286,13 +286,16 @@ public class ChordTrackEditorController extends TrackEditorController implements
             GridPane gp = new GridPane();
             gp = graphic.parseNote(noteLabel.getText());
             
-            if (gp.getChildren().size() > 1){
-                if (noteLabel.getText().contains("R")){
+            System.out.println(noteLabel.getText());
+            if (gp.getChildren().size() > 1  && !(note.getChordString() == null)){
+                if (noteLabel.getText().contains("R") || note.getChordString().length() == 0){
                     noteLabel.setText(" ");
-            } else{
-                noteLabel.setFont(Font.font(8));
-                noteLabel.setText(note.getChordString()); 
+                } else{
+                    noteLabel.setFont(Font.font(8));
+                    noteLabel.setText(note.getChordString()); 
                 }
+            } else {
+                noteLabel.setText(" ");
             }
             
             noteLabel.setContentDisplay(ContentDisplay.BOTTOM);
@@ -312,8 +315,7 @@ public class ChordTrackEditorController extends TrackEditorController implements
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-	uMusicChord c = uMusicChord.NONE;
-	mteChord.getItems().setAll(java.util.Arrays.asList(c.values()));
+	uMusicChord c = uMusicChord.MELODY;
         mteChord.getSelectionModel().select(7);
 	sheetMusicScroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 	sheetMusicScroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
