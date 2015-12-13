@@ -15,6 +15,8 @@ import umusic.uMusicAppData;
 /**
  *
  * @author Joshua
+ * 
+ * This class parses a note and creates the Chord and Melody Graphics for their editors.
  */
 public class MelodyTrackEditorGraphic {
     
@@ -30,6 +32,9 @@ public class MelodyTrackEditorGraphic {
 
     }
     
+    /*
+    * Displays time signature based on current time signature stored in uMusicSongController.
+    */
     public StackPane displayTimeSignature(){
         String file = "umusic/gui/img/timeSignature/";
         int TimeSigNum = uMusicAppData.getInstance().getSongController().getTimeSignatureNumerator();
@@ -59,9 +64,15 @@ public class MelodyTrackEditorGraphic {
         createGraphicStack(file);
         return stack;
     }
+    
+    /*
+    * Parses a note string and creates a GridPane of images and returns it.
+    */
     public GridPane parseNote(String note){
         String[] noteArray = note.split("");
         String file = "umusic/gui/img/";
+        
+        //Creates standard rests
         if(noteArray.length == 3){
             switch(noteArray[2]){
                 
@@ -73,6 +84,8 @@ public class MelodyTrackEditorGraphic {
             }
             createGraphicGridNote(file);
         }
+        
+        //Creates standard notes and dotted rests.
         if(noteArray.length == 4){
             if (noteArray[2].equalsIgnoreCase("1") | noteArray[2].equalsIgnoreCase("2") |
                     noteArray[2].equalsIgnoreCase("3") | noteArray[2].equalsIgnoreCase("4") |
@@ -110,6 +123,12 @@ public class MelodyTrackEditorGraphic {
                 createGraphicGridNote(file);
             }   
         }
+        
+        /*
+        * Creates notes that are either dotted, sharp, or flat.
+        * Catches Rest dotted notes that may have sharp or flat selected.
+        */
+        
         if(noteArray.length == 5){
           if (noteArray[3].equalsIgnoreCase("1") | noteArray[3].equalsIgnoreCase("2") |
                     noteArray[3].equalsIgnoreCase("3") | noteArray[3].equalsIgnoreCase("4") |
@@ -167,6 +186,8 @@ public class MelodyTrackEditorGraphic {
                 createGraphicGridNote(file);
             }
         }
+        
+        //Creates notes that are dotted and are either sharp or flat.
         if(noteArray.length == 6){
           if (noteArray[3].equalsIgnoreCase("1") | noteArray[3].equalsIgnoreCase("2") |
                     noteArray[3].equalsIgnoreCase("3") | noteArray[3].equalsIgnoreCase("4") |
@@ -196,6 +217,8 @@ public class MelodyTrackEditorGraphic {
 
         return grid;
     }
+    
+    //Method which adds the parsed note to the grid.
     public void createGraphicGridNote(String file){
         image = new Image(file + ".png");
         iv = new ImageView();
@@ -203,6 +226,7 @@ public class MelodyTrackEditorGraphic {
         grid.add(iv, 1, 0);
     }
     
+    //Method which adds the parsed Staff to the grid.
     public void createGraphicGridStaff(String file){
         image = new Image(file + ".png");
         iv = new ImageView();
@@ -210,6 +234,7 @@ public class MelodyTrackEditorGraphic {
         grid.add(iv, 2, 0);
     }
     
+    //Method which adds the time signature to a stack.
     public void createGraphicStack(String file){
         image = new Image(file + ".png");
         iv = new ImageView();
@@ -217,6 +242,7 @@ public class MelodyTrackEditorGraphic {
         stack.getChildren().add(iv);
     }
     
+    //Decides which Staff size for each note.
     public void createStaff(int staff){
         
         switch(staff){
