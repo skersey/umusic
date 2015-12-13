@@ -15,6 +15,7 @@ public class uMusicPercussionTrack {
     private String trackName;
     private final RhythmBank rhythmBank = new RhythmBank();
     private final List<Integer> trackSequence = new ArrayList<>();
+    //the percussion track is always on track/voice 9
     private final Integer trackNumber = 9;
 
     public uMusicPercussionTrack(String name) {
@@ -54,7 +55,7 @@ public class uMusicPercussionTrack {
     }
 
     /**
-    * @return List<Integer> returns the trackSequence for this track 
+    * @return List returns the trackSequence for this track 
     */
     public List<Integer> getTrackSequence() {
         return trackSequence;

@@ -17,7 +17,7 @@ public class uMusicRhythm {
 
     public enum Instrument {
         BASS("BASS_DRUM"), SNARE("ACOUSTIC_SNARE"), CLOSED_HI_HAT("CLOSED_HI_HAT"), OPEN_HI_HAT("OPEN_HI_HAT"), CYMBAL("CRASH_CYMBAL_1");
-        private String midiName;
+        private final String midiName;
 
         private Instrument(String midiName) {
             this.midiName = midiName;

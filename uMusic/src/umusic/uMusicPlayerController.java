@@ -67,6 +67,7 @@ public class uMusicPlayerController {
      */
     public void playLiveRhythm(uMusicRhythm rhythm, int volume) {
         realTime.play(":CON(7," + volume + ") ");
+	//Percussions must be played on track/voice 9
         realTime.play("V9 ");
         realTime.play(rhythm.toString());
     }
@@ -110,6 +111,8 @@ public class uMusicPlayerController {
 
             System.out.print(mp.isFinished() + "+" + mp.isPaused());
         }
+	
+	//The startSong overloads start and pause.  If the song is pause, then resume.
         if (mp.isPaused() && !mp.isFinished()) {
             mp.resume();
             return;
@@ -146,6 +149,7 @@ public class uMusicPlayerController {
     /**
      * Starts the song or track that has been added to the managed player
      * Validates the trackNumber provided is the trackNumber that was added to the managedPlayer. 
+     * @param trackNumber The track number to be started
      */
     public void startTrack(TrackNumber trackNumber) {
         if (mp.isPaused() && trackPlaying && this.trackNumber.toString().equalsIgnoreCase(trackNumber.toString())) {
@@ -172,6 +176,7 @@ public class uMusicPlayerController {
     /**
      * Pauses the track that has been added to the managed player
      * Validates the trackNumber provided is the trackNumber that was added to the managedPlayer. 
+     * @param trackNumber The track number to be paused 
      */
     public void pauseTrack(TrackNumber trackNumber) {
         if (mp.isPlaying() && this.trackNumber.toString().equalsIgnoreCase(trackNumber.toString())) {
@@ -183,6 +188,7 @@ public class uMusicPlayerController {
      * Finalizes the track that has been added to the managed player
      * Validates the trackNumber provided is the trackNumber that was added to the managedPlayer. 
      * When start is issued, the track will start from the beginning.
+     * @param trackNumber The track number to be finished 
      */
     public void finishTrack(TrackNumber trackNumber) {
         if (this.trackNumber.toString().equalsIgnoreCase(trackNumber.toString())) {

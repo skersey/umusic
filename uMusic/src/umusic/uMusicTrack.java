@@ -86,9 +86,8 @@ public class uMusicTrack {
     /**
     * @param note add the provided uMusicNote to the list for this track 
     */
-    public int addNextNote(uMusicNote note) {
+    public void addNextNote(uMusicNote note) {
         notes.add(note);
-        return 0;
     }
 
     /**

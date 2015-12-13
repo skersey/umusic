@@ -114,6 +114,8 @@ public class uMusicNote {
 	*    Build a string in jFugue format that represents this note/chord  
 	*/
 	private void buildNoteString() {
+		//The jfugue representation of this note must be in the following
+		//order.  Do not change the order that the string is contrusted in
 		noteString = " " + note.toUpperCase();
 		
 		switch (sharpFlat) {
@@ -157,7 +159,6 @@ public class uMusicNote {
                         }
 		} 
                 
-
 		switch (duration) {
 			case 1:
 				noteString += "w"; 

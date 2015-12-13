@@ -10,6 +10,11 @@ import umusic.uMusicTrack.TrackNumber;
 /**
  *
  * @author bkersey
+ * 
+ * This class is the base for the song.  This class contains all of the tracks
+ * and all of the attributes that are common to each track - such as tempo and 
+ * time signature.  This class also provides methods to get a string or sequence
+ * that allows the song to be played in a jfugue player.
  */
 public class uMusicSongController {
 
@@ -21,6 +26,7 @@ public class uMusicSongController {
     private String tempo = "Allegro";
     private String name;
     private uMusicTrack[] trackList;
+    //jfugue and midi only support one percussion track
     private uMusicPercussionTrack percussionTrack;
     public ArrayList<String> tempoList = new ArrayList<>(Arrays.asList("Grave",
             "Largo", "Larghetto", "Lento", "Adagio", "Adagietto", "Andante",
