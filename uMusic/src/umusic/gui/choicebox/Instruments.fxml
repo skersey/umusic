@@ -16,6 +16,10 @@
             <String fx:value="Violin" />
             <String fx:value="Tuba" />
             <String fx:value="Acoustic_Bass" />
+            <String fx:value="Guitar" />
+            <String fx:value="Alto_Sax" />
+            <String fx:value="Soprano_Sax" />
+            <String fx:value="Clarinet" />
         </FXCollections>
     </items>
 </ChoiceBox>
