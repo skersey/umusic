@@ -6,10 +6,12 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  *
  * @author bkersey
+ * 
+ * This class contains all of the information necessary to define a rhythm.  
  */
 public class uMusicRhythm {
 
-    private int baseBeatDuration = 4; //1,2,4,8,16 where 2=1/2, 4=1/4, 8=1/8, 16=1/16
+    private int baseBeatDuration = 4; 
     private String rhythmName;
     private final Map<Instrument, String> layerMap = new ConcurrentHashMap<>();
 
@@ -26,26 +28,49 @@ public class uMusicRhythm {
         }
     };
 
+    /**
+    * Constructor for uMusicRhythm 
+    * @param rhythmname The user defined name for this rhythm 
+    */
     public uMusicRhythm(String rhythmName) {
         this.rhythmName = rhythmName;
     }
 
+    /**
+    * Constructor for uMusicRhythm 
+    * @param rhythmname The user defined name for this rhythm 
+    * @param baseBeatDuration the duration for the beat
+    */
     public uMusicRhythm(String rhythmName, int baseBeatDuration) {
         this(rhythmName);
         this.baseBeatDuration = baseBeatDuration;
     }
 
+    /**
+    * @return int returns the baseBeatDuration for this rhythm 
+    */
     public int getBaseBeatDuration() {
         return this.baseBeatDuration;
     }
+    
+    /**
+    * @return String returns the name of the rhythm 
+    */
     public String getRhythmName() {
         return rhythmName;
     }
 
+    /**
+    * @param rhythmname The user defined name for this rhythm 
+    */
     public void setRhythmName(String rhythmName) {
         this.rhythmName = rhythmName;
     }
 
+    /**
+    * @return String returns a jfugue formated string representation of this 
+    * rhythm with all of the notes and Layers
+    */
     public String toStaccatoString() {
         StringBuilder sb = new StringBuilder();
         sb.append(" ");
@@ -68,6 +93,10 @@ public class uMusicRhythm {
         return sb.toString();
     }
 
+    /**
+     * @return char returns a char representation of the baseBeatDuration for this rhythm
+     * @return 
+     */
     private char getBaseBeatChar() {
         switch (baseBeatDuration) {
             case 1:
@@ -85,18 +114,30 @@ public class uMusicRhythm {
         }
     }
 
+    /**
+    * @param Instrument
+    * @return String returns the rhythm associated with the instrument  
+    */
     public String getRhythmLayer(Instrument instrument)  {
         return layerMap.get(instrument);
     }
             
+    /**
+    * this method associates the provided instrument and rhythm into the rhythm layerMap
+    * @param instrument
+    * @param rhythm   
+    */
     public void setRhythmLayer(Instrument instrument, String rhythm) {
         layerMap.put(instrument, rhythm);
     }
 
 
+    /**
+    * @return String returns a jfugue formated string representation of this 
+    * rhythm with all of the notes and Layers
+    */
     @Override
     public String toString() {
         return toStaccatoString();
     }
-
 }

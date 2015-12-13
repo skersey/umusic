@@ -128,7 +128,7 @@ public class SongControlsController implements Initializable {
         
         tempo.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
-            public void changed(ObservableValue<? extends Number> ov, 
+            public void changed(ObservableValue<? extends Number> ov,
                 Number old_val, Number new_val) {
                 tempo.getSelectionModel().select(tempo.getSelectionModel().getSelectedIndex());
                 uMusicAppData.getInstance().getSongController().setTempo(tempo.getSelectionModel().getSelectedItem().toString());

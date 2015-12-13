@@ -27,7 +27,7 @@
                 </ScrollPane>
             </VBox>
         </HBox>
-        <ScrollPane fx:id="dteRhythmEditor" VBox.vgrow="ALWAYS">
+        <ScrollPane fx:id="dteRhythmEditor" prefHeight="300"  minHeight="125" >
         </ScrollPane>
         
     </VBox>

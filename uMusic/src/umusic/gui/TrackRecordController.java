@@ -217,10 +217,7 @@ public class TrackRecordController implements Initializable {
         return this.trackNumber;
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-    }
-
+    
     public void setVolume(double volume) {
         trVolume.setValue(volume);
     }
@@ -232,5 +229,9 @@ public class TrackRecordController implements Initializable {
     public void disableInstrument() {
 
         trInstrument.setDisable(true);
+    }
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
     }
 }
