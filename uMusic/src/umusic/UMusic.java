@@ -1,29 +1,29 @@
 package umusic;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.ArrayList;
+//import java.util.Scanner;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import umusic.uMusicNote.Inversion;
-import umusic.uMusicNote.uMusicChord;
-import umusic.uMusicNote.SharpFlat;
-import umusic.uMusicTrack.TrackNumber;
+//import umusic.uMusicNote.Inversion;
+//import umusic.uMusicNote.uMusicChord;
+//import umusic.uMusicNote.SharpFlat;
+//import umusic.uMusicTrack.TrackNumber;
 
 public class UMusic extends Application {
 
-    static ArrayList<uMusicNote> voice1 = new ArrayList<>();
+    /*static ArrayList<uMusicNote> voice1 = new ArrayList<>();
 
     static uMusicTrack track1;
     static uMusicTrack track2;
     static uMusicTrack track3;
-
+*/
     public static Stage stage; //need to be able to access the stage djm 11/29/15
-    public static uMusicSongController sc;
+  /*  public static uMusicSongController sc;
     public static uMusicPlayerController pc;
-
+*/
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("gui/UMusicMain.fxml"));
@@ -39,7 +39,8 @@ public class UMusic extends Application {
         this.stage.show();
 
     }
-
+/*  It's sad to see it all go, but I think it's time.
+    
     public static void makeGuitarTrack(uMusicSongController sc) {
         TrackNumber tn = sc.addTrack("Track 1");
         sc.setInstrument(tn, "Guitar");
@@ -654,5 +655,5 @@ public class UMusic extends Application {
 
         System.out.println("END");
         System.exit(0);
-    }
+    */
 }

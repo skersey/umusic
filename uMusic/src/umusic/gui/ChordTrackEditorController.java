@@ -33,7 +33,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
 import umusic.uMusicAppData;
 import umusic.uMusicNote;
@@ -148,7 +147,6 @@ public class ChordTrackEditorController extends TrackEditorController implements
 	Inversion inv = Inversion.NONE;
         boolean dotted = false;
 
-        String noteArray[] = note.split("");
         RadioButton selectedDuration = (RadioButton) durationGroup.getSelectedToggle();
 	chord = chord.getChordFromString(mteChord.getSelectionModel().getSelectedItem().toString());
         String durationStr = selectedDuration.getText();

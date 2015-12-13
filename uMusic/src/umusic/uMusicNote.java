@@ -19,9 +19,6 @@ public class uMusicNote {
 	private String noteString;
 	private String chordString;
 	private String chordLessString;
-
-	private StaccatoParser parser = null;
-	private Pattern pattern = null;
 	
 	public enum SharpFlat {NONE, SHARP, DOUBLE_SHARP, FLAT, DOUBLE_FLAT} 
 	public enum Inversion {NONE, SINGLE, DOUBLE} 
@@ -40,7 +37,7 @@ public class uMusicNote {
 
 		/**
 		 * @return String This returns a representation of the chord
-		 * that jfugue accepts
+		 * that jFugue accepts
 		*/
 		public String toJfugueString() {
 			return this.jfugue;
@@ -114,7 +111,7 @@ public class uMusicNote {
 	}
 	
 	/**
-	*    Build a string in jfugue format that represents this note/chord  
+	*    Build a string in jFugue format that represents this note/chord  
 	*/
 	private void buildNoteString() {
 		noteString = " " + note.toUpperCase();

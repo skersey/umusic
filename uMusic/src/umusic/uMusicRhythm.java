@@ -30,7 +30,7 @@ public class uMusicRhythm {
 
     /**
     * Constructor for uMusicRhythm 
-    * @param rhythmname The user defined name for this rhythm 
+    * @param rhythmName The user defined name for this rhythm 
     */
     public uMusicRhythm(String rhythmName) {
         this.rhythmName = rhythmName;
@@ -38,7 +38,7 @@ public class uMusicRhythm {
 
     /**
     * Constructor for uMusicRhythm 
-    * @param rhythmname The user defined name for this rhythm 
+    * @param rhythmName The user defined name for this rhythm 
     * @param baseBeatDuration the duration for the beat
     */
     public uMusicRhythm(String rhythmName, int baseBeatDuration) {
@@ -61,7 +61,7 @@ public class uMusicRhythm {
     }
 
     /**
-    * @param rhythmname The user defined name for this rhythm 
+    * @param rhythmName The user defined name for this rhythm 
     */
     public void setRhythmName(String rhythmName) {
         this.rhythmName = rhythmName;
@@ -115,7 +115,7 @@ public class uMusicRhythm {
     }
 
     /**
-    * @param Instrument
+    * @param instrument
     * @return String returns the rhythm associated with the instrument  
     */
     public String getRhythmLayer(Instrument instrument)  {

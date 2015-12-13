@@ -14,9 +14,9 @@ import umusic.uMusicTrack.TrackNumber;
  *
  * @author bkersey
  * 
- * This class provides both a jfugue live player and managed player
+ * This class provides both a jFugue live player and managed player
  * The live player:
- * 		-accepts jfugue formatted strings as input
+ * 		-accepts jFugue formatted strings as input
  * 		-plays notes/chords as it receives them
  * The managed player:
  * 		-accepts midi formatted sequences as input

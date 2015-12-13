@@ -27,15 +27,6 @@ public class uMusicSongController {
             "Andantino", "Moderato", "Allegretto", "Allegro", "Vivace",
             "Presto", "Pretissimo"));
 
-/*    public uMusicSongController(String name, String tempo, int timeSignatureNumerator, int timeSignatureDenominator, int masterVolume) {
-        this();
-        this.name = name;
-        this.tempo = tempo;
-        this.timeSignatureNumerator = timeSignatureNumerator;
-        this.timeSignatureDenominator = timeSignatureDenominator;
-        this.masterVolume = masterVolume;
-    }
-*/
     public uMusicSongController(String name, String tempo, int timeSignatureNumerator, int timeSignatureDenominator) {
         this();
         this.name = name;
@@ -44,17 +35,6 @@ public class uMusicSongController {
         this.timeSignatureDenominator = timeSignatureDenominator;
     }
 
-/*    public uMusicSongController(String name, String tempo) {
-        this();
-        this.name = name;
-        this.tempo = tempo;
-    }
-
-    public uMusicSongController(String name) {
-        this();
-        this.name = name;
-    }
-*/
     public uMusicSongController() {
         trackList = new uMusicTrack[TrackNumber.TRACKMAX.ordinal()];
         for (int i = 0; i < TrackNumber.TRACKMAX.ordinal(); i++) {
@@ -95,7 +75,9 @@ public class uMusicSongController {
                 setTrackVolume(trackList[i].getTrackNumber(), trackVolume);
             }
         }
-        setPercussionTrackVolume(percussionVolume);
+        if (percussionTrack != null){
+            setPercussionTrackVolume(percussionVolume);
+        }
     }
 
     /**
@@ -136,7 +118,7 @@ public class uMusicSongController {
 
     /**
      * Add a new track to the song controller
-     * @param trackType Defins the track type (melody or chord)
+     * @param trackType Defines the track type (melody or chord)
      * @param trackName Sets the name of the track
      * @param instrument Sets the track instrument
      * @return Returns the TrackNumber of the new track 
@@ -202,7 +184,7 @@ public class uMusicSongController {
 
     /**
      * 
-     * @param trackNumber The tracknumber that contains the note 
+     * @param trackNumber The track number that contains the note 
      * @param arrayIndex The index into the array of uMusicNotes
      * @param note replace the current note at arrayIndex with the note provided 
      */
@@ -212,7 +194,7 @@ public class uMusicSongController {
 
     /**
      * 
-     * @param trackNumber The tracknumber that contains the note 
+     * @param trackNumber The track number that contains the note 
      * @param arrayIndex The index into the array of uMusicNotes
      */
     public void deleteNote(TrackNumber trackNumber, int arrayIndex) {
@@ -221,7 +203,7 @@ public class uMusicSongController {
 
     /**
      * 
-     * @param trackNumber The tracknumber that contains the note 
+     * @param trackNumber The track number that contains the note 
      */
     public void deleteLastNote(TrackNumber trackNumber) {
         trackList[trackNumber.ordinal()].deleteLastNote();
@@ -229,7 +211,7 @@ public class uMusicSongController {
 
     /**
      * 
-     * @param trackNumber The tracknumber of the track 
+     * @param trackNumber The track number of the track 
      * @param trackName The name of the track
      */
     public void setTrackName(TrackNumber trackNumber, String trackName){
@@ -238,7 +220,7 @@ public class uMusicSongController {
 
     /**
      * 
-     * @param trackNumber The tracknumber of the track 
+     * @param trackNumber The track number of the track 
      * @param volume Sets the track volume to this value; adjusted by the master volume
      * @return 
      */
@@ -345,8 +327,8 @@ public class uMusicSongController {
 
     /**
      * 
-     * @return a Sequene that contains all of the information necessary to play
-     * the song in the jfugue managed player
+     * @return a Sequence that contains all of the information necessary to play
+     * the song in the jFugue managed player
      */
     public Sequence getSongSequence() {
         String song = "";
@@ -370,8 +352,8 @@ public class uMusicSongController {
     /**
      * 
      * @param trackNumber
-     * @return a Sequene for the trackNumber provided that contains all of the 
-     * information necessary to play the track in the jfugue managed player
+     * @return a Sequence for the trackNumber provided that contains all of the 
+     * information necessary to play the track in the jFugue managed player
      */
     public Sequence getTrackSequence(TrackNumber trackNumber) {
         String song = "";
@@ -388,8 +370,8 @@ public class uMusicSongController {
 
     /**
      * 
-     * @return a Sequene that contains all of the information necessary to play
-     * the song in the jfugue managed player
+     * @return a Sequence that contains all of the information necessary to play
+     * the song in the jFugue managed player
      */
     public Sequence getPercussionTrackSequence() {
         String song = "";

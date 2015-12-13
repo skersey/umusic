@@ -38,7 +38,7 @@ public class uMusicPercussionTrack {
     }
 
     /**
-    * @param rhythmId The name of the rhythmbank to remove 
+    * @param rhythmId The name of the rhythmBank to remove 
     */
     public void removeRhythm(Integer rhythmId) {
         this.rhythmBank.remove(rhythmId);
@@ -75,7 +75,7 @@ public class uMusicPercussionTrack {
     }
 
     /**
-    * @return String returns a jfugue formated string representation of this 
+    * @return String returns a jFugue formated string representation of this 
     * track with all of the notes 
     */
     public String toStaccatoString() {

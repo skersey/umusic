@@ -52,7 +52,7 @@ public class uMusicTrack {
     }
 
     /**
-    * @param name The user defined name for this track
+    * @param trackName The user defined name for this track
     */
     public void setName(String trackName){
         this.trackName = trackName;
@@ -163,7 +163,7 @@ public class uMusicTrack {
     }
 
     /**
-    * @return String returns a jfugue formated string representation of this 
+    * @return String returns a jFugue formated string representation of this 
     * track with all of the notes 
     */
     public String buildTrackString() {

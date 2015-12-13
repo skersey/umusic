@@ -13,9 +13,14 @@ import java.io.Writer;
 /**
  *
  * @author Joshua
+ * 
+ * This class saves and loads songs using the JSon format with GSon.
  */
 public class uMusicFileController {
     
+    /*
+    * Takes in a uMusicSongController object and saves its content into a JSon file
+    */
     public static void save(String fileName, uMusicSongController sc){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(sc);
@@ -29,6 +34,9 @@ public class uMusicFileController {
         System.out.println("File Saved.");
     }
     
+    /*
+    * Takes in a JSon file and loads its content into a uMusicSongController and then returns it
+    */
     public static uMusicSongController load(String fileName){    
         uMusicSongController sc = null;
         try(

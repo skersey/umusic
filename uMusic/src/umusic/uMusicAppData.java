@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -18,7 +17,6 @@ import javafx.stage.Stage;
 import umusic.gui.MainControlsController;
 import umusic.gui.SongControlsController;
 import umusic.gui.TrackRecordController;
-import umusic.uMusicTrack.TrackNumber;
 
 /**
  *
